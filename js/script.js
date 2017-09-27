@@ -419,18 +419,6 @@ $("#datetimepicker2_1x_p").on("dp.change", function (e) {
 
 
 
-
-$('input[type="radio"]').click(function(){
-	var getValue = $(this).attr("value");
-	var targetBox = $("." + getValue);
-	$(".box").not(targetBox).hide();
-	$(targetBox).show();
-});
-
-
-
-
-
         $(".showItem").hide();
         $(".showhead").show();
         $(".hidehead").hide();
