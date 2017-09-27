@@ -1,0 +1,224 @@
+.maincontainer1{
+  border: 1px solid #dedede;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.5); 
+  width: calc(100% - 200px);
+  height: 520px;
+  margin: 100px;
+}
+#maincontainer2{
+  border: 1px solid #dedede;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.5); 
+  width: calc(100% - 200px);
+  height: 520px;
+  margin: 100px;
+}
+#chartdiv {
+  width: 100%;
+  height: 400px;
+}
+.amcharts-export-menu, a{
+  display: none !important;
+}
+.dropcss{
+  background-color: #eee;
+  color: #5b6472;
+  width: 90%;
+  text-align: left !important;
+  border-radius:0px !important;
+}
+.caretcss{
+  color: #1565c0;
+  float: right;
+  margin-top: 5px;
+  border-top: 6px dashed !important;
+    border-right: 6px solid transparent !important;
+    border-left: 6px solid transparent !important;
+}
+.caretcss1{
+  color: #666;
+  float: right;
+  margin-top: 5px;
+  border-top: 6px dashed !important;
+    border-right: 6px solid transparent !important;
+    border-left: 6px solid transparent !important;
+}
+.graphdropcss{
+  display: inline-block;
+}
+.sidesectioncss h4,.list-group h6{
+  color: #777;
+}
+.sidesectioncss h6{
+  margin-bottom: 0px !important;
+}
+.sidesectioncss{
+display: inline-block;
+width: 20%; 
+background-color: #fafbfc; 
+padding: 36px 10px; 
+border: 1px solid #dedede;
+border-bottom: none !important;
+border-top: none !important;
+height: 454px;
+}
+.leftsidelistcss{
+padding-top: 10px;  
+display: inline-block !important; 
+width: 50%; 
+float: left;
+}
+.rightsidelistcss{
+  padding-top: 10px;
+display: inline-block !important; 
+width: 50%; 
+border-left: 1px solid #dedede; 
+padding-left: 15px !important;
+}
+.bluetextcss{
+  color:#57a4f8;
+  font-size: 18px;
+}
+.greytextcss{
+  color:#acacac;
+  font-size: 18px;
+}
+.bluecirclelist{
+  width: 25px;
+  height: 25px;
+  border: 2px solid #57a4f8;
+  border-radius: 50%;
+  background-color: #91d3ff;
+}
+.greycirclelist{
+  width: 25px;
+  height: 25px;
+  border: 2px solid #acacac;
+  border-radius: 50%;
+  background-color: #dfdfdf;
+}
+footer{
+  clear: both;
+  border-top: 1px solid #dedede;
+    padding: 8px 10px 5px;
+    border-bottom: 1px solid #bababa;
+}
+.bluecirclecss{
+  width: 25px;
+  height: 25px;
+  border: 2px solid #57a4f8;
+  border-radius: 50%;
+  background-color: #91d3ff;
+  display: inline-block;
+    left: -2px;
+    top:-2px;
+    right: auto;
+    position: absolute;
+}
+.greycirclecss{
+  width: 25px;
+  height: 25px;
+  border: 2px solid #acacac;
+  border-radius: 50%;
+  background-color: #dfdfdf;
+  display: inline-block;
+  top:-2px;
+    left: -2px;
+    right: auto;
+    position: absolute;
+}
+.orangecirclecss{
+  width: 25px;
+  height: 25px;
+  border: 2px solid #cc752a;
+  border-radius: 50%;
+  background-color: #f8b47a;
+  display: inline-block;
+    left: -2px;
+    top:-2px;
+    right: auto;
+    position: absolute;
+}
+.redcirclecss{
+  width: 25px;
+  height: 25px;
+  border: 2px solid #c02929;
+  border-radius: 50%;
+  background-color: #ff7f7f;
+  display: inline-block;
+    left: -2px;
+    right: auto;
+    position: absolute;
+    top:-2px;
+}
+.lemoncirclecss{
+  width: 25px;
+  height: 25px;
+  border: 2px solid #acc12b;
+  border-radius: 50%;
+  background-color: #e1f562;
+  display: inline-block;
+    left: -2px;
+    right: auto;
+    position: absolute;
+    top:-2px;
+}
+.purplecirclecss{
+  width: 25px;
+  height: 25px;
+  border: 2px solid #5537e8;
+  border-radius: 50%;
+  background-color: #a390ff;
+  display: inline-block;
+    left: -2px;
+    right: auto;
+    top:-2px;
+    position: absolute;
+}
+.yellowcirclecss{
+  width: 25px;
+  height: 25px;
+  border: 2px solid #cbb129;
+  border-radius: 50%;
+  background-color: #ffe769;
+  display: inline-block;
+    left: -2px;
+    right: auto;
+    position: absolute;
+    top:-2px;
+}
+.footerbtn{
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  width: 160px;
+  height: 25px;
+  position: relative;
+  padding: 0px;
+  background: #f2f2f2;
+  color: #acacac;
+  font-size: 12px;
+    border: none;
+    margin-right: 10px;
+}
+.footerheading{
+  font-size: 10px;
+  color: #acacac;
+  margin-bottom: 2px;
+}
+.dropdowncontainercss{
+  padding: 10px;
+}
+.imgcss{
+  float: right;
+  width: 17px;
+}
+.calendarcss {
+    color: #c5d0de;
+    float: left;
+    margin-right: 10px;
+    font-size: 18px !important;
+}
+button:focus{
+  outline: none !important;
+}
