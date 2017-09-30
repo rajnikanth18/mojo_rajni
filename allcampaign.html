@@ -24,8 +24,8 @@
 <link href="datepicker/bootstrap-datetimepicker.css" rel="stylesheet">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-<link rel='stylesheet prefetch' href='https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='css/bootstrap.css'>
+<link rel='stylesheet prefetch' href='css/dataTables.bootstrap.css'>
 <style>
 @media only screen and (min-width: 993px) {
 .hide-on-large-only {
@@ -275,16 +275,16 @@ display: block !important;
   <div class="container">
     <div class="col s12 m8 l9 tab1">
       <div class="row">
-        <div class="col s12 fw618">
-          <ul class="tabs tab-demo-active z-depth-1" style="width: 100%;">
-            <li class="tab col s1"><a class="waves-effect waves-light active" href="#campaign_alljobgroups">All Campaigns</a></li>
-            <li class="tab col s1"><a class="waves-effect waves-light" href="#campaign_jobs">Jobs</a></li>
-            <li class="tab col s1"><a class="waves-effect waves-light" href="#campaign_placements">Placements</a></li>
-            <li class="tab col s1"><a class="waves-effect waves-light" href="#campaign_rules">Rules</a></li>
-            <li class="tab col s1"><a class="waves-effect waves-light" href="#campaign_recommendations">Recommendations</a></li>
-            <li class="tab col s1"><a class="waves-effect waves-light" href="#campaign_budget">Budget</a></li>
-            <li class="tab col s1"><a class="waves-effect waves-light" href="#campaign_admin">Admin</a></li>
-            <li class="tab col s1"><a class="waves-effect waves-light" href="#campaign_report">Report</a></li>
+        <div class="col s7">
+          <ul class="tabs tab-demo-active z-depth-1">
+            <li class="tab col"><a class="waves-effect waves-light active" href="#campaign_alljobgroups">All Campaigns</a></li>
+            <li class="tab col"><a class="waves-effect waves-light" href="#campaign_jobs">Jobs</a></li>
+            <li class="tab col"><a class="waves-effect waves-light" href="#campaign_placements">Placements</a></li>
+            <li class="tab col"><a class="waves-effect waves-light" href="#campaign_rules">Rules</a></li>
+            <li class="tab col"><a class="waves-effect waves-light" href="#campaign_recommendations">Recommendations</a></li>
+            <li class="tab col"><a class="waves-effect waves-light" href="#campaign_budget">Budget</a></li>
+            <li class="tab col"><a class="waves-effect waves-light" href="#campaign_admin">Admin</a></li>
+            <li class="tab col"><a class="waves-effect waves-light" href="#campaign_report">Report</a></li>
           </ul>
         </div>
         <div class="col s12">
@@ -301,7 +301,7 @@ display: block !important;
                   <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Add Campaign</button>
                 </div>
                 <div class="col s12 fw100p" style="padding:0px;">
-                  <div id="alljobgroupsdashboard" class="col s12">
+                  <div id="allcampaignsdashboard" class="col s12">
                     <div class="maincontainer1">
                       <div style="float:left; width:70%;">
                         <div class="dropdowncontainercss">
@@ -1722,10 +1722,246 @@ display: block !important;
                       </div>
                     </div>
                   </div>
-                  <div id="alljobgroupsdatabase" class="col s12" style="display: none;">
+                  <div id="allcampaignsdatabase" class="col s12" style="display: none;">
+                  <div class="maincontainer4">
+              <div style="float:left; width:70%;">
+                <div class="dropdowncontainercss">
+                  <div class="dropdown1 graphdropcss1" style="width:35%">
+                    <button class="btn dropcss dropdown-toggle" type="button" data-toggle="collapse" data-target="#charttab1_4x">Compare Spend & Applies <span class="caret caretcss"></span></button>
+                    <div id="charttab1_4x" class="collapse">
+                      <div class="comparetxthead">Compare: (select two)</div>
+                      <div class="comparecheckboxes">
+                        <div class="ccrow"> <span>
+                          <input type="checkbox" name="clicks_4x" id="clicks_4x">
+                          <label for="clicks_4x">Clicks</label>
+                          </span> <span>
+                          <input type="checkbox" name="cpc_4x" id="cpc_4x">
+                          <label for="cpc_4x">CPC</label>
+                          </span> </div>
+                        <div class="ccrow"> <span>
+                          <input type="checkbox" name="applies_4x" id="applies_4x">
+                          <label for="applies_4x">Applies</label>
+                          </span> <span>
+                          <input type="checkbox" name="cpa_4x" id="cpa_4x">
+                          <label for="cpa_4x">CPA</label>
+                          </span> </div>
+                        <div class="ccrow"> <span>
+                          <input type="checkbox" name="spend_4x" id="spend_4x">
+                          <label for="spend_4x">Spend</label>
+                          </span> <span>
+                          <input type="checkbox" name="cta_4x" id="cta_4x">
+                          <label for="cta_4x">Spend</label>
+                          </span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown2 graphdropcss2" style="width:25%">
+                    <button class="btn dropcss dropdown-toggle" type="button" data-toggle="collapse" data-target="#charttab2_4x">Custom Date Range <span class="caret caretcss"></span></button>
+                    <div id="charttab2_4x" class="collapse">
+                      <div class="customoption">Last 7 days</div>
+                      <div class="customoption">Last 30 days</div>
+                      <div class="customdates">
+                        <div class="form-group clearfix"> <span class="labeldate">Custom</span>
+                          <div class='input-group date cal' id='datetimepicker3_4x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                            <input type='text' class="form-control-date" name="cdate3_4x" />
+                          </div>
+                          <div class="hypendash">-</div>
+                          <div class='input-group date cal' id='datetimepicker4_4x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                            <input type='text' class="form-control-date" name="cdate4_4x" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <br />
+                      <div class="customoption">
+                        <div class="switch">
+                          <label> Compare
+                            <input type="checkbox">
+                            <span class="lever"></span> </label>
+                        </div>
+                      </div>
+                      <div class="customoption">Last 7 days</div>
+                      <div class="customoption">Last 30 days</div>
+                      <div class="customdates">
+                        <div class="form-group clearfix"> <span class="labeldate">Custom</span>
+                          <div class='input-group date cal' id='datetimepicker5_4x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                            <input type='text' class="form-control-date" name="cdate5_4x" />
+                          </div>
+                          <div class="hypendash">-</div>
+                          <div class='input-group date cal' id='datetimepicker6_4x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                            <input type='text' class="form-control-date" name="cdate6_4x" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown3 graphdropcss3" style="width:18%">
+                    <div class='input-group date' id='datetimepicker7_4x'>
+                      <div class="chart_tab3_btn"> <span class="input-group-addon"> <span class="fa fa-calendar calendarcss"></span> </span>
+                        <input type='text' class="form-control-date" name="cdate7_4x" />
+                        <span class="input-group-addon"><span class="caret caretcss1"></span></span> </div>
+                    </div>
+                  </div>
+                  <div class="dropdown4 graphdropcss4" style="width:18%">
+                    <div class='input-group date' id='datetimepicker8_4x'>
+                      <div class="chart_tab3_btn"> <span class="input-group-addon"> <span class="fa fa-calendar calendarcss"></span></span>
+                        <input type='text' class="form-control-date" name="cdate8_4x" />
+                        <span class="input-group-addon"><span class="caret caretcss1"></span></span> </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="chartdiv4"></div>
+              </div>
+              <div class="sidesectioncss">
+                <h4>Comparison - Summary</h4>
+                <div class="list-group a activeldd4" id="a" style="display:block; float:left; width:50%; border-right:1px solid #dedede;">
+                  <div class=bluecirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="bluetextcss">2,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="bluetextcss">185</p>
+                  <h6 class="">Spend</h6>
+                  <p class="bluetextcss">$6,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="bluetextcss">$3.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="bluetextcss">$12.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="bluetextcss">3%</p>
+                </div>
+                <div class="list-group b activeldd4" id="b" style="display:block; float:left; width:50%;">
+                  <div class=orangecirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="orangetextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="orangetextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="orangetextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="orangetextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="orangetextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="orangetextcss">4%</p>
+                </div>
+                <div class="list-group c" id="c" style="display:none; float:left; width:50%;">
+                  <div class=lemoncirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="lemontextcss">2,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="lemontextcss">185</p>
+                  <h6 class="">Spend</h6>
+                  <p class="lemontextcss">$6,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="lemontextcss">$3.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="lemontextcss">$12.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="lemontextcss">3%</p>
+                </div>
+                <div class="list-group d" id="d" style="display:none; float:left; width:50%;">
+                  <div class=greycirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="greytextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="greytextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="greytextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="greytextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="greytextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="greytextcss">4%</p>
+                </div>
+                <div class="list-group e" id="e" style="display:none; float:left; width:50%;">
+                  <div class=purplecirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="purpletextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="purpletextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="purpletextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="purpletextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="purpletextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="purpletextcss">4%</p>
+                </div>
+                <div class="list-group f" id="f" style="display:none; float:left; width:50%;">
+                  <div class=redcirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="redtextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="redtextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="redtextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="redtextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="redtextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="redtextcss">4%</p>
+                </div>
+                <div class="list-group g" id="g" style="display:none; float:left; width:50%;">
+                  <div class=yellowcirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="yellowtextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="yellowtextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="yellowtextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="yellowtextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="yellowtextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="yellowtextcss">4%</p>
+                </div>
+              </div>
+              <footer>
+                <div class="footerheading">Search for Companies</div>
+                <div class="chip4 activeimg4">
+                  <div class="bluecirclecss"></div>
+                  <label for="companya_4x"> Heartland Express &nbsp;</label>
+                  <input type="checkbox" name="comparision_4[]" id="companya_4x" value="a" checked>
+                  <img src="images/pin.png"> </div>
+                <div class="chip4 activeimg4">
+                  <div class="orangecirclecss"></div>
+                  <label for="companyb_4x"> CRST Specialised &nbsp;</label>
+                  <input type="checkbox" name="comparision_4{}" id="companyb_4x" value="b" checked>
+                  <img src="images/pin.png"> </div>
+                <div class="chip4">
+                  <div class="lemoncirclecss"></div>
+                  <label for="companyc_4x"> Carefirst Bluecross &nbsp;</label>
+                  <input type="checkbox" name="comparision_4{}" id="companyc_4x" value="c" disabled>
+                  <img src="images/pin.png"> </div>
+                <div class="chip4">
+                  <div class="greycirclecss"></div>
+                  <label for="companyd_4x"> Yuma Regional &nbsp;</label>
+                  <input type="checkbox" name="comparision_4{}" id="companyd_4x" value="d" disabled>
+                  <img src="images/pin.png"> </div>
+                <div class="chip4">
+                  <div class="purplecirclecss"></div>
+                  <label for="companye_4x"> Hirekey &nbsp;</label>
+                  <input type="checkbox" name="comparision_4{}" id="companye_4x" value="e" disabled>
+                  <img src="images/pin.png"> </div>
+                <div class="chip4">
+                  <div class="redcirclecss"></div>
+                  <label for="companyf_4x"> University of Phoenix &nbsp;</label>
+                  <input type="checkbox" name="comparision_4{}" id="companyf_4x" value="f" disabled>
+                  <img src="images/pin.png"> </div>
+                <div class="chip2">
+                  <div class="yellowcirclecss"></div>
+                  <label for="companyg_4x"> University of Phoenix &nbsp;</label>
+                  <input type="checkbox" name="comparision_4{}" id="companyg_4x" value="g" disabled>
+                  <img src="images/pin.png"> </div>
+              </footer>
+            </div>
                     <div class="container" ng-app="datatable">
                       <div class="panel" data-ng-controller="datatableCtrl">
-                        <div class="panel-heading border">
+                        <div class="panel-heading2 border">
                           <div class="row">
                             <div class="col s2 pheading-db-addclient">
                               <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Add Client</button>
@@ -1750,40 +1986,377 @@ display: block !important;
                           </div>
                         </div>
                         <div class="panel-body">
-                          <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
-                            <thead>
-                              <tr>
-                                <th><input type="checkbox" ng-model="ids[doc.provider.Id]" name="chall" id="chall">
-                                  <label for="chall"></label></th>
-                                <th>Active</th>
-                                <th>Client Name</th>
-                                <th>Status</th>
-                                <th>Clicks</th>
-                                <th>Bot Clicks</th>
-                                <th>Applies</th>
-                                <th>CPC</th>
-                                <th>CPA</th>
-                                <th>Spend</th>
-                                <th>Budget</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr ng-repeat="n in data">
-                                <td><input type="checkbox" name="cb" id="cb">
-                                  <label for="cb"></label></td>
-                                <td><img src="images/checkbox.png" /></td>
-                                <td>{{n[1]}}</td>
-                                <td>{{n[2]}}</td>
-                                <td>{{n[3]}}</td>
-                                <td>{{n[4]}}</td>
-                                <td>{{n[5]}}</td>
-                                <td>{{n[6]}}</td>
-                                <td>{{n[7]}}</td>
-                                <td>{{n[8]}}</td>
-                                <td>{{n[9]}}</td>
-                              </tr>
-                            </tbody>
-                          </table>
+
+						<table id="exampleTable">
+  <thead>
+    <tr>
+      <th></th>
+	  <th><input type="checkbox" name=""></th>            
+      <th>Active</th>
+      <th>Campagin Name</th>
+      <th>Status</th>
+      <th>Clicks</th>
+      <th>Bot Clicks</th>
+      <th>Applies</th>
+      <th>CPC</th>
+      <th>CPA</th>
+      <th>Spend</th>
+      <th>Budget</th>
+      <th>Performance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="id">1</td>
+	  <td><input type="checkbox" name=""></td>      
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>High Performning Campaign</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+      <td><img src="images/enable.png" alt="" /></td>
+    </tr>
+    <tr>
+      <td class="id">2</td>
+	  <td><input type="checkbox" name=""></td>      
+      <td><img src="images/checkbox_circle.png" alt=""></td>      
+      <td>Low Performning Campaign</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+      <td><img src="images/enable.png" alt="" /></td>
+    </tr>
+    <tr>
+      <td class="id">3</td>
+	  <td><input type="checkbox" name=""></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>      
+      <td>Deafult Campaign</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+      <td><img src="images/enable.png" alt="" /></td>
+    </tr>
+    <tr>
+      <td class="id">4</td>
+	  <td><input type="checkbox" name=""></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>General Campaign</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+      <td><img src="images/enable.png" alt="" /></td>
+    </tr>
+  </tbody>
+</table>
+<table id="innertable1" style="display:none;">
+  <thead>
+    <tr>
+      <th>Publisher Name</th>
+      <th>Status</th>
+      <th>Clicks</th>
+      <th>Bot Clicks</th>
+      <th>Applies</th>
+      <th>CPC</th>
+      <th>CPA</th>
+      <th>Spend</th>
+      <th>Budget</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Indeed</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>Jobs2Careers</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>Beyond</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>Linkup</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>CareerBliss</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>Lead5</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>ZipRecruiter</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>RestorationMedia</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>Jobcase</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>Livecareer</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>Appcast</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+  </tbody>
+</table>
+<table id="innertable2" style="display:none;">
+  <thead>
+    <tr>
+      <th>Publisher Nmae</th>
+      <th>Status</th>
+      <th>Clicks</th>
+      <th>Bot Clicks</th>
+      <th>Applies</th>
+      <th>CPC</th>
+      <th>CPA</th>
+      <th>Spend</th>
+      <th>Budget</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Beyond</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>Linkup</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>CareerBliss</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+  </tbody>
+</table>
+<table id="innertable3" style="display:none;">
+  <thead>
+    <tr>
+      <th>Publisher Nmae</th>
+      <th>Status</th>
+      <th>Clicks</th>
+      <th>Bot Clicks</th>
+      <th>Applies</th>
+      <th>CPC</th>
+      <th>CPA</th>
+      <th>Spend</th>
+      <th>Budget</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jobcase</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>Livecareer</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>Appcast</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+  </tbody>
+</table>
+<table id="innertable4" style="display:none;">
+  <thead>
+    <tr>
+      <th>Publisher Nmae</th>
+      <th>Status</th>
+      <th>Clicks</th>
+      <th>Bot Clicks</th>
+      <th>Applies</th>
+      <th>CPC</th>
+      <th>CPA</th>
+      <th>Spend</th>
+      <th>Budget</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Livecareer</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>Appcast</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+    <tr>
+      <td>Jobcase</td>
+      <td>2241 Live</td>
+      <td>16541</td>
+      <td>176</td>
+      <td>352</td>
+      <td>$0.66</td>
+      <td>$12.64</td>
+      <td>$1822.75</td>
+      <td>$3222 Monthly</td>
+    </tr>
+  </tbody>
+</table>
+	
                         </div>
                       </div>
                     </div>
@@ -1817,35 +2390,49 @@ display: block !important;
 <!-- ================================================
     Scripts
     ================================================ -->
-<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-<script src="https://www.amcharts.com/lib/3/serial.js"></script>
-<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/amcharts.js"></script>
+<script src="js/serial.js"></script>
+<script src="js/export.js"></script>
+<link rel="stylesheet" href="js/export.css" type="text/css" media="all" />
+<script src="js/light.js"></script>
+
+
+
+<script type="text/javascript" src="js/jquery-2.js" ></script>
+
+<script src="js/bootstrap.js"></script>
 <script src="https://use.fontawesome.com/c0640f5159.js"></script>
 <script src="js/chart.js"></script>
 <script src="js/chart2.js"></script>
 <script src="js/chart3.js"></script>
+<script src="js/chart4.js"></script>
 <!--materialize js-->
-<script type="text/javascript" src="http://demo.geekslabs.com/materialize-v1.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
 <!--prism-->
 <script type="text/javascript" src="js/prism.js"></script>
 <!--scrollbar-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/perfect-scrollbar.jquery.js"></script>
+<script type="text/javascript" src="js/perfect-scrollbar.js"></script>
 <!--plugins.js - Some Specific JS codes for Plugin Settings-->
-<script type="text/javascript" src="http://demo.geekslabs.com/materialize-v1.0/js/plugins.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
 <!--custom-script.js - Add your own theme custom JS-->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="datepicker/moment-with-locales.js.download"></script>
 <script src="datepicker/bootstrap-datetimepicker.js.download"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.0/ui-bootstrap-tpls.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js'></script>
+<script src='js/ui-bootstrap-tpls.min.js'></script>
+<script src='js/angular-ui-utils.min.js'></script>
 <script src='js/jquery.dataTables.js'></script>
 <script src='js/dataTables.bootstrap.js'></script>
-<script type="text/javascript" src="js/script.js"></script>
+
 <script type="text/javascript" src="js/allclient_list.js"></script>
+
+<link rel='stylesheet prefetch' href='datatable/dataTables_themeroller.css'>
+<link rel='stylesheet prefetch' href='datatable/dataTables.css'>
+<script src='datatable/jquery.dataTables.js'></script>
+
+<script type="text/javascript" src="js/script_db.js"></script>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+
 <script type='text/javascript'>
 window.onload=function(){
 $('.tabular1_scrollbar').perfectScrollbar();
@@ -1861,5 +2448,6 @@ $('.pagination .paginate_button.next a').html('<i class="fa fa-chevron-right" ar
 } 
 
 </script>
+
 </body>
 </html>

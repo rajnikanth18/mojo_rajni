@@ -24,8 +24,8 @@
 <link href="datepicker/bootstrap-datetimepicker.css" rel="stylesheet">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-<link rel='stylesheet prefetch' href='https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='css/bootstrap.css'>
+<link rel='stylesheet prefetch' href='css/dataTables.bootstrap.css'>
 <style>
 @media only screen and (min-width: 993px) {
 .hide-on-large-only {
@@ -384,7 +384,7 @@ display: block !important;
                             </div>
                           </div>
                         </div>
-                        <div id="chartdiv2"></div>
+                        <div id="chartdiv"></div>
                       </div>
                       <div class="sidesectioncss">
                         <h4>Comparison - Summary</h4>
@@ -559,7 +559,35 @@ display: block !important;
                             <div class="cdbox">
                               <div class="cdbox_head">
                                 <div class="cdbox_head_row">
-                                  <div class="cdbox_head_col_left">Clicks&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                                  <div class="cdbox_head_col_left">
+								  <span class="clickscbox dropdown-toggle" data-toggle="collapse" data-target="#tabular1_click_1x">Clicks&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+								  <div id="tabular1_click_1x" class="tabulardisplay collapse">
+                              <div class="comparetxthead">Compare: (select two)</div>
+                              <div class="comparecheckboxes">
+                                <div class="ccrow"> <span>
+                                  <input type="checkbox" name="clicks_1x" id="clicks_1x">
+                                  <label for="clicks_1x">Clicks</label>
+                                  </span> <span>
+                                  <input type="checkbox" name="cpc_1x" id="cpc_1x">
+                                  <label for="cpc_1x">CPC</label>
+                                  </span> </div>
+                                <div class="ccrow"> <span>
+                                  <input type="checkbox" name="applies_1x" id="applies_1x">
+                                  <label for="applies_1x">Applies</label>
+                                  </span> <span>
+                                  <input type="checkbox" name="cpa_1x" id="cpa_1x">
+                                  <label for="cpa_1x">CPA</label>
+                                  </span> </div>
+                                <div class="ccrow"> <span>
+                                  <input type="checkbox" name="spend_1x" id="spend_1x">
+                                  <label for="spend_1x">Spend</label>
+                                  </span> <span>
+                                  <input type="checkbox" name="cta_1x" id="cta_1x">
+                                  <label for="cta_1x">Spend</label>
+                                  </span></div>
+                              </div>
+                            </div>
+								  </div>
                                   <div class="cdbox_head_col_right"> <span class="tclicks">2,659</span> <span class="pclicks">+8.9%</span> </div>
                                 </div>
                               </div>
@@ -617,7 +645,41 @@ display: block !important;
                             <div class="cdbox">
                               <div class="cdbox_head">
                                 <div class="cdbox_head_row">
-                                  <div class="cdbox_head_col_left">Spend&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                                  <div class="cdbox_head_col_left">
+								  
+								  
+								  
+								  <span class="clickscbox dropdown-toggle" data-toggle="collapse" data-target="#tabular1_spend_1x">Spend&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+<div id="tabular1_spend_1x" class="tabulardisplay collapse">
+<div class="comparetxthead">Compare: (select two)</div>
+<div class="comparecheckboxes">
+<div class="ccrow"> <span>
+  <input type="checkbox" name="clicks_1x" id="clicks_1x">
+  <label for="clicks_1x">Clicks</label>
+  </span> <span>
+  <input type="checkbox" name="cpc_1x" id="cpc_1x">
+  <label for="cpc_1x">CPC</label>
+  </span> </div>
+<div class="ccrow"> <span>
+  <input type="checkbox" name="applies_1x" id="applies_1x">
+  <label for="applies_1x">Applies</label>
+  </span> <span>
+  <input type="checkbox" name="cpa_1x" id="cpa_1x">
+  <label for="cpa_1x">CPA</label>
+  </span> </div>
+<div class="ccrow"> <span>
+  <input type="checkbox" name="spend_1x" id="spend_1x">
+  <label for="spend_1x">Spend</label>
+  </span> <span>
+  <input type="checkbox" name="cta_1x" id="cta_1x">
+  <label for="cta_1x">Spend</label>
+  </span></div>
+</div>
+</div>
+
+								  
+								  
+								  </div>
                                   <div class="cdbox_head_col_right"> <span class="tclicks">$6,435</span> <span class="pclicks">+6.8%</span> </div>
                                 </div>
                               </div>
@@ -675,7 +737,40 @@ display: block !important;
                             <div class="cdbox">
                               <div class="cdbox_head">
                                 <div class="cdbox_head_row">
-                                  <div class="cdbox_head_col_left">CPC&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                                  <div class="cdbox_head_col_left">
+								  
+								  
+								   <span class="clickscbox dropdown-toggle" data-toggle="collapse" data-target="#tabular1_cpc_1x">CPC&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+<div id="tabular1_cpc_1x" class="tabulardisplay collapse">
+<div class="comparetxthead">Compare: (select two)</div>
+<div class="comparecheckboxes">
+<div class="ccrow"> <span>
+  <input type="checkbox" name="clicks_1x" id="clicks_1x">
+  <label for="clicks_1x">Clicks</label>
+  </span> <span>
+  <input type="checkbox" name="cpc_1x" id="cpc_1x">
+  <label for="cpc_1x">CPC</label>
+  </span> </div>
+<div class="ccrow"> <span>
+  <input type="checkbox" name="applies_1x" id="applies_1x">
+  <label for="applies_1x">Applies</label>
+  </span> <span>
+  <input type="checkbox" name="cpa_1x" id="cpa_1x">
+  <label for="cpa_1x">CPA</label>
+  </span> </div>
+<div class="ccrow"> <span>
+  <input type="checkbox" name="spend_1x" id="spend_1x">
+  <label for="spend_1x">Spend</label>
+  </span> <span>
+  <input type="checkbox" name="cta_1x" id="cta_1x">
+  <label for="cta_1x">Spend</label>
+  </span></div>
+</div>
+</div>
+								  
+								  
+								  
+								  </div>
                                   <div class="cdbox_head_col_right"> <span class="tclicks">$3.68</span> <span class="pclicks">+5.4%</span> </div>
                                 </div>
                               </div>
@@ -855,7 +950,39 @@ display: block !important;
                             <div class="cdbox">
                               <div class="cdbox_head">
                                 <div class="cdbox_head_row">
-                                  <div class="cdbox_head_col_left">Clicks&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                                  <div class="cdbox_head_col_left">
+								  
+								  
+								  <span class="clickscbox dropdown-toggle" data-toggle="collapse" data-target="#tabular2_clicks_1x">Clicks&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+<div id="tabular2_clicks_1x" class="tabulardisplay collapse">
+<div class="comparetxthead">Compare: (select two)</div>
+<div class="comparecheckboxes">
+<div class="ccrow"> <span>
+  <input type="checkbox" name="clicks_1x" id="clicks_1x">
+  <label for="clicks_1x">Clicks</label>
+  </span> <span>
+  <input type="checkbox" name="cpc_1x" id="cpc_1x">
+  <label for="cpc_1x">CPC</label>
+  </span> </div>
+<div class="ccrow"> <span>
+  <input type="checkbox" name="applies_1x" id="applies_1x">
+  <label for="applies_1x">Applies</label>
+  </span> <span>
+  <input type="checkbox" name="cpa_1x" id="cpa_1x">
+  <label for="cpa_1x">CPA</label>
+  </span> </div>
+<div class="ccrow"> <span>
+  <input type="checkbox" name="spend_1x" id="spend_1x">
+  <label for="spend_1x">Spend</label>
+  </span> <span>
+  <input type="checkbox" name="cta_1x" id="cta_1x">
+  <label for="cta_1x">Spend</label>
+  </span></div>
+</div>
+</div>
+								  
+								  
+								  </div>
                                   <div class="cdbox_head_col_right"> <span class="tclicks">2,659</span> <span class="pclicks">+8.9%</span> </div>
                                 </div>
                               </div>
@@ -913,7 +1040,40 @@ display: block !important;
                             <div class="cdbox">
                               <div class="cdbox_head">
                                 <div class="cdbox_head_row">
-                                  <div class="cdbox_head_col_left">Spend&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                                  <div class="cdbox_head_col_left">
+								  
+								  
+								  
+								  <span class="clickscbox dropdown-toggle" data-toggle="collapse" data-target="#tabular2_spend_1x">Spend&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+<div id="tabular2_spend_1x" class="tabulardisplay collapse">
+<div class="comparetxthead">Compare: (select two)</div>
+<div class="comparecheckboxes">
+<div class="ccrow"> <span>
+  <input type="checkbox" name="clicks_1x" id="clicks_1x">
+  <label for="clicks_1x">Clicks</label>
+  </span> <span>
+  <input type="checkbox" name="cpc_1x" id="cpc_1x">
+  <label for="cpc_1x">CPC</label>
+  </span> </div>
+<div class="ccrow"> <span>
+  <input type="checkbox" name="applies_1x" id="applies_1x">
+  <label for="applies_1x">Applies</label>
+  </span> <span>
+  <input type="checkbox" name="cpa_1x" id="cpa_1x">
+  <label for="cpa_1x">CPA</label>
+  </span> </div>
+<div class="ccrow"> <span>
+  <input type="checkbox" name="spend_1x" id="spend_1x">
+  <label for="spend_1x">Spend</label>
+  </span> <span>
+  <input type="checkbox" name="cta_1x" id="cta_1x">
+  <label for="cta_1x">Spend</label>
+  </span></div>
+</div>
+</div>
+								  
+								  
+								  </div>
                                   <div class="cdbox_head_col_right"> <span class="tclicks">$6,435</span> <span class="pclicks">+6.8%</span> </div>
                                 </div>
                               </div>
@@ -971,7 +1131,38 @@ display: block !important;
                             <div class="cdbox">
                               <div class="cdbox_head">
                                 <div class="cdbox_head_row">
-                                  <div class="cdbox_head_col_left">CPC&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                                  <div class="cdbox_head_col_left">
+								  
+								  
+								  <span class="clickscbox dropdown-toggle" data-toggle="collapse" data-target="#tabular2_cpc_1x">CPC&nbsp;<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+<div id="tabular2_cpc_1x" class="tabulardisplay collapse">
+<div class="comparetxthead">Compare: (select two)</div>
+<div class="comparecheckboxes">
+<div class="ccrow"> <span>
+  <input type="checkbox" name="clicks_1x" id="clicks_1x">
+  <label for="clicks_1x">Clicks</label>
+  </span> <span>
+  <input type="checkbox" name="cpc_1x" id="cpc_1x">
+  <label for="cpc_1x">CPC</label>
+  </span> </div>
+<div class="ccrow"> <span>
+  <input type="checkbox" name="applies_1x" id="applies_1x">
+  <label for="applies_1x">Applies</label>
+  </span> <span>
+  <input type="checkbox" name="cpa_1x" id="cpa_1x">
+  <label for="cpa_1x">CPA</label>
+  </span> </div>
+<div class="ccrow"> <span>
+  <input type="checkbox" name="spend_1x" id="spend_1x">
+  <label for="spend_1x">Spend</label>
+  </span> <span>
+  <input type="checkbox" name="cta_1x" id="cta_1x">
+  <label for="cta_1x">Spend</label>
+  </span></div>
+</div>
+</div>
+								  
+								  </div>
                                   <div class="cdbox_head_col_right"> <span class="tclicks">$3.68</span> <span class="pclicks">+5.4%</span> </div>
                                 </div>
                               </div>
@@ -5271,15 +5462,254 @@ display: block !important;
                     </div>
                   </div>
                   <div id="allclientsdatabase" class="col s12" style="display: none;">
+		            
+                    <div class="maincontainer2">
+              <div style="float:left; width:70%;">
+                <div class="dropdowncontainercss">
+                  <div class="dropdown1 graphdropcss1" style="width:35%">
+                    <button class="btn dropcss dropdown-toggle" type="button" data-toggle="collapse" data-target="#charttab1_2x">Compare Spend & Applies <span class="caret caretcss"></span></button>
+                    <div id="charttab1_2x" class="collapse">
+                      <div class="comparetxthead">Compare: (select two)</div>
+                      <div class="comparecheckboxes">
+                        <div class="ccrow"> <span>
+                          <input type="checkbox" name="clicks_2x" id="clicks_2x">
+                          <label for="clicks_2x">Clicks</label>
+                          </span> <span>
+                          <input type="checkbox" name="cpc_2x" id="cpc_2x">
+                          <label for="cpc_2x">CPC</label>
+                          </span> </div>
+                        <div class="ccrow"> <span>
+                          <input type="checkbox" name="applies_2x" id="applies_2x">
+                          <label for="applies_2x">Applies</label>
+                          </span> <span>
+                          <input type="checkbox" name="cpa_2x" id="cpa_2x">
+                          <label for="cpa_2x">CPA</label>
+                          </span> </div>
+                        <div class="ccrow"> <span>
+                          <input type="checkbox" name="spend_2x" id="spend_2x">
+                          <label for="spend_2x">Spend</label>
+                          </span> <span>
+                          <input type="checkbox" name="cta_2x" id="cta_2x">
+                          <label for="cta_2x">Spend</label>
+                          </span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown2 graphdropcss2" style="width:25%">
+                    <button class="btn dropcss dropdown-toggle" type="button" data-toggle="collapse" data-target="#charttab2_2x">Custom Date Range <span class="caret caretcss"></span></button>
+                    <div id="charttab2_2x" class="collapse">
+                      <div class="customoption">Last 7 days</div>
+                      <div class="customoption">Last 30 days</div>
+                      <div class="customdates">
+                        <div class="form-group clearfix"> <span class="labeldate">Custom</span>
+                          <div class='input-group date cal' id='datetimepicker3_2x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                            <input type='text' class="form-control-date" name="cdate3_2x" />
+                          </div>
+                          <div class="hypendash">-</div>
+                          <div class='input-group date cal' id='datetimepicker4_2x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                            <input type='text' class="form-control-date" name="cdate4_2x" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="divider"></div>
+                      <br />
+                      <div class="customoption">
+                        <div class="switch">
+                          <label> Compare
+                            <input type="checkbox">
+                            <span class="lever"></span> </label>
+                        </div>
+                      </div>
+                      <div class="customoption">Last 7 days</div>
+                      <div class="customoption">Last 30 days</div>
+                      <div class="customdates">
+                        <div class="form-group clearfix"> <span class="labeldate">Custom</span>
+                          <div class='input-group date cal' id='datetimepicker5_2x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                            <input type='text' class="form-control-date" name="cdate5_2x" />
+                          </div>
+                          <div class="hypendash">-</div>
+                          <div class='input-group date cal' id='datetimepicker6_2x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                            <input type='text' class="form-control-date" name="cdate6_2x" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown3 graphdropcss3" style="width:18%">
+                    <div class='input-group date' id='datetimepicker7_2x'>
+                      <div class="chart_tab3_btn"> <span class="input-group-addon"> <span class="fa fa-calendar calendarcss"></span> </span>
+                        <input type='text' class="form-control-date" name="cdate7_2x" />
+                        <span class="input-group-addon"><span class="caret caretcss1"></span></span> </div>
+                    </div>
+                  </div>
+                  <div class="dropdown4 graphdropcss4" style="width:18%">
+                    <div class='input-group date' id='datetimepicker8_2x'>
+                      <div class="chart_tab3_btn"> <span class="input-group-addon"> <span class="fa fa-calendar calendarcss"></span></span>
+                        <input type='text' class="form-control-date" name="cdate8_2x" />
+                        <span class="input-group-addon"><span class="caret caretcss1"></span></span> </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="chartdiv2"></div>
+              </div>
+              <div class="sidesectioncss">
+                <h4>Comparison - Summary</h4>
+                <div class="list-group a activeldd2" id="a" style="display:block; float:left; width:50%; border-right:1px solid #dedede;">
+                  <div class=bluecirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="bluetextcss">2,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="bluetextcss">185</p>
+                  <h6 class="">Spend</h6>
+                  <p class="bluetextcss">$6,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="bluetextcss">$3.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="bluetextcss">$12.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="bluetextcss">3%</p>
+                </div>
+                <div class="list-group b activeldd2" id="b" style="display:block; float:left; width:50%;">
+                  <div class=orangecirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="orangetextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="orangetextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="orangetextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="orangetextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="orangetextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="orangetextcss">4%</p>
+                </div>
+                <div class="list-group c" id="c" style="display:none; float:left; width:50%;">
+                  <div class=lemoncirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="lemontextcss">2,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="lemontextcss">185</p>
+                  <h6 class="">Spend</h6>
+                  <p class="lemontextcss">$6,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="lemontextcss">$3.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="lemontextcss">$12.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="lemontextcss">3%</p>
+                </div>
+                <div class="list-group d" id="d" style="display:none; float:left; width:50%;">
+                  <div class=greycirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="greytextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="greytextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="greytextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="greytextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="greytextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="greytextcss">4%</p>
+                </div>
+                <div class="list-group e" id="e" style="display:none; float:left; width:50%;">
+                  <div class=purplecirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="purpletextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="purpletextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="purpletextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="purpletextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="purpletextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="purpletextcss">4%</p>
+                </div>
+                <div class="list-group f" id="f" style="display:none; float:left; width:50%;">
+                  <div class=redcirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="redtextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="redtextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="redtextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="redtextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="redtextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="redtextcss">4%</p>
+                </div>
+                <div class="list-group g" id="g" style="display:none; float:left; width:50%;">
+                  <div class=yellowcirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="yellowtextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="yellowtextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="yellowtextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="yellowtextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="yellowtextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="yellowtextcss">4%</p>
+                </div>
+              </div>
+              <footer>
+                <div class="footerheading">Search for Companies</div>
+                <div class="chip2 activeimg2">
+                  <div class="bluecirclecss"></div>
+                  <label for="companya_2x"> Heartland Express &nbsp;</label>
+                  <input type="checkbox" name="comparision_2[]" id="companya_2x" value="a" checked>
+                  <img src="images/pin.png"> </div>
+                <div class="chip2 activeimg2">
+                  <div class="orangecirclecss"></div>
+                  <label for="companyb_2x"> CRST Specialised &nbsp;</label>
+                  <input type="checkbox" name="comparision_2{}" id="companyb_2x" value="b" checked>
+                  <img src="images/pin.png"> </div>
+                <div class="chip2">
+                  <div class="lemoncirclecss"></div>
+                  <label for="companyc_2x"> Carefirst Bluecross &nbsp;</label>
+                  <input type="checkbox" name="comparision_2{}" id="companyc_2x" value="c" disabled>
+                  <img src="images/pin.png"> </div>
+                <div class="chip2">
+                  <div class="greycirclecss"></div>
+                  <label for="companyd_2x"> Yuma Regional &nbsp;</label>
+                  <input type="checkbox" name="comparision_2{}" id="companyd_2x" value="d" disabled>
+                  <img src="images/pin.png"> </div>
+                <div class="chip2">
+                  <div class="purplecirclecss"></div>
+                  <label for="companye_2x"> Hirekey &nbsp;</label>
+                  <input type="checkbox" name="comparision_2{}" id="companye_2x" value="e" disabled>
+                  <img src="images/pin.png"> </div>
+                <div class="chip2">
+                  <div class="redcirclecss"></div>
+                  <label for="companyf_2x"> University of Phoenix &nbsp;</label>
+                  <input type="checkbox" name="comparision_2{}" id="companyf_2x" value="f" disabled>
+                  <img src="images/pin.png"> </div>
+                <div class="chip2">
+                  <div class="yellowcirclecss"></div>
+                  <label for="companyg_2x"> University of Phoenix &nbsp;</label>
+                  <input type="checkbox" name="comparision_2{}" id="companyg_2x" value="g" disabled>
+                  <img src="images/pin.png"> </div>
+              </footer>
+            </div>
+                           
                     <div class="container" ng-app="datatable">
                       <div class="panel" data-ng-controller="datatableCtrl">
-                        <div class="panel-heading border">
+                        
+                        <div class="panel-heading2 border">
                           <div class="row">
                             <div class="col s2 pheading-db-addclient">
                               <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Add Client</button>
                             </div>
                             <div class="col s2 pheading-db-edit">
-                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Edit</button>
+                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Edit <i class="fa fa-angle-down" aria-hidden="true"></i></button>
                             </div>
                             <div class="col s3 pheading-db-search">
                               <div class="db-search hide-on-med-and-down"> <i class="fa fa-search" aria-hidden="true"></i>
@@ -5287,10 +5717,10 @@ display: block !important;
                               </div>
                             </div>
                             <div class="col s2 pheading-db-clientstatus">
-                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Client Status</button>
+                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Automation  <i class="fa fa-angle-down" aria-hidden="true"></i></button>
                             </div>
                             <div class="col s2 pheading-db-columnview">
-                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Column View</button>
+                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Column View <i class="fa fa-angle-down" aria-hidden="true"></i></button>
                             </div>
                             <div class="col s1 pheading-db-downloadicon">
                               <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-download" aria-hidden="true"></i></button>
@@ -5428,7 +5858,7 @@ display: block !important;
                     </div>
                   </div>
                 </div>
-                <div id="chartdiv"></div>
+                <div id="chartdiv3"></div>
               </div>
               <div class="sidesectioncss">
                 <h4>Comparison - Summary</h4>
@@ -5596,31 +6026,31 @@ display: block !important;
 <!-- ================================================
     Scripts
     ================================================ -->
-<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-<script src="https://www.amcharts.com/lib/3/serial.js"></script>
-<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/amcharts.js"></script>
+<script src="js/serial.js"></script>
+<script src="js/export.js"></script>
+<link rel="stylesheet" href="js/export.css" type="text/css" media="all" />
+<script src="js/light.js"></script>
+<script type="text/javascript" src="js/jquery-2.js"></script>
+<script src="js/bootstrap.js"></script>
 <script src="https://use.fontawesome.com/c0640f5159.js"></script>
 <script src="js/chart.js"></script>
 <script src="js/chart2.js"></script>
 <script src="js/chart3.js"></script>
 <!--materialize js-->
-<script type="text/javascript" src="http://demo.geekslabs.com/materialize-v1.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
 <!--prism-->
 <script type="text/javascript" src="js/prism.js"></script>
 <!--scrollbar-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/perfect-scrollbar.jquery.js"></script>
 <!--plugins.js - Some Specific JS codes for Plugin Settings-->
-<script type="text/javascript" src="http://demo.geekslabs.com/materialize-v1.0/js/plugins.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
 <!--custom-script.js - Add your own theme custom JS-->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="datepicker/moment-with-locales.js.download"></script>
 <script src="datepicker/bootstrap-datetimepicker.js.download"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.0/ui-bootstrap-tpls.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js'></script>
+<script src='js/ui-bootstrap-tpls.min.js'></script>
+<script src='js/angular-ui-utils.min.js'></script>
 <script src='js/jquery.dataTables.js'></script>
 <script src='js/dataTables.bootstrap.js'></script>
 <script type="text/javascript" src="js/script.js"></script>
