@@ -146,8 +146,9 @@ display: block !important;
 <div class="wrapper">
   <!-- START LEFT SIDEBAR NAV-->
   <aside id="left-sidebar-nav">
-    <ul id="slide-out" class="side-nav fixed leftside-navigation">
-      <li class="search-details">
+    <!--ul id="slide-out" class="side-nav fixed leftside-navigation"-->
+	<ul class="nav-slideleft side-nav fixed leftside-navigation">
+	<li class="search-details">
         <div class="header-search-wrapper hide-on-med-and-down"> <i class="fa fa-search" aria-hidden="true"></i>
           <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Search">
         </div>
@@ -159,13 +160,13 @@ display: block !important;
               <ul class="collapsible collapsible-accordion">
                 <li class="no-padding">
                   <ul class="collapsible collapsible-accordion">
-                    <li class="bold"><a class="collapsible-header" href="allcampaign.html"> Heartland Expresss <i class="fa fa-angle-right"></i></a>
+                    <li class="bold"><a class="collapsible-header" href="#"> Heartland Expresss <i class="fa fa-angle-right"></i></a>
                       <div class="collapsible-body">
                         <ul class="collapsible collapsible-accordion sublist">
-                          <li><a class="collapsible-header waves-effect waves-cyan" href="campaign-highperforming.html">High Performing Campaign <i class="fa fa-angle-right"></i></a>
+                          <li><a class="collapsible-header waves-effect waves-cyan" href="allcampaign.html">High Performing Campaign <i class="fa fa-angle-right"></i></a>
                             <div class="collapsible-body sub_sublist active">
                               <ul>
-                                <li class="twolines"><a href="#">CDL-A Truck Driver - Great Pay and Routes <i class="fa fa-angle-right"></i></a></li>
+                                <li class="twolines"><a href="campaign-highperforming.html">CDL-A Truck Driver - Great Pay and Routes <i class="fa fa-angle-right"></i></a></li>
                                 <li><a href="#">Class A CDL Truck Driver <i class="fa fa-angle-right"></i></a></li>
                               </ul>
                             </div>
@@ -288,8 +289,8 @@ display: block !important;
               <div class="row">
                 <div class="col s12 fw325" style="0 6px;">
                   <ul class="tabs tab-demo-active z-depth-1" style="width: 100%;">
-                    <li class="tab col s3"><a class="white-text waves-effect waves-light active" href="#allclientsdashboard">All Clients Dashboard</a></li>
-                    <li class="tab col s3"><a class="white-text waves-effect waves-light" href="#allclientsdatabase">All Clients Datatable</a></li>
+                    <li class="tab col s3"><a class="active" href="#allclientsdashboard">All Clients Dashboard</a></li>
+                    <li class="tab col s3"><a class="" href="#allclientsdatabase">All Clients Datatable</a></li>
                   </ul>
                 </div>
                 <div class="col s1 fw105">
@@ -5728,40 +5729,289 @@ display: block !important;
                           </div>
                         </div>
                         <div class="panel-body">
-                          <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
-                            <thead>
-                              <tr>
-                                <th><input type="checkbox" ng-model="ids[doc.provider.Id]" name="chall" id="chall">
-                                  <label for="chall"></label></th>
-                                <th>Active</th>
-                                <th>Client Name</th>
-                                <th>Status</th>
-                                <th>Clicks</th>
-                                <th>Bot Clicks</th>
-                                <th>Applies</th>
-                                <th>CPC</th>
-                                <th>CPA</th>
-                                <th>Spend</th>
-                                <th>Budget</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr ng-repeat="n in data">
-                                <td><input type="checkbox" name="cb" id="cb">
-                                  <label for="cb"></label></td>
-                                <td><img src="images/checkbox.png" /></td>
-                                <td>{{n[1]}}</td>
-                                <td>{{n[2]}}</td>
-                                <td>{{n[3]}}</td>
-                                <td>{{n[4]}}</td>
-                                <td>{{n[5]}}</td>
-                                <td>{{n[6]}}</td>
-                                <td>{{n[7]}}</td>
-                                <td>{{n[8]}}</td>
-                                <td>{{n[9]}}</td>
-                              </tr>
-                            </tbody>
-                          </table>
+						
+						<table id="allclientdb_table">
+  <thead>
+    <tr>
+	  <th><input id="checkall" name="ch" id="ch0" type="checkbox" class="filled-in"><label for="ch0"></label></th>            
+      <th>Active</th>
+      <th>Campaign Name</th>
+      <th>Status</th>
+      <th>Clicks</th>
+      <th>Bot Clicks</th>
+      <th>Applies</th>
+      <th>CPC</th>
+      <th>CPA</th>
+      <th>Spend</th>
+      <th>Budget</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+	  <td><input name="ch" id="ch1" type="checkbox" class="filled-in"><label for="ch1"></label></td> 
+	  <td><img src="images/checkbox_circle.png" alt=""></td> 
+      <td>Heartland Express</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+    <tr>
+	  <td><input name="ch" id="ch2" type="checkbox" class="filled-in"><label for="ch2"></label></td>      
+      <td><img src="images/checkbox_circle.png" alt=""></td>      
+      <td>CRST Specialised Transportation (STI)</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+    <tr>
+	  <td><input name="ch" id="ch3" type="checkbox" class="filled-in"><label for="ch3"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>      
+      <td>Best Logistics</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+    <tr>
+	  <td><input name="ch" id="ch4" type="checkbox" class="filled-in"><label for="ch4"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>CareFirst Bluecross Blueshield</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch5" type="checkbox" class="filled-in"><label for="ch5"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Yuma Regional Medical Centre</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch6" type="checkbox" class="filled-in"><label for="ch6"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>University of Phoenix</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch7" type="checkbox" class="filled-in"><label for="ch7"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>CRST Expedited</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch8" type="checkbox" class="filled-in"><label for="ch8"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>CRST Malone</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch9" type="checkbox" class="filled-in"><label for="ch9"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Mcleod Express</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch10" type="checkbox" class="filled-in"><label for="ch11"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Celadon</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch11" type="checkbox" class="filled-in"><label for="ch11"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Schilli Corporation</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch12" type="checkbox" class="filled-in"><label for="ch12"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Sherman Brother Trucking</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch13" type="checkbox" class="filled-in"><label for="ch13"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Adex Medical Staffing</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch14" type="checkbox" class="filled-in"><label for="ch14"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>IMC Corporation</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch15" type="checkbox" class="filled-in"><label for="ch15"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Navajo Express</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch16" type="checkbox" class="filled-in"><label for="ch16"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>G6 Hospitality</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch17" type="checkbox" class="filled-in"><label for="ch17"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>FCA</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch18" type="checkbox" class="filled-in"><label for="ch18"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>BAYADA - ICIMS</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch19" type="checkbox" class="filled-in"><label for="ch19"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Franchise Career Services</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch20" type="checkbox" class="filled-in"><label for="ch20"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Hirekey - West Marnie</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+  </tbody>
+</table>
+
+						
+						
                         </div>
                       </div>
                     </div>
@@ -6007,6 +6257,317 @@ display: block !important;
                   <img src="images/pin.png"> </div>
               </footer>
             </div>
+			<div class="container" ng-app="datatable">
+                      <div class="panel" data-ng-controller="datatableCtrl">
+                        
+                        <div class="panel-heading2 border">
+                          <div class="row">
+                            <div class="col s2 pheading-db-edit">
+                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Edit <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="col s3 pheading-db-search">
+                              <div class="db-search hide-on-med-and-down"> <i class="fa fa-search" aria-hidden="true"></i>
+                                <input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0">
+                              </div>
+                            </div>
+                            <div class="col s2 pheading-db-clientstatus">
+                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Client Status  <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="col s2 pheading-db-columnview">
+                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Column View <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="col s1 pheading-db-downloadicon">
+                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-download" aria-hidden="true"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="panel-body">
+						
+						<table id="allplacementdb_table">
+  <thead>
+    <tr>
+	  <th><input id="checkall" name="ch" id="ch0" type="checkbox" class="filled-in"><label for="ch0"></label></th>            
+      <th>Active</th>
+      <th>Campaign Name</th>
+      <th>Status</th>
+      <th>Clicks</th>
+      <th>Bot Clicks</th>
+      <th>Applies</th>
+      <th>CPC</th>
+      <th>CPA</th>
+      <th>Spend</th>
+      <th>Budget</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+	  <td><input name="ch" id="ch1" type="checkbox" class="filled-in"><label for="ch1"></label></td> 
+	  <td><img src="images/checkbox_circle.png" alt=""></td> 
+      <td>Heartland Express</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+    <tr>
+	  <td><input name="ch" id="ch2" type="checkbox" class="filled-in"><label for="ch2"></label></td>      
+      <td><img src="images/checkbox_circle.png" alt=""></td>      
+      <td>CRST Specialised Transportation (STI)</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+    <tr>
+	  <td><input name="ch" id="ch3" type="checkbox" class="filled-in"><label for="ch3"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>      
+      <td>Best Logistics</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+    <tr>
+	  <td><input name="ch" id="ch4" type="checkbox" class="filled-in"><label for="ch4"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>CareFirst Bluecross Blueshield</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch5" type="checkbox" class="filled-in"><label for="ch5"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Yuma Regional Medical Centre</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch6" type="checkbox" class="filled-in"><label for="ch6"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>University of Phoenix</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch7" type="checkbox" class="filled-in"><label for="ch7"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>CRST Expedited</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch8" type="checkbox" class="filled-in"><label for="ch8"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>CRST Malone</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch9" type="checkbox" class="filled-in"><label for="ch9"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Mcleod Express</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch10" type="checkbox" class="filled-in"><label for="ch11"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Celadon</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch11" type="checkbox" class="filled-in"><label for="ch11"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Schilli Corporation</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch12" type="checkbox" class="filled-in"><label for="ch12"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Sherman Brother Trucking</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch13" type="checkbox" class="filled-in"><label for="ch13"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Adex Medical Staffing</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch14" type="checkbox" class="filled-in"><label for="ch14"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>IMC Corporation</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch15" type="checkbox" class="filled-in"><label for="ch15"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Navajo Express</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch16" type="checkbox" class="filled-in"><label for="ch16"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>G6 Hospitality</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch17" type="checkbox" class="filled-in"><label for="ch17"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>FCA</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch18" type="checkbox" class="filled-in"><label for="ch18"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>BAYADA - ICIMS</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch19" type="checkbox" class="filled-in"><label for="ch19"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Franchise Career Services</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch20" type="checkbox" class="filled-in"><label for="ch20"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Hirekey - West Marnie</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+  </tbody>
+</table>
+
+						
+						
+                        </div>
+                      </div>
+                    </div>
           </div>
         </div>
       </div>
@@ -6054,9 +6615,19 @@ display: block !important;
 <script src='js/jquery.dataTables.js'></script>
 <script src='js/dataTables.bootstrap.js'></script>
 <script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/allclientdb_table.js"></script>
+<script type="text/javascript" src="js/allplacementdb_table.js"></script>
+
 <script type="text/javascript" src="js/allclient_list.js"></script>
 <script type='text/javascript'>
 window.onload=function(){
+
+	$("#chartdiv .amChartsLegend").append("<span class='svgpos1'>Spend</span><span class='svgpos2'>Applies</span>");
+	$("#chartdiv2 .amChartsLegend").append("<span class='svgpos1'>Spend</span><span class='svgpos2'>Applies</span>");
+	$("#chartdiv3 .amChartsLegend").append("<span class='svgpos1'>Spend</span><span class='svgpos2'>Applies</span>");
+	$("#chartdiv4 .amChartsLegend").append("<span class='svgpos1'>Spend</span><span class='svgpos2'>Applies</span>");	
+
+
 $('.tabular1_scrollbar').perfectScrollbar();
 $('#notifications-dropdown').perfectScrollbar();
 $('#alerts-dropdown').perfectScrollbar();

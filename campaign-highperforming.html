@@ -24,9 +24,8 @@
 <link href="datepicker/bootstrap-datetimepicker.css" rel="stylesheet">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-<link rel='stylesheet prefetch' href='https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css'>
-
+<link rel='stylesheet prefetch' href='css/bootstrap.css'>
+<link rel='stylesheet prefetch' href='css/dataTables.bootstrap.css'>
 <style>
 @media only screen and (min-width: 993px){
 .hide-on-large-only {
@@ -173,7 +172,8 @@ display: block !important;
 <div class="wrapper">
   <!-- START LEFT SIDEBAR NAV-->
   <aside id="left-sidebar-nav">
-    <ul id="slide-out" class="side-nav fixed leftside-navigation">
+    <!--ul id="slide-out" class="side-nav fixed leftside-navigation"-->
+	<ul class="nav-slideleft side-nav fixed leftside-navigation">
       <li class="search-details">
         <div class="header-search-wrapper hide-on-med-and-down"> <i class="fa fa-search" aria-hidden="true"></i>
           <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Search">
@@ -1175,70 +1175,590 @@ display: block !important;
             </div>
           </div>
           <div id="alljobgroupsdatabase" class="col s12" style="display: none;">
-            <div class="container" ng-app="datatable">
-              <div class="panel" data-ng-controller="datatableCtrl">
-                <div class="panel-heading border">
-                  <div class="row">
-                	<div class="col s2 pheading-db-addclient">
-                    	<button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Add Client</button>
+            
+			<div class="maincontainer5">
+              <div style="float:left; width:70%;">
+                <div class="dropdowncontainercss">
+                  <div class="dropdown1 graphdropcss1" style="width:35%">
+                    <button class="btn dropcss dropdown-toggle" type="button" data-toggle="collapse" data-target="#charttab1_5x">Compare Spend & Applies <span class="caret caretcss"></span></button>
+                    <div id="charttab1_5x" class="collapse">
+                      <div class="comparetxthead">Compare: (select two)</div>
+                      <div class="comparecheckboxes">
+                        <div class="ccrow"> <span>
+                          <input type="checkbox" name="clicks_5x" id="clicks_5x">
+                          <label for="clicks_5x">Clicks</label>
+                          </span> <span>
+                          <input type="checkbox" name="cpc_5x" id="cpc_5x">
+                          <label for="cpc_5x">CPC</label>
+                          </span> </div>
+                        <div class="ccrow"> <span>
+                          <input type="checkbox" name="applies_5x" id="applies_5x">
+                          <label for="applies_5x">Applies</label>
+                          </span> <span>
+                          <input type="checkbox" name="cpa_5x" id="cpa_5x">
+                          <label for="cpa_5x">CPA</label>
+                          </span> </div>
+                        <div class="ccrow"> <span>
+                          <input type="checkbox" name="spend_5x" id="spend_5x">
+                          <label for="spend_5x">Spend</label>
+                          </span> <span>
+                          <input type="checkbox" name="cta_5x" id="cta_5x">
+                          <label for="cta_5x">Spend</label>
+                          </span></div>
+                      </div>
                     </div>
-                    <div class="col s2 pheading-db-edit">
-                    	<button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Edit</button>
-                    </div>
-                    <div class="col s3 pheading-db-search">
-                    	<div class="db-search hide-on-med-and-down"> <i class="fa fa-search" aria-hidden="true"></i>
-                          <input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0">
+                  </div>
+                  <div class="dropdown2 graphdropcss2" style="width:25%">
+                    <button class="btn dropcss dropdown-toggle" type="button" data-toggle="collapse" data-target="#charttab2_5x">Custom Date Range <span class="caret caretcss"></span></button>
+                    <div id="charttab2_5x" class="collapse">
+                      <div class="customoption">Last 7 days</div>
+                      <div class="customoption">Last 30 days</div>
+                      <div class="customdates">
+                        <div class="form-group clearfix"> <span class="labeldate">Custom</span>
+                          <div class='input-group date cal' id='datetimepicker3_5x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                            <input type='text' class="form-control-date" name="cdate3_5x" />
+                          </div>
+                          <div class="hypendash">-</div>
+                          <div class='input-group date cal' id='datetimepicker4_5x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                            <input type='text' class="form-control-date" name="cdate4_5x" />
+                          </div>
                         </div>
+                      </div>
+                      <div class="divider"></div>
+                      <br />
+                      <div class="customoption">
+                        <div class="switch">
+                          <label> Compare
+                            <input type="checkbox">
+                            <span class="lever"></span> </label>
+                        </div>
+                      </div>
+                      <div class="customoption">Last 7 days</div>
+                      <div class="customoption">Last 30 days</div>
+                      <div class="customdates">
+                        <div class="form-group clearfix"> <span class="labeldate">Custom</span>
+                          <div class='input-group date cal' id='datetimepicker5_5x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                            <input type='text' class="form-control-date" name="cdate5_5x" />
+                          </div>
+                          <div class="hypendash">-</div>
+                          <div class='input-group date cal' id='datetimepicker6_5x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                            <input type='text' class="form-control-date" name="cdate6_5x" />
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                        <div class="col s2 pheading-db-clientstatus">
-                    	<button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Client Status</button>
+                  </div>
+                  <div class="dropdown3 graphdropcss3" style="width:18%">
+                    <div class='input-group date' id='datetimepicker7_5x'>
+                      <div class="chart_tab3_btn"> <span class="input-group-addon"> <span class="fa fa-calendar calendarcss"></span> </span>
+                        <input type='text' class="form-control-date" name="cdate7_5x" />
+                        <span class="input-group-addon"><span class="caret caretcss1"></span></span> </div>
                     </div>
-                     <div class="col s2 pheading-db-columnview">
-                    	<button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Column View</button>
+                  </div>
+                  <div class="dropdown4 graphdropcss4" style="width:18%">
+                    <div class='input-group date' id='datetimepicker8_5x'>
+                      <div class="chart_tab3_btn"> <span class="input-group-addon"> <span class="fa fa-calendar calendarcss"></span></span>
+                        <input type='text' class="form-control-date" name="cdate8_5x" />
+                        <span class="input-group-addon"><span class="caret caretcss1"></span></span> </div>
                     </div>
-                        <div class="col s1 pheading-db-downloadicon">
-                    	<button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-download" aria-hidden="true"></i></button>
-                    </div>
-                    </div>
+                  </div>
                 </div>
-                <div class="panel-body">
-                  <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
-                    <thead>
-                      <tr>
-                        <th><input type="checkbox" ng-model="ids[doc.provider.Id]" name="chall" id="chall">
-                          <label for="chall"></label></th>
-                        <th>Active</th>
-                        <th>Client Name</th>
-                        <th>Status</th>
-                        <th>Clicks</th>
-                        <th>Bot Clicks</th>
-                        <th>Applies</th>
-                        <th>CPC</th>
-                        <th>CPA</th>
-                        <th>Spend</th>
-                        <th>Budget</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr ng-repeat="n in data">
-                        <td><input type="checkbox" name="cb" id="cb">
-                          <label for="cb"></label></td>
-                        <td><img src="images/checkbox.png" /></td>
-                        <td>{{n[1]}}</td>
-                        <td>{{n[2]}}</td>
-                        <td>{{n[3]}}</td>
-                        <td>{{n[4]}}</td>
-                        <td>{{n[5]}}</td>
-                        <td>{{n[6]}}</td>
-                        <td>{{n[7]}}</td>
-                        <td>{{n[8]}}</td>
-                        <td>{{n[9]}}</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div id="chartdiv5"></div>
+              </div>
+              <div class="sidesectioncss">
+                <h4>Comparison - Summary</h4>
+                <div class="list-group a activeldd5" id="a" style="display:block; float:left; width:50%; border-right:1px solid #dedede;">
+                  <div class=bluecirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="bluetextcss">2,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="bluetextcss">185</p>
+                  <h6 class="">Spend</h6>
+                  <p class="bluetextcss">$6,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="bluetextcss">$3.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="bluetextcss">$12.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="bluetextcss">3%</p>
+                </div>
+                <div class="list-group b activeldd5" id="b" style="display:block; float:left; width:50%;">
+                  <div class=orangecirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="orangetextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="orangetextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="orangetextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="orangetextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="orangetextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="orangetextcss">4%</p>
+                </div>
+                <div class="list-group c" id="c" style="display:none; float:left; width:50%;">
+                  <div class=lemoncirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="lemontextcss">2,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="lemontextcss">185</p>
+                  <h6 class="">Spend</h6>
+                  <p class="lemontextcss">$6,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="lemontextcss">$3.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="lemontextcss">$12.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="lemontextcss">3%</p>
+                </div>
+                <div class="list-group d" id="d" style="display:none; float:left; width:50%;">
+                  <div class=greycirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="greytextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="greytextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="greytextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="greytextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="greytextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="greytextcss">4%</p>
+                </div>
+                <div class="list-group e" id="e" style="display:none; float:left; width:50%;">
+                  <div class=purplecirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="purpletextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="purpletextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="purpletextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="purpletextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="purpletextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="purpletextcss">4%</p>
+                </div>
+                <div class="list-group f" id="f" style="display:none; float:left; width:50%;">
+                  <div class=redcirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="redtextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="redtextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="redtextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="redtextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="redtextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="redtextcss">4%</p>
+                </div>
+                <div class="list-group g" id="g" style="display:none; float:left; width:50%;">
+                  <div class=yellowcirclelist></div>
+                  <h6 class="">Clicks</h6>
+                  <p class="yellowtextcss">3,659</p>
+                  <h6 class="">Applies</h6>
+                  <p class="yellowtextcss">195</p>
+                  <h6 class="">Spend</h6>
+                  <p class="yellowtextcss">$7,365</p>
+                  <h6 class="">CPC</h6>
+                  <p class="yellowtextcss">$4.68</p>
+                  <h6 class="">CPA</h6>
+                  <p class="yellowtextcss">$15.34</p>
+                  <h6 class="">CTA</h6>
+                  <p class="yellowtextcss">4%</p>
                 </div>
               </div>
+              <footer>
+                <div class="footerheading">Search for Companies</div>
+                <div class="chip2 activeimg2">
+                  <div class="bluecirclecss"></div>
+                  <label for="companya_5x"> Heartland Express &nbsp;</label>
+                  <input type="checkbox" name="comparision_5[]" id="companya_5x" value="a" checked>
+                  <img src="images/pin.png"> </div>
+                <div class="chip2 activeimg2">
+                  <div class="orangecirclecss"></div>
+                  <label for="companyb_5x"> CRST Specialised &nbsp;</label>
+                  <input type="checkbox" name="comparision_5{}" id="companyb_5x" value="b" checked>
+                  <img src="images/pin.png"> </div>
+                <div class="chip2">
+                  <div class="lemoncirclecss"></div>
+                  <label for="companyc_5x"> Carefirst Bluecross &nbsp;</label>
+                  <input type="checkbox" name="comparision_5{}" id="companyc_5x" value="c" disabled>
+                  <img src="images/pin.png"> </div>
+                <div class="chip2">
+                  <div class="greycirclecss"></div>
+                  <label for="companyd_5x"> Yuma Regional &nbsp;</label>
+                  <input type="checkbox" name="comparision_5{}" id="companyd_5x" value="d" disabled>
+                  <img src="images/pin.png"> </div>
+                <div class="chip2">
+                  <div class="purplecirclecss"></div>
+                  <label for="companye_5x"> Hirekey &nbsp;</label>
+                  <input type="checkbox" name="comparision_5{}" id="companye_5x" value="e" disabled>
+                  <img src="images/pin.png"> </div>
+                <div class="chip2">
+                  <div class="redcirclecss"></div>
+                  <label for="companyf_5x"> University of Phoenix &nbsp;</label>
+                  <input type="checkbox" name="comparision_5{}" id="companyf_5x" value="f" disabled>
+                  <img src="images/pin.png"> </div>
+                <div class="chip2">
+                  <div class="yellowcirclecss"></div>
+                  <label for="companyg_5x"> University of Phoenix &nbsp;</label>
+                  <input type="checkbox" name="comparision_5{}" id="companyg_5x" value="g" disabled>
+                  <img src="images/pin.png"> </div>
+              </footer>
             </div>
+			
+			<div class="container" ng-app="datatable">
+                      <div class="panel" data-ng-controller="datatableCtrl">
+                        
+                        <div class="panel-heading2 border">
+                          <div class="row">
+                            <div class="col s2 pheading-db-addclient">
+                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Add Client</button>
+                            </div>
+                            <div class="col s2 pheading-db-edit">
+                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Edit <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="col s3 pheading-db-search">
+                              <div class="db-search hide-on-med-and-down"> <i class="fa fa-search" aria-hidden="true"></i>
+                                <input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0">
+                              </div>
+                            </div>
+                            <div class="col s2 pheading-db-automation-btn">
+                              <a class="dropdown-button btn dropcss dropdown-toggle" href='#' data-activates='dropdown1' data-beloworigin="true">Automation  <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+							  <ul id='dropdown1' class='dropdown-content'>
+    <li><a class='dropdown-button2 d' href="#"  data-activates='dropdown2' data-hover="hover" data-alignment="left">Create Automation <i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+	<li><a href="#">Manage Rules</a></li>
+    <li><a href="#">Select Existing Rules</a></li>
+    <li><a href="#">Ad Expansion</a></li>
+</ul>
+<ul id='dropdown2' class='dropdown-content'>
+    <li><a href="#!">Bid Strategy</a></li>
+    <li><a href="#!">Administration</a></li>
+    <li><a href="#!">Performance</a></li>
+    <li><a href="#!">Placements</a></li>
+</ul>
+
+                            </div>
+
+		
+
+
+
+
+
+
+
+
+
+
+							
+							
+							
+                            <div class="col s2 pheading-db-columnview">
+                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Column View <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="col s1 pheading-db-downloadicon">
+                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-download" aria-hidden="true"></i></button>
+                            </div>
+							
+							
+                          </div>
+                        </div>
+                        <div class="panel-body">
+						
+						<table id="allcampaigndb_table">
+  <thead>
+    <tr>
+	  <th><input id="checkall" name="ch" id="ch0" type="checkbox" class="filled-in"><label for="ch0"></label></th>            
+      <th>Active</th>
+      <th>Campaign Name</th>
+      <th>Status</th>
+      <th>Clicks</th>
+      <th>Bot Clicks</th>
+      <th>Applies</th>
+      <th>CPC</th>
+      <th>CPA</th>
+      <th>Spend</th>
+      <th>Budget</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+	  <td><input name="ch" id="ch1" type="checkbox" class="filled-in"><label for="ch1"></label></td> 
+	  <td><img src="images/checkbox_circle.png" alt=""></td> 
+      <td>Heartland Express</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+    <tr>
+	  <td><input name="ch" id="ch2" type="checkbox" class="filled-in"><label for="ch2"></label></td>      
+      <td><img src="images/checkbox_circle.png" alt=""></td>      
+      <td>CRST Specialised Transportation (STI)</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+    <tr>
+	  <td><input name="ch" id="ch3" type="checkbox" class="filled-in"><label for="ch3"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>      
+      <td>Best Logistics</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+    <tr>
+	  <td><input name="ch" id="ch4" type="checkbox" class="filled-in"><label for="ch4"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>CareFirst Bluecross Blueshield</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch5" type="checkbox" class="filled-in"><label for="ch5"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Yuma Regional Medical Centre</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch6" type="checkbox" class="filled-in"><label for="ch6"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>University of Phoenix</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch7" type="checkbox" class="filled-in"><label for="ch7"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>CRST Expedited</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch8" type="checkbox" class="filled-in"><label for="ch8"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>CRST Malone</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch9" type="checkbox" class="filled-in"><label for="ch9"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Mcleod Express</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch10" type="checkbox" class="filled-in"><label for="ch11"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Celadon</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch11" type="checkbox" class="filled-in"><label for="ch11"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Schilli Corporation</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch12" type="checkbox" class="filled-in"><label for="ch12"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Sherman Brother Trucking</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch13" type="checkbox" class="filled-in"><label for="ch13"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Adex Medical Staffing</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch14" type="checkbox" class="filled-in"><label for="ch14"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>IMC Corporation</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch15" type="checkbox" class="filled-in"><label for="ch15"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Navajo Express</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch16" type="checkbox" class="filled-in"><label for="ch16"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>G6 Hospitality</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch17" type="checkbox" class="filled-in"><label for="ch17"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>FCA</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch18" type="checkbox" class="filled-in"><label for="ch18"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>BAYADA - ICIMS</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch19" type="checkbox" class="filled-in"><label for="ch19"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Franchise Career Services</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+	<tr>
+	  <td><input name="ch" id="ch20" type="checkbox" class="filled-in"><label for="ch20"></label></td>            
+      <td><img src="images/checkbox_circle.png" alt=""></td>
+      <td>Hirekey - West Marnie</td>
+      <td>3204 Live</td>
+      <td>19753</td>
+      <td>231</td>
+      <td>386</td>
+      <td>$0.66</td>
+      <td>$13.66</td>
+      <td>$2222.25</td>
+      <td>$6700 Monthly</td>
+    </tr>
+  </tbody>
+</table>
+
+						
+						
+                        </div>
+                      </div>
+                    </div>
+			
+			
           </div>
         </div>
       </div>
@@ -1285,37 +1805,37 @@ display: block !important;
 <!-- ================================================
     Scripts
     ================================================ -->
-<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-<script src="https://www.amcharts.com/lib/3/serial.js"></script>
-<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/amcharts.js"></script>
+<script src="js/serial.js"></script>
+<script src="js/export.js"></script>
+<link rel="stylesheet" href="js/export.css" type="text/css" media="all" />
+<script src="js/light.js"></script>
+
+<script type="text/javascript" src="js/jquery-2.js"></script>
+<script src="js/bootstrap.js"></script>
 <script src="https://use.fontawesome.com/c0640f5159.js"></script>
 
-<script src="js/chart.js"></script>
 <script src="js/chart2.js"></script>
-<script src="js/chart3.js"></script>
+<script src="js/chart5.js"></script>
 
 <!--materialize js-->
-<script type="text/javascript" src="http://demo.geekslabs.com/materialize-v1.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
 <!--prism-->
 <script type="text/javascript" src="js/prism.js"></script>
 <!--scrollbar-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/perfect-scrollbar.jquery.js"></script>
 <!--plugins.js - Some Specific JS codes for Plugin Settings-->
-<script type="text/javascript" src="http://demo.geekslabs.com/materialize-v1.0/js/plugins.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
 <!--custom-script.js - Add your own theme custom JS-->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="datepicker/moment-with-locales.js.download"></script>
 <script src="datepicker/bootstrap-datetimepicker.js.download"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.0/ui-bootstrap-tpls.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js'></script>
+<script src='js/ui-bootstrap-tpls.min.js'></script>
+<script src='js/angular-ui-utils.min.js'></script>
 <script src='js/jquery.dataTables.js'></script>
 <script src='js/dataTables.bootstrap.js'></script>
 <script type="text/javascript" src="js/script.js"></script>
-<script type="text/javascript" src="js/allclient_list.js"></script>
+<script type="text/javascript" src="js/allcampaigndb_table.js"></script>
 <script type='text/javascript'>
 window.onload=function(){
 $('.tabular1_scrollbar').perfectScrollbar();

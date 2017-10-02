@@ -145,7 +145,8 @@ display: block !important;
 <div class="wrapper">
   <!-- START LEFT SIDEBAR NAV-->
   <aside id="left-sidebar-nav">
-    <ul id="slide-out" class="side-nav fixed leftside-navigation">
+    <!--ul id="slide-out" class="side-nav fixed leftside-navigation"-->
+	  <ul class="nav-slideleft side-nav fixed leftside-navigation">
       <li class="search-details">
         <div class="header-search-wrapper hide-on-med-and-down"> <i class="fa fa-search" aria-hidden="true"></i>
           <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Search">
@@ -275,7 +276,7 @@ display: block !important;
   <div class="container">
     <div class="col s12 m8 l9 tab1">
       <div class="row">
-        <div class="col s7">
+        <div class="col s5">
           <ul class="tabs tab-demo-active z-depth-1">
             <li class="tab col"><a class="waves-effect waves-light active" href="#campaign_alljobgroups">All Campaigns</a></li>
             <li class="tab col"><a class="waves-effect waves-light" href="#campaign_jobs">Jobs</a></li>
@@ -393,7 +394,7 @@ display: block !important;
                       </div>
                       <div class="sidesectioncss">
                         <h4>Comparison - Summary</h4>
-                        <div class="list-group a activeldd" id="a" style="display:block; float:left; width:50%; border-right:1px solid #dedede;">
+                        <div class="list-group a activeldd" id="a" style="display:block; float:left; width:47%; border-right:1px solid #dedede;">
                           <div class=bluecirclelist></div>
                           <h6 class="">Clicks</h6>
                           <p class="bluetextcss">2,659</p>
@@ -408,7 +409,7 @@ display: block !important;
                           <h6 class="">CTA</h6>
                           <p class="bluetextcss">3%</p>
                         </div>
-                        <div class="list-group b activeldd" id="b" style="display:block; float:left; width:50%;">
+                        <div class="list-group b activeldd" id="b" style="display:block; float:left; width:50%; padding-left:21%">
                           <div class=orangecirclelist></div>
                           <h6 class="">Clicks</h6>
                           <p class="orangetextcss">3,659</p>
@@ -1814,7 +1815,7 @@ display: block !important;
               </div>
               <div class="sidesectioncss">
                 <h4>Comparison - Summary</h4>
-                <div class="list-group a activeldd4" id="a" style="display:block; float:left; width:50%; border-right:1px solid #dedede;">
+                <div class="list-group a activeldd4" id="a" style="display:block; float:left; width:47%; border-right:1px solid #dedede;">
                   <div class=bluecirclelist></div>
                   <h6 class="">Clicks</h6>
                   <p class="bluetextcss">2,659</p>
@@ -1829,7 +1830,7 @@ display: block !important;
                   <h6 class="">CTA</h6>
                   <p class="bluetextcss">3%</p>
                 </div>
-                <div class="list-group b activeldd4" id="b" style="display:block; float:left; width:50%;">
+                <div class="list-group b activeldd4" id="b" style="display:block; float:left; width:50%; padding-left:21%">
                   <div class=orangecirclelist></div>
                   <h6 class="">Clicks</h6>
                   <p class="orangetextcss">3,659</p>
@@ -1964,7 +1965,7 @@ display: block !important;
                         <div class="panel-heading2 border">
                           <div class="row">
                             <div class="col s2 pheading-db-addclient">
-                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Add Client</button>
+                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Add Campagin</button>
                             </div>
                             <div class="col s2 pheading-db-edit">
                               <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Edit</button>
@@ -1987,11 +1988,10 @@ display: block !important;
                         </div>
                         <div class="panel-body">
 
-						<table id="exampleTable">
+						<table id="allcampaigndb_table">
   <thead>
     <tr>
-      <th></th>
-	  <th><input type="checkbox" name=""></th>            
+      <th><input id="checkall" name="ch" id="ch0" type="checkbox" class="filled-in"><label for="ch0"></label></th>            
       <th>Active</th>
       <th>Campagin Name</th>
       <th>Status</th>
@@ -2007,8 +2007,7 @@ display: block !important;
   </thead>
   <tbody>
     <tr>
-      <td class="id">1</td>
-	  <td><input type="checkbox" name=""></td>      
+	  <td><input name="ch" id="ch1" type="checkbox" class="filled-in"><label for="ch1"></label></td>      
       <td><img src="images/checkbox_circle.png" alt=""></td>
       <td>High Performning Campaign</td>
       <td>3204 Live</td>
@@ -2019,11 +2018,10 @@ display: block !important;
       <td>$13.66</td>
       <td>$2222.25</td>
       <td>$6700 Monthly</td>
-      <td><img src="images/enable.png" alt="" /></td>
+      <td><img id="1" src="images/enable.png" alt="" /></td>
     </tr>
     <tr>
-      <td class="id">2</td>
-	  <td><input type="checkbox" name=""></td>      
+      <td><input name="ch" id="ch1" type="checkbox" class="filled-in"><label for="ch1"></label></td>      
       <td><img src="images/checkbox_circle.png" alt=""></td>      
       <td>Low Performning Campaign</td>
       <td>3204 Live</td>
@@ -2034,11 +2032,10 @@ display: block !important;
       <td>$13.66</td>
       <td>$2222.25</td>
       <td>$6700 Monthly</td>
-      <td><img src="images/enable.png" alt="" /></td>
+      <td><img id="2" src="images/enable.png" alt="" /></td>
     </tr>
     <tr>
-      <td class="id">3</td>
-	  <td><input type="checkbox" name=""></td>            
+      <td id="3"><input name="ch" id="ch1" type="checkbox" class="filled-in"><label for="ch1"></label></td>            
       <td><img src="images/checkbox_circle.png" alt=""></td>      
       <td>Deafult Campaign</td>
       <td>3204 Live</td>
@@ -2049,11 +2046,10 @@ display: block !important;
       <td>$13.66</td>
       <td>$2222.25</td>
       <td>$6700 Monthly</td>
-      <td><img src="images/enable.png" alt="" /></td>
+      <td><img id="3" src="images/enable.png" alt="" /></td>
     </tr>
     <tr>
-      <td class="id">4</td>
-	  <td><input type="checkbox" name=""></td>            
+      <td><input name="ch" id="ch1" type="checkbox" class="filled-in"><label for="ch1"></label></td>            
       <td><img src="images/checkbox_circle.png" alt=""></td>
       <td>General Campaign</td>
       <td>3204 Live</td>
@@ -2064,7 +2060,7 @@ display: block !important;
       <td>$13.66</td>
       <td>$2222.25</td>
       <td>$6700 Monthly</td>
-      <td><img src="images/enable.png" alt="" /></td>
+      <td><img id="4" src="images/enable.png" alt="" /></td>
     </tr>
   </tbody>
 </table>
@@ -2428,13 +2424,23 @@ display: block !important;
 <link rel='stylesheet prefetch' href='datatable/dataTables.css'>
 <script src='datatable/jquery.dataTables.js'></script>
 
-<script type="text/javascript" src="js/script_db.js"></script>
-
 <script type="text/javascript" src="js/script.js"></script>
+
+<script type="text/javascript" src="js/script_db.js"></script>
 
 
 <script type='text/javascript'>
 window.onload=function(){
+
+	$("#chartdiv .amChartsLegend").append("<span class='svgpos1'>Spend</span><span class='svgpos2'>Applies</span>");
+	$("#chartdiv2 .amChartsLegend").append("<span class='svgpos1'>Spend</span><span class='svgpos2'>Applies</span>");
+	$("#chartdiv3 .amChartsLegend").append("<span class='svgpos1'>Spend</span><span class='svgpos2'>Applies</span>");
+	$("#chartdiv4 .amChartsLegend").append("<span class='svgpos1'>Spend</span><span class='svgpos2'>Applies</span>");	
+
+	$("#allcampaigndb_table_previous").html('<i class="fa fa-angle-left" aria-hidden="true"></i>')
+        $("#allcampaigndb_table_next").html('<i class="fa fa-angle-right" aria-hidden="true"></i>')
+
+
 $('.tabular1_scrollbar').perfectScrollbar();
 $('#notifications-dropdown').perfectScrollbar();
 $('#alerts-dropdown').perfectScrollbar();

@@ -1,15 +1,30 @@
+  $('.dropdown-button1').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: ($('.dropdown-content').width()*3)/2.5 + 5, // Spacing from edge
+      belowOrigin: false, // Displays dropdown below the button
+      alignment: 'left' // Displays dropdown with edge aligned to the left of button
+    }
+  );
+  $('.dropdown-button2').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: ($('.dropdown-content').width()*3)/2.5 + 5, // Spacing from edge
+      belowOrigin: false, // Displays dropdown below the button
+      alignment: 'left' // Displays dropdown with edge aligned to the left of button
+    }
+  );
+        
+		
 
-/*$('.footerbtn').click(function(){
-	$(this).find('.imgcss').toggle();
-	$(this).addClass("activebtn");
-	var getval = $(this).attr('id');
-	$('#'+getval).addClass('activebtn');
-	
-});*/
-
-/*$('#DataTables_Table_0_next a').html('<i class="fa fa-chevron-right" aria-hidden="true"></i>');											 
-$('.DataTables_Table_0_previous a').html('<i class="fa fa-chevron-left" aria-hidden="true"></i>');											 */
-
+$(".sidebar-collapse").on("click",function(){
+	$("#main").toggleClass("slideleft");
+	$(".nav-slideleft").toggleClass("navleftslide");
+});
 
 
 $('.chip input[type="checkbox"]').click(function(){
@@ -43,6 +58,33 @@ $('.chip input[type="checkbox"]').click(function(){
 	}
   });
 
+$('.chip2 input[type="checkbox"]').click(function(){
+												  
+	var inputValue2 = $(this).attr("value");
+	$(".maincontainer2 ." + inputValue2).removeClass("activeldd2");
+	$(".maincontainer2 .list-group").removeClass("firstcheck2");
+	$(".maincontainer2 ." + inputValue2).toggle();												  
+													 
+
+if ($(".chip2 :checkbox[type='checkbox']:checked").length == 0)  { 
+	$(".maincontainer2 .list-group").removeClass("activeldd2");
+	$(".maincontainer2 .activeldd2:eq(0)").removeClass("firstcheck2");
+	$(".maincontainer2 div.chip2").removeClass("activeimg2");
+}
+
+if ($(".chip2 :checkbox[type='checkbox']:checked").length == 2)  {      
+  //not(:checked)
+   
+   $('.chip2 :checkbox:not(:checked)').prop('disabled', true);
+   $(".maincontainer2 ." + inputValue2).addClass("activeldd2");
+   $(".maincontainer2 .activeldd2:eq(0)").addClass("firstcheck2");
+   $(this).closest('div.chip2').addClass('activeimg2');
+}
+  else { 
+   $('.chip2 :checkbox:not(:checked)').prop('disabled', false);  
+}
+});
+
 $('.chip3 input[type="checkbox"]').click(function(){
 												  
 	var inputValue3 = $(this).attr("value");
@@ -70,16 +112,84 @@ if ($(".chip3 :checkbox[type='checkbox']:checked").length == 2)  {
 }
 });
 
+$('.chip4 input[type="checkbox"]').click(function(){
+												  
+	var inputValue4 = $(this).attr("value");
+	$(".maincontainer4 ." + inputValue4).removeClass("activeldd4");
+	$(".maincontainer4 .list-group").removeClass("firstcheck4");
+	$(".maincontainer4 ." + inputValue4).toggle();												  
+													 
+
+if ($(".chip4 :checkbox[type='checkbox']:checked").length == 0)  { 
+	$(".maincontainer4 .list-group").removeClass("activeldd4");
+	$(".maincontainer4 .activeldd4:eq(0)").removeClass("firstcheck4");
+	$(".maincontainer4 div.chip4").removeClass("activeimg4");
+}
+
+if ($(".chip4 :checkbox[type='checkbox']:checked").length == 2)  {      
+  //not(:checked)
+   
+   $('.chip4 :checkbox:not(:checked)').prop('disabled', true);
+   $(".maincontainer4 ." + inputValue4).addClass("activeldd4");
+   $(".maincontainer4 .activeldd4:eq(0)").addClass("firstcheck4");
+   $(this).closest('div.chip4').addClass('activeimg4');
+}
+  else { 
+   $('.chip4 :checkbox:not(:checked)').prop('disabled', false);  
+}
+});
+
+$('.chip5 input[type="checkbox"]').click(function(){
+												  
+	var inputValue5 = $(this).attr("value");
+	$(".maincontainer5 ." + inputValue5).removeClass("activeldd5");
+	$(".maincontainer5 .list-group").removeClass("firstcheck5");
+	$(".maincontainer5 ." + inputValue5).toggle();												  
+													 
+
+if ($(".chip5 :checkbox[type='checkbox']:checked").length == 0)  { 
+	$(".maincontainer5 .list-group").removeClass("activeldd5");
+	$(".maincontainer5 .activeldd5:eq(0)").removeClass("firstcheck5");
+	$(".maincontainer5 div.chip5").removeClass("activeimg5");
+}
+
+if ($(".chip5 :checkbox[type='checkbox']:checked").length == 2)  {      
+  //not(:checked)
+   
+   $('.chip5 :checkbox:not(:checked)').prop('disabled', true);
+   $(".maincontainer5 ." + inputValue5).addClass("activeldd5");
+   $(".maincontainer5 .activeldd5:eq(0)").addClass("firstcheck5");
+   $(this).closest('div.chip5').addClass('activeimg5');
+}
+  else { 
+   $('.chip5 :checkbox:not(:checked)').prop('disabled', false);  
+}
+});
+
+
+/*
 $('#alerts-dropdown').perfectScrollbar();
 $('#notifications-dropdown').perfectScrollbar();
-
+*/
 
 
 $('#datetimepicker3_1x, #datetimepicker4_1x, #datetimepicker5_1x, #datetimepicker6_1x, #datetimepicker7_1x, #datetimepicker8_1x').datetimepicker({
 	format: 'MMM DD, YY',
 	defaultDate: new Date()									 
 });
+$('#datetimepicker3_2x, #datetimepicker4_2x, #datetimepicker5_2x, #datetimepicker6_2x, #datetimepicker7_2x, #datetimepicker8_2x').datetimepicker({
+	format: 'MMM DD, YY',
+	defaultDate: new Date()										 
+});
 $('#datetimepicker3_3x, #datetimepicker4_3x, #datetimepicker5_3x, #datetimepicker6_3x, #datetimepicker7_3x, #datetimepicker8_3x').datetimepicker({
+	format: 'MMM DD, YY',
+	defaultDate: new Date()										 
+});
+$('#datetimepicker3_4x, #datetimepicker4_4x, #datetimepicker5_4x, #datetimepicker6_4x, #datetimepicker7_4x, #datetimepicker8_4x').datetimepicker({
+	format: 'MMM DD, YY',
+	defaultDate: new Date()										 
+});
+$('#datetimepicker3_5x, #datetimepicker4_5x, #datetimepicker5_5x, #datetimepicker6_5x, #datetimepicker7_5x, #datetimepicker8_5x').datetimepicker({
 	format: 'MMM DD, YY',
 	defaultDate: new Date()										 
 });
@@ -122,7 +232,6 @@ $("#datetimepicker8").on("dp.change", function (e) {
 	$('#datetimepicker7').data("DateTimePicker").maxDate(e.date);
 });
 
-datetimepicker7_1x
 
 /* notification */
 

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="description" content=" ">
+<meta name="keywords" content="">
+<title>Add Client</title>
+<!-- Favicons-->
+<link rel="icon" href="images/favicon-32x32.png" sizes="32x32">
+<!-- Favicons-->
+<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-152x152.png">
+<!-- Material Bootstrap core CSS -->
+<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+<link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+<!-- Custome CSS-->
+<link href="css/custom.css" type="text/css" rel="stylesheet" media="screen,projection">
+<!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+<link href="css/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
+<link rel="stylesheet" type="text/css" href="css/perfect-scrollbar.css">
+<link rel="stylesheet" type="text/css" media="screen" href="datepicker/bootstrap.min.css">
+<link href="datepicker/bootstrap-datetimepicker.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel='stylesheet prefetch' href='css/bootstrap.css'>
+<link rel='stylesheet prefetch' href='css/dataTables.bootstrap.css'>
+<link rel='stylesheet prefetch' href='css/jquery.steps.css'>
+<style>
+@media only screen and (min-width: 993px) {
+.hide-on-large-only {
+display: block !important;
+}
+}
+</style>
+</head>
+<body>
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!-- START HEADER -->
+<header id="header" class="page-topbar">
+  <!-- start header nav-->
+  <div class="navbar-fixed">
+    <nav class="navbar-color">
+      <div class="nav-wrapper">
+        <ul class="left">
+          <li>
+            <h1 class="logo-wrapper"><a href="#" class="brand-logo darken-1"><img src="images/logo.jpg" class="logo" alt="Logo"></a> <span class="logo-text">Email Campaign Management System</span></h1>
+          </li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light translation-button" data-activates="translation-dropdown">Recommendations<small class="notification-badge">5</small></a> </li>
+          <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light notification-button" data-activates="notifications-dropdown">Notifications<small class="notification-badge">5</small></a> </li>
+          <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light notification-button" data-activates="alerts-dropdown">Alerts<small class="notification-badge">5</small> </a> </li>
+          <li><a href="#" data-activates="profile-dropdown" class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn"> <img src="images/avatar.png" alt="" class="circle responsive-img valign profile-image"> </a>
+            <ul id="profile-dropdown" class="dropdown-content active" style="width: 128px; position: absolute; top: 57px;  opacity: 1; display: none;">
+              <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile</a> </li>
+              <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a> </li>
+              <li><a href="#"><i class="fa fa-question-circle-o" aria-hidden="true"></i> Help</a> </li>
+              <li class="divider"></li>
+              <li><a href="#"><i class="fa fa-lock" aria-hidden="true"></i> Lock</a> </li>
+              <li><a href="#"><i class="fa fa-sign-out " aria-hidden="true"></i> Logout</a> </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- alerts-dropdown -->
+        <ul id="alerts-dropdown" class="dropdown-content">
+          <li>
+            <div class="data_custom1"><a href="#!">Last 7 days</a></div>
+            <div class="data_custom2"><a href="#!">Last 30 days</a></div>
+          </li>
+          <li class="data_custom3">
+            <div class="form-group clearfix">
+            <span class="labeldate">Custom</span>
+            <div class='input-group date cal' id='datetimepicker9a'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+              <input class="form-control date" name="cdate9a" type="text">
+            </div>
+            <div class="hypendash">-</div>
+            <div class='input-group date cal' id='datetimepicker10a'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+              <input class="form-control date" name="cdate10a" type="text">
+            </div>
+            </div>
+          </li>
+          <li class="divider"></li>
+          <li class="data_custom4"> <span>
+            <input class="with-gap" name="alertgroup" type="radio" id="notify" checked />
+            <label for="notify">Notifications</label>
+            </span> <span>
+            <input class="with-gap" name="alertgroup" type="radio" id="alerts"/>
+            <label for="alerts">Alerts</label>
+            </span> </li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+        </ul>
+        <!-- notifications-dropdown -->
+        <ul id="notifications-dropdown" class="dropdown-content">
+          <li>
+            <div class="data_custom1"><a href="#!">Last 7 days</a></div>
+            <div class="data_custom2"><a href="#!">Last 30 days</a></div>
+          </li>
+          <li class="data_custom3">
+            <div class="form-group clearfix"> <span class="labeldate">Custom</span>
+              <div class='input-group date cal' id='datetimepicker9b'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                <input class="form-control-date" name="cdate9b" type="text">
+              </div>
+              <div class="hypendash">-</div>
+              <div class='input-group date cal' id='datetimepicker10b'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                <input class="form-control-date" name="cdate10b" type="text">
+              </div>
+            </div>
+          </li>
+          <li class="divider"></li>
+          <li class="data_custom4"> <span>
+            <input class="with-gap" name="notifygroup" type="radio" id="notify" checked />
+            <label for="notify">Notifications</label>
+            </span> <span>
+            <input class="with-gap" name="notifygroup" type="radio" id="alerts"/>
+            <label for="alerts">Alerts</label>
+            </span> </li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- end header nav-->
+</header>
+<!-- END HEADER -->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!-- START MAIN -->
+<div id="main">
+<!-- START WRAPPER -->
+<div class="wrapper">
+  <!-- START LEFT SIDEBAR NAV-->
+  <aside id="left-sidebar-nav">
+    <!--ul id="slide-out" class="side-nav fixed leftside-navigation"-->
+	<ul class="nav-slideleft side-nav fixed leftside-navigation">
+	<li class="search-details">
+        <div class="header-search-wrapper hide-on-med-and-down"> <i class="fa fa-search" aria-hidden="true"></i>
+          <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Search">
+        </div>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible"  data-collapsible="accordion">
+          <li class="bold sidemenu active"><a class="collapsible-header active" style="padding-top:0px;"> All Clients </a><span class="listno">16</span>
+            <div class="collapsible-body" style="display:block;">
+              <ul class="collapsible collapsible-accordion">
+                <li class="no-padding">
+                  <ul class="collapsible collapsible-accordion">
+                    <li class="bold"><a class="collapsible-header" href="allcampaign.html"> Heartland Expresss <i class="fa fa-angle-right"></i></a>
+                      <div class="collapsible-body">
+                        <ul class="collapsible collapsible-accordion sublist">
+                          <li><a class="collapsible-header waves-effect waves-cyan" href="campaign-highperforming.html">High Performing Campaign <i class="fa fa-angle-right"></i></a>
+                            <div class="collapsible-body sub_sublist active">
+                              <ul>
+                                <li class="twolines"><a href="#">CDL-A Truck Driver - Great Pay and Routes <i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#">Class A CDL Truck Driver <i class="fa fa-angle-right"></i></a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li><a href="#">Low Performing Campaign <i class="fa fa-angle-right"></i></a> </li>
+                          <li><a href="#">Default Campaign <i class="fa fa-angle-right"></i></a> </li>
+                          <li><a href="#">General Campaign <i class="fa fa-angle-right"></i></a> </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="bold"><a href="#" class="waves-cyan"> CRST Specialised <i class="fa fa-angle-right"></i></a> </li>
+                <li class="bold"><a href="#" class="waves-cyan"> Best Logistics <i class="fa fa-angle-right"></i></a> </li>
+                <li class="bold"><a href="#" class="waves-cyan"> Carefirst Bluecrosss <i class="fa fa-angle-right"></i></a> </li>
+                <li class="no-padding">
+                  <ul class="collapsible collapsible-accordion">
+                    <li class="bold"><a class="collapsible-header waves-cyan"> Yuma Regional <i class="fa fa-angle-right"></i></a>
+                      <div class="collapsible-body">
+                        <ul>
+                          <li><a href="#">Typography <i class="fa fa-angle-right"></i></a> </li>
+                          <li><a href="#">Icons <i class="fa fa-angle-right"></i></a> </li>
+                          <li><a href="#">Animations <i class="fa fa-angle-right"></i></a> </li>
+                          <li><a href="#">Shadow <i class="fa fa-angle-right"></i></a> </li>
+                          <li><a href="#">Media <i class="fa fa-angle-right"></i></a> </li>
+                          <li><a href="#">Sass <i class="fa fa-angle-right"></i></a> </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="bold"><a class="collapsible-header  waves-cyan"> Hirekey<i class="fa fa-angle-right"></i></a></li>
+                    <li class="bold"><a class="collapsible-header waves-cyan"> University of Phoenix <i class="fa fa-angle-right"></i></a></li>
+                    <li class="bold"><a href="#" class="waves-cyan"> CRST Malone <i class="fa fa-angle-right"></i></a> </li>
+                    <li class="bold"><a class="collapsible-header  waves-cyan"> Mcleod Express <i class="fa fa-angle-right"></i></a></li>
+                    <li class="bold"><a class="collapsible-header  waves-cyan"> Celadon <i class="fa fa-angle-right"></i></a></li>
+                    <li class="bold"><a class="collapsible-header  waves-cyan"> Schilli Corporation <i class="fa fa-angle-right"></i></a></li>
+                    <li class="bold"><a class="collapsible-header  waves-cyan"> Sherman Brothers <i class="fa fa-angle-right"></i></a></li>
+                    <li class="bold"><a class="collapsible-header  waves-cyan">Adex Medical <i class="fa fa-angle-right"></i></a></li>
+                    <li class="bold"><a class="collapsible-header  waves-cyan">TMC Corporation <i class="fa fa-angle-right"></i></a></li>
+                    <li class="bold"><a class="collapsible-header waves-cyan"> Navajo Express <i class="fa fa-angle-right"></i></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="bold sidemenu"><a class="collapsible-header"> All Category <i class="fa fa-angle-right"></i></a><span class="listno">25</span>
+            <div class="collapsible-body">
+              <ul class="collapsible collapsible-accordion">
+                <li><a href="#">Accounting <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Administration <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Consulting <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Customer Service <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Distribution <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Finance <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Health Services <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Hospitality <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Human Resources <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Insurance <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Internet <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Legal <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Marketing <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Media <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Nursing <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Operations <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Quality <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Real Estate <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Retail <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Sales <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Software <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Training <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Trucking <i class="fa fa-angle-right"></i></a> </li>
+                <li><a href="#">Warehouse <i class="fa fa-angle-right"></i></a> </li>
+              </ul>
+            </div>
+          </li>
+          <li class="porgress_side list3">
+            <div class="progessupdate"> <span class="col-sm-8">All Clients/Budget</span><span class="col-sm-4 alignright">16/$59,584</span> </div>
+            <div class="progressbar"> <span class="dvalbar" style="width: 75%"></span> </div>
+          </li>
+          <li class="porgress_side list4">
+            <div class="progessupdate"> <span class="col-sm-8">All Clients/Budget</span><span class="col-sm-4 right">16/$59,584</span> </div>
+            <div class="progressbar"> <span class="dvalbar" style="width: 55%"></span> </div>
+          </li>
+          <li class="bold"> &nbsp; </li>
+          <li class="bold"> &nbsp; </li>
+        </ul>
+      </li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-light"><i class="fa fa-bars" aria-hidden="true"></i></a> </aside>
+  <!-- END LEFT SIDEBAR NAV-->
+  <!-- //////////////////////////////////////////////////////////////////////////// -->
+  <!-- START CONTENT -->
+  <section id="content">
+  <!--breadcrumbs start-->
+  <div id="breadcrumbs-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <ol class="breadcrumbs">
+            <li><a href="campaign.html">All Clients</a> </li>
+            <li class="active">Clients: Heartland Express</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--breadcrumbs end-->
+  <!--start container-->
+  <div class="container">
+    <div class="col s12 m8 l9 tab1">
+      <div class="row">
+          <ul class="tabs tab-demo-active z-depth-1" style="width: 100%;">
+            <li class="tab col s3"><a class="waves-effect waves-light active" href="#allclients">All Clients</a></li>
+            <li class="tab col s3"><a class="waves-effect waves-light" href="#allplacements">All Placements</a></li>
+          </ul>
+        </div>
+        
+          
+            <div class="col s12 m8 l9 tab2">
+              <div class="row">
+			  
+			  <form id="example-advanced-form" action="#">
+    <h3>Step</h3>
+    <fieldset>
+        <div class="input-field col s12">
+		<select>
+		  <option value="1" selected>Social</option>
+		  <option value="2">Option 2</option>
+		  <option value="3">Option 3</option>
+		</select>
+		<label>Select Media (Not for PPC, Job Boards, Pay and Post Job Board)</label>
+	  </div> 
+        <div class="input-field col s3">
+		<select>
+		  <option value="1">Everyone in this location</option>
+		  <option value="2">Option 2</option>
+		  <option value="3">Option 3</option>
+		</select>
+		<label>Location</label>
+	  </div> 
+	  <div class="input-field col s3">
+		<select>
+		  <option value="1">Select Locations</option>
+		  <option value="2">Option 2</option>
+		  <option value="3">Option 3</option>
+		</select>
+	  </div> 
+	  <div class="input-field col s2">
+          <input id="zip" type="text" class="validate">
+          <label for="zip">Zip</label>
+      </div>
+	  <div class="input-field col s2">
+          <input id="mileradius" type="text" class="validate">
+          <label for="mileradius">Mile Radius</label>
+      </div>	
+	  <div class="input-field col s2">
+		<select>
+		  <option value="1">Include</option>
+		  <option value="2">Option 2</option>
+		  <option value="3">Option 3</option>
+		</select>
+	  </div>
+	  <div class="input-field col s3">
+		<select>
+		  <option value="1" selected></option>
+		  <option value="1">Everyone in this location</option>
+		  <option value="2">Option 2</option>
+		  <option value="3">Option 3</option>
+		</select>
+		<label>Age</label>
+	  </div> 
+	  -
+	  <div class="input-field col s3">
+		<select>
+		  <option value="1" selected></option>
+		  <option value="1">Everyone in this location</option>
+		  <option value="2">Option 2</option>
+		  <option value="3">Option 3</option>
+		</select>
+		<label>Age</label>
+	  </div> 
+	  <div class="input-field col s3">
+		<select>
+		  <option value="1" selected></option>
+		  <option value="1">Everyone in this location</option>
+		  <option value="2">Option 2</option>
+		  <option value="3">Option 3</option>
+		</select>
+		<label>Gender</label>
+	  </div> 
+	  <div class="input-field col s3">
+		<select>
+		  <option value="1" selected></option>
+		  <option value="1">Everyone in this location</option>
+		  <option value="2">Option 2</option>
+		  <option value="3">Option 3</option>
+		</select>
+		<label>Ethnicity</label>
+	  </div> 
+	  <div class="input-field col s12">
+          <input id="mileradius" type="text" class="validate">
+          <label for="mileradius">Mile Radius</label>
+      </div>	
+ 	  <div>Detailed Targetting</div>
+	  <div class="input-field col s6">
+    <select>
+      <option value="" disabled selected>Add Education, Word</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+    <label>Include people who match at least ONE of the following</label>
+  </div>
+  <div class="input-field col s6">
+    <select>
+      <option value="" disabled selected>Add Education, Word</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+    <label>Exclude people who match at least ONE of the following</label>
+  </div>
+  <div class="container">
+	<div class="row">
+		<div class="col s12">Audience</div>
+		<div class="row">
+			<div class="col s6">
+				<div class="row">  
+					<div class="col s6">
+						<input class="with-gap" name="group1" type="radio" id="test3"  />
+						<label for="test3">Create a custom audience</label>
+					</div>
+					<div class="col s6">
+						<input class="with-gap" name="group1" type="radio" id="test3"  />
+						<label for="test3">Use saved audience</label>
+					</div>
+				</div>
+				<div class="row">
+					
+					<div class="col s12">
+					  <ul class="tabs tab-demo-active z-depth-1" style="width: 100%;">
+						<li class="tab col s3"><a class="active" href="#formstep1">Customer File</a></li>
+						<li class="tab col s3"><a class="" href="#formstep2">Website Traffic</a></li>
+						<li class="tab col s3"><a class="" href="#formstep3">Engagement on Facebook</a></li>
+					  </ul>
+					</div>
+					<div class="col s12">
+						<div id="formstep1" class="col s12">
+							formstep1 form here
+						</div>
+						<div id="formstep2" class="col s12">
+							<div class="row">
+								<div class="col s12">
+									<span>Pixel</span>
+									<span>Pixel Id: 20064896686998</span>
+								</div>
+								<div class="input-field col s6">
+								  <input placeholder="People who vist specific web page" id="websitetraffic" type="text" class="validate">
+								  <label for="websitetraffic">Website Traffic</label>
+								</div>
+								<div class="input-field col s6">
+								  <input placeholder="" id="lastdays" type="text" class="validate"> Days
+								  <label for="lastdays">In the last</label>
+								</div>
+								<div class="input-field col s6">
+								  <input placeholder="" id="audiencename" type="text" class="validate">
+								  <label for="audiencename">Audience Name</label>
+								</div>
+							</div>
+						</div>
+						<div id="formstep3" class="col s12">
+							<div class="row">
+								
+								<div class="input-field col s12">
+								<select>
+								  <option value=""selected>Add Education, Word</option>
+								  <option value="1">Option 1</option>
+								  <option value="2">Option 2</option>
+								  <option value="3">Option 3</option>
+								</select>
+								<label>Page</label>
+								</div>
+							</div>
+							<div class="row">
+								
+								<div class="input-field col s12">
+								<select>
+								  <option value="" disabled selected>Choose your option</option>
+								  <option value="1">Option 1</option>
+								  <option value="2">Option 2</option>
+								  <option value="3">Option 3</option>
+								</select>
+								<label>Include</label>
+								</div>
+							</div>
+							<div class="input-field col s6">
+							  <input placeholder="" id="lastdays" type="text" class="validate"> Days
+							  <label for="lastdays">In the last</label>
+							</div>
+							<div class="input-field col s6">
+							  <input placeholder="" id="audiencename" type="text" class="validate">
+							  <label for="audiencename">Audience Name</label>
+							</div>
+						</div>
+					</div>
+						<a class="waves-effect waves-light btn">Cancel</a>
+						<a class="waves-effect waves-light btn">Create Audience</a>
+				</div>
+			</div>
+			<div class="col s6">
+				<div class="row">  
+					<div class="col s6">
+						<input class="with-gap" name="group1" type="radio" id="test4"  />
+						<label for="test3">Create a look alike audience</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12">Look alike audience</div>
+					<div class="row">
+						<div class="input-field col s12">
+						  <input placeholder="Choose for custom audience or a page" id="first_name" type="text" class="validate">
+						  <label for="first_name">Add source URL</label>
+						</div>
+						<div class="file-field input-field">
+						  <div class="btn">
+							<span>Browse</span>
+							<input type="file">
+						  </div>
+						  <div class="file-path-wrapper">
+							<input class="file-path validate" type="text" placeholder="Location">
+						  </div>
+						</div>
+						<div class="range-field">
+						  <input type="range" id="test5" min="0" max="10" />
+						</div>
+						<a class="waves-effect waves-light btn">Cancel</a>
+						<a class="waves-effect waves-light btn">Create Audience</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+    </fieldset>
+ 
+    <h3>Step</h3>
+    <fieldset>
+        
+    </fieldset>
+ 
+    <h3>Step</h3>
+    <fieldset>
+        <legend>You are to young</legend>
+ 
+        <p>Please go away ;-)</p>
+    </fieldset>
+ 
+    <h3>Step</h3>
+    <fieldset>
+        <legend>Terms and Conditions</legend>
+ 
+        <input id="acceptTerms-2" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
+    </fieldset>
+</form>
+			  
+			  </div>
+      </div>
+    </div>
+    <br>
+    <!--Accordion-->
+    <!--end container-->
+    </section>
+    <!-- END CONTENT -->
+  </div>
+  <!-- END WRAPPER -->
+</div>
+<!-- END MAIN -->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!-- START FOOTER -->
+<!-- END FOOTER -->
+<!-- ================================================
+    Scripts
+    ================================================ -->
+<script src="js/amcharts.js"></script>
+<script src="js/serial.js"></script>
+<script src="js/export.js"></script>
+<link rel="stylesheet" href="js/export.css" type="text/css" media="all" />
+<script src="js/light.js"></script>
+<script type="text/javascript" src="js/jquery-2.js"></script>
+<script type="text/javascript" src="js/jquery.steps.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="https://use.fontawesome.com/c0640f5159.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/chart2.js"></script>
+<script src="js/chart3.js"></script>
+<!--materialize js-->
+<script type="text/javascript" src="js/materialize.js"></script>
+<!--prism-->
+<script type="text/javascript" src="js/prism.js"></script>
+<!--scrollbar-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/perfect-scrollbar.jquery.js"></script>
+<!--plugins.js - Some Specific JS codes for Plugin Settings-->
+<script type="text/javascript" src="js/plugins.js"></script>
+<!--custom-script.js - Add your own theme custom JS-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="datepicker/moment-with-locales.js.download"></script>
+<script src="datepicker/bootstrap-datetimepicker.js.download"></script>
+<script src='js/ui-bootstrap-tpls.min.js'></script>
+<script src='js/angular-ui-utils.min.js'></script>
+<script src='js/jquery.dataTables.js'></script>
+<script src='js/dataTables.bootstrap.js'></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/script_db.js"></script>
+<script type="text/javascript" src="js/form.js"></script>
+<script type='text/javascript'>
+window.onload=function(){
+$('.tabular1_scrollbar').perfectScrollbar();
+$('#notifications-dropdown').perfectScrollbar();
+$('#alerts-dropdown').perfectScrollbar();
+
+$('.pagination .paginate_button.previous.disabled a').html('<i class="fa fa-chevron-left" aria-hidden="true"></i>');
+$('.pagination .paginate_button.next.disabled a').html('<i class="fa fa-chevron-right" aria-hidden="true"></i>');
+
+$('.pagination .paginate_button.previous a').html('<i class="fa fa-chevron-left" aria-hidden="true"></i>');
+$('.pagination .paginate_button.next a').html('<i class="fa fa-chevron-right" aria-hidden="true"></i>');
+
+} 
+
+</script>
+</body>
+</html>
