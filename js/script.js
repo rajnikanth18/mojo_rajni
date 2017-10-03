@@ -18,32 +18,44 @@
       alignment: 'left' // Displays dropdown with edge aligned to the left of button
     }
   );
+  
+  
+  
         
-		
+  $('input[name="alertgroup"]').click(function(){
+        var getvalue = $(this).attr("value");
+        $(".alertbox").hide();
+        $("." + getvalue).show();
+  });
+	
+  $('input[name="notifygroup"]').click(function(){
+        var getvalue = $(this).attr("value");
+        $(".notifybox").hide();
+        $("." + getvalue).show();
+  });	
 
 $(".sidebar-collapse").on("click",function(){
 	$("#main").toggleClass("slideleft");
 	$(".nav-slideleft").toggleClass("navleftslide");
 });
 
-
+$('.chip input[type="checkbox"]').parent(".chip.activeimg").find("img").show();
 $('.chip input[type="checkbox"]').click(function(){
 
 		var inputValue = $(this).attr("value");
 		$(".maincontainer1 ." + inputValue).removeClass("activeldd");
 		$(".maincontainer1 .list-group").removeClass("firstcheck");
-		$(".maincontainer1 ." + inputValue).toggle();							 
+		$(".maincontainer1 ." + inputValue).toggle();	
+		$(this).parent("").toggleClass("activeimg");
 													 
 	if ($(".chip :checkbox[type='checkbox']:checked").length == 0)  { 
 		$(".maincontainer1 .list-group").removeClass("activeldd");
-		$(".maincontainer1 .activeldd:eq(0)").removeClass("firstcheck");
-		$(".maincontainer1 div.chip").removeClass("activeimg");
+		$(".maincontainer1 .activeldd:eq(0)").removeClass("firstcheck");		
 	}
 											
 	if ($(".chip :checkbox[type='checkbox']:checked").length == 1)  { 
 		$(".maincontainer1 ." + inputValue).addClass("activeldd");
 		$(".maincontainer1 ." + inputValue).addClass("firstcheck");
-		$(this).closest('div.chip').addClass('activeimg');
 	}
 
 	if ($(".chip :checkbox[type='checkbox']:checked").length == 2)  {      
@@ -51,53 +63,60 @@ $('.chip input[type="checkbox"]').click(function(){
 		$('.chip :checkbox:not(:checked)').prop('disabled', true);
 		$(".maincontainer1 ." + inputValue).addClass("activeldd");
 		$(".maincontainer1 .activeldd:eq(0)").addClass("firstcheck");
-		$(this).closest('div.chip').addClass('activeimg');
 	}
 	else { 
 		$('.chip :checkbox:not(:checked)').prop('disabled', false);  
 	}
   });
 
+$('.chip2 input[type="checkbox"]').parent(".chip2.activeimg2").find("img").show();
 $('.chip2 input[type="checkbox"]').click(function(){
 												  
 	var inputValue2 = $(this).attr("value");
 	$(".maincontainer2 ." + inputValue2).removeClass("activeldd2");
 	$(".maincontainer2 .list-group").removeClass("firstcheck2");
-	$(".maincontainer2 ." + inputValue2).toggle();												  
-													 
+	$(".maincontainer2 ." + inputValue2).toggle();
+	$(this).parent("").toggleClass("activeimg2");
 
 if ($(".chip2 :checkbox[type='checkbox']:checked").length == 0)  { 
 	$(".maincontainer2 .list-group").removeClass("activeldd2");
 	$(".maincontainer2 .activeldd2:eq(0)").removeClass("firstcheck2");
-	$(".maincontainer2 div.chip2").removeClass("activeimg2");
+}
+
+if ($(".chip2 :checkbox[type='checkbox']:checked").length == 1)  { 
+		$(".maincontainer2 ." + inputValue2).addClass("activeldd2");
+		$(".maincontainer2 ." + inputValue2).addClass("firstcheck2");
 }
 
 if ($(".chip2 :checkbox[type='checkbox']:checked").length == 2)  {      
   //not(:checked)
-   
    $('.chip2 :checkbox:not(:checked)').prop('disabled', true);
    $(".maincontainer2 ." + inputValue2).addClass("activeldd2");
    $(".maincontainer2 .activeldd2:eq(0)").addClass("firstcheck2");
-   $(this).closest('div.chip2').addClass('activeimg2');
 }
   else { 
    $('.chip2 :checkbox:not(:checked)').prop('disabled', false);  
 }
 });
 
+$('.chip3 input[type="checkbox"]').parent(".chip3.activeimg").find("img").show();
 $('.chip3 input[type="checkbox"]').click(function(){
 												  
 	var inputValue3 = $(this).attr("value");
 	$(".maincontainer3 ." + inputValue3).removeClass("activeldd3");
 	$(".maincontainer3 .list-group").removeClass("firstcheck3");
-	$(".maincontainer3 ." + inputValue3).toggle();												  
-													 
+	$(".maincontainer3 ." + inputValue3).toggle();
+	$(this).parent("").toggleClass("activeimg3");
 
 if ($(".chip3 :checkbox[type='checkbox']:checked").length == 0)  { 
 	$(".maincontainer3 .list-group").removeClass("activeldd3");
 	$(".maincontainer3 .activeldd3:eq(0)").removeClass("firstcheck3");
-	$(".maincontainer3 div.chip3").removeClass("activeimg3");
 }
+
+	if ($(".chip3 :checkbox[type='checkbox']:checked").length == 1)  { 
+		$(".maincontainer3 ." + inputValue).addClass("activeldd3");
+		$(".maincontainer3 ." + inputValue).addClass("firstcheck3");
+	}
 
 if ($(".chip3 :checkbox[type='checkbox']:checked").length == 2)  {      
   //not(:checked)
@@ -105,25 +124,29 @@ if ($(".chip3 :checkbox[type='checkbox']:checked").length == 2)  {
    $('.chip3 :checkbox:not(:checked)').prop('disabled', true);
    $(".maincontainer3 ." + inputValue3).addClass("activeldd3");
    $(".maincontainer3 .activeldd3:eq(0)").addClass("firstcheck3");
-   $(this).closest('div.chip3').addClass('activeimg3');
 }
   else { 
    $('.chip3 :checkbox:not(:checked)').prop('disabled', false);  
 }
 });
 
+$('.chip4 input[type="checkbox"]').parent(".chip4.activeimg4").find("img").show();
 $('.chip4 input[type="checkbox"]').click(function(){
 												  
 	var inputValue4 = $(this).attr("value");
 	$(".maincontainer4 ." + inputValue4).removeClass("activeldd4");
 	$(".maincontainer4 .list-group").removeClass("firstcheck4");
-	$(".maincontainer4 ." + inputValue4).toggle();												  
-													 
+	$(".maincontainer4 ." + inputValue4).toggle();
+	$(this).parent("").toggleClass("activeimg4");
 
 if ($(".chip4 :checkbox[type='checkbox']:checked").length == 0)  { 
 	$(".maincontainer4 .list-group").removeClass("activeldd4");
 	$(".maincontainer4 .activeldd4:eq(0)").removeClass("firstcheck4");
-	$(".maincontainer4 div.chip4").removeClass("activeimg4");
+}
+
+if ($(".chip4 :checkbox[type='checkbox']:checked").length == 1)  { 
+	$(".maincontainer4 ." + inputValue4).addClass("activeldd4");
+	$(".maincontainer4 ." + inputValue4).addClass("firstcheck4");
 }
 
 if ($(".chip4 :checkbox[type='checkbox']:checked").length == 2)  {      
@@ -132,34 +155,36 @@ if ($(".chip4 :checkbox[type='checkbox']:checked").length == 2)  {
    $('.chip4 :checkbox:not(:checked)').prop('disabled', true);
    $(".maincontainer4 ." + inputValue4).addClass("activeldd4");
    $(".maincontainer4 .activeldd4:eq(0)").addClass("firstcheck4");
-   $(this).closest('div.chip4').addClass('activeimg4');
 }
   else { 
    $('.chip4 :checkbox:not(:checked)').prop('disabled', false);  
 }
 });
 
+$('.chip5 input[type="checkbox"]').parent(".chip5.activeimg5").find("img").show();
 $('.chip5 input[type="checkbox"]').click(function(){
 												  
 	var inputValue5 = $(this).attr("value");
 	$(".maincontainer5 ." + inputValue5).removeClass("activeldd5");
 	$(".maincontainer5 .list-group").removeClass("firstcheck5");
-	$(".maincontainer5 ." + inputValue5).toggle();												  
+	$(".maincontainer5 ." + inputValue5).toggle();	
+	$(this).parent("").toggleClass("activeimg5");	
 													 
 
 if ($(".chip5 :checkbox[type='checkbox']:checked").length == 0)  { 
 	$(".maincontainer5 .list-group").removeClass("activeldd5");
 	$(".maincontainer5 .activeldd5:eq(0)").removeClass("firstcheck5");
-	$(".maincontainer5 div.chip5").removeClass("activeimg5");
 }
-
+if ($(".chip5 :checkbox[type='checkbox']:checked").length == 1)  { 
+	$(".maincontainer5 ." + inputValue5).addClass("activeldd5");
+	$(".maincontainer5 ." + inputValue5).addClass("firstcheck5");
+}
 if ($(".chip5 :checkbox[type='checkbox']:checked").length == 2)  {      
   //not(:checked)
    
    $('.chip5 :checkbox:not(:checked)').prop('disabled', true);
    $(".maincontainer5 ." + inputValue5).addClass("activeldd5");
    $(".maincontainer5 .activeldd5:eq(0)").addClass("firstcheck5");
-   $(this).closest('div.chip5').addClass('activeimg5');
 }
   else { 
    $('.chip5 :checkbox:not(:checked)').prop('disabled', false);  

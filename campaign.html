@@ -47,6 +47,7 @@ display: block !important;
             <h1 class="logo-wrapper"><a href="#" class="brand-logo darken-1"><img src="images/logo.jpg" class="logo" alt="Logo"></a> <span class="logo-text">Email Campaign Management System</span></h1>
           </li>
         </ul>
+
         <ul class="right hide-on-med-and-down">
           <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light translation-button" data-activates="translation-dropdown">Recommendations<small class="notification-badge">5</small></a> </li>
           <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light notification-button" data-activates="notifications-dropdown">Notifications<small class="notification-badge">5</small></a> </li>
@@ -63,7 +64,7 @@ display: block !important;
           </li>
         </ul>
         <!-- alerts-dropdown -->
-        <ul id="alerts-dropdown" class="dropdown-content">
+        <ul id="alerts-dropdown" class="dropdown-content"">
           <li>
             <div class="data_custom1"><a href="#!">Last 7 days</a></div>
             <div class="data_custom2"><a href="#!">Last 30 days</a></div>
@@ -82,22 +83,42 @@ display: block !important;
           </li>
           <li class="divider"></li>
           <li class="data_custom4"> <span>
-            <input class="with-gap" name="alertgroup" type="radio" id="notify" checked />
-            <label for="notify">Notifications</label>
+            <input class="with-gap" name="alertgroup" value="notify2" type="radio" id="notify2" checked />
+            <label for="notify2">Notifications</label>
             </span> <span>
-            <input class="with-gap" name="alertgroup" type="radio" id="alerts"/>
-            <label for="alerts">Alerts</label>
+            <input class="with-gap" name="alertgroup" value="alert2" type="radio" id="alert2"/>
+            <label for="alert2">Alerts</label>
             </span> </li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="notify2 alertbox">
+		  <ul>
+			<li> <a href="#!"> notify Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li> <a href="#!"> notify Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li> <a href="#!"> notify Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li> <a href="#!"> notify Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
-        </ul>
+          <li> <a href="#!"> notify Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+		  </ul>
+		  </li>
+          <li class="alert2 alertbox" style="display:none;">
+		  <ul>
+			<li> <a href="#!"> alert Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> alert Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> alert Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> alert Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> alert Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+		  </ul>
+		  </li>
+		  <li><div class="topheader-search-wrapper hide-on-med-and-down"> <i class="fa fa-search" aria-hidden="true"></i>
+          <input name="Search" class="header-search-input z-depth-2" placeholder="Search" type="text">
+        </div></li>
+		</ul>
         <!-- notifications-dropdown -->
         <ul id="notifications-dropdown" class="dropdown-content">
           <li>
@@ -117,13 +138,15 @@ display: block !important;
           </li>
           <li class="divider"></li>
           <li class="data_custom4"> <span>
-            <input class="with-gap" name="notifygroup" type="radio" id="notify" checked />
+            <input class="with-gap" name="notifygroup" value="notify" type="radio" id="notify" checked />
             <label for="notify">Notifications</label>
             </span> <span>
-            <input class="with-gap" name="notifygroup" type="radio" id="alerts"/>
-            <label for="alerts">Alerts</label>
+            <input class="with-gap" name="notifygroup" value="alert" type="radio" id="alert"/>
+            <label for="alert">Alerts</label>
             </span> </li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+<li class="notify notifybox">
+		  <ul>
+			<li> <a href="#!"> notify Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
           <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
@@ -132,7 +155,26 @@ display: block !important;
           <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
           <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
-        </ul>
+		  </ul>
+		  </li>
+          <li class="alert alertbox" style="display:none;">
+		  <ul>
+			<li> <a href="#!"> alert Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+		  </ul>
+		  </li>          
+
+		  <li><div class="topheader-search-wrapper hide-on-med-and-down"> <i class="fa fa-search" aria-hidden="true"></i>
+          <input name="Search" class="header-search-input z-depth-2" placeholder="Search" type="text">
+        </div></li>
+		</ul>
       </div>
     </nav>
   </div>
@@ -160,13 +202,13 @@ display: block !important;
               <ul class="collapsible collapsible-accordion">
                 <li class="no-padding">
                   <ul class="collapsible collapsible-accordion">
-                    <li class="bold"><a class="collapsible-header" href="#"> Heartland Expresss <i class="fa fa-angle-right"></i></a>
+                    <li class="bold"><a class="collapsible-header" href="allcampaign.html"> Heartland Expresss <i class="fa fa-angle-right"></i></a>
                       <div class="collapsible-body">
                         <ul class="collapsible collapsible-accordion sublist">
-                          <li><a class="collapsible-header waves-effect waves-cyan" href="allcampaign.html">High Performing Campaign <i class="fa fa-angle-right"></i></a>
+                          <li><a class="collapsible-header waves-effect waves-cyan" href="campaign-highperforming.html">High Performing Campaign <i class="fa fa-angle-right"></i></a>
                             <div class="collapsible-body sub_sublist active">
                               <ul>
-                                <li class="twolines"><a href="campaign-highperforming.html">CDL-A Truck Driver - Great Pay and Routes <i class="fa fa-angle-right"></i></a></li>
+                                <li class="twolines"><a href="campaign-jobgroup.html">CDL-A Truck Driver - Great Pay and Routes <i class="fa fa-angle-right"></i></a></li>
                                 <li><a href="#">Class A CDL Truck Driver <i class="fa fa-angle-right"></i></a></li>
                               </ul>
                             </div>
@@ -499,39 +541,39 @@ display: block !important;
                         <div class="footerheading">Search for Companies</div>
                         <div class="chip activeimg">
                           <div class="bluecirclecss"></div>
-                          <label for="companya_1x"> Heartland Express &nbsp;</label>
+                          <label for="companya_1x"> Heartland Express &nbsp; <img src="images/pin.png"></label>
                           <input type="checkbox" name="comparision[]" id="companya_1x" value="a" checked>
-                          <img src="images/pin.png"> </div>
+                           </div>
                         <div class="chip activeimg">
                           <div class="orangecirclecss"></div>
-                          <label for="companyb_1x"> CRST Specialised &nbsp;</label>
+                          <label for="companyb_1x"> CRST Specialised &nbsp; <img src="images/pin.png"></label>
                           <input type="checkbox" name="comparision[]" id="companyb_1x" value="b" checked>
-                          <img src="images/pin.png"> </div>
+                           </div>
                         <div class="chip">
                           <div class="lemoncirclecss"></div>
-                          <label for="companyc_1x"> Carefirst Bluecross &nbsp;</label>
+                          <label for="companyc_1x"> Carefirst Bluecross &nbsp; <img src="images/pin.png"></label>
                           <input type="checkbox" name="comparision[]" id="companyc_1x" value="c" disabled>
-                          <img src="images/pin.png"> </div>
+                           </div>
                         <div class="chip">
                           <div class="greycirclecss"></div>
-                          <label for="companyd_1x"> Yuma Regional &nbsp;</label>
+                          <label for="companyd_1x"> Yuma Regional &nbsp; <img src="images/pin.png"></label>
                           <input type="checkbox" name="comparision[]" id="companyd_1x" value="d" disabled>
-                          <img src="images/pin.png"> </div>
+                           </div>
                         <div class="chip">
                           <div class="purplecirclecss"></div>
-                          <label for="companye_1x"> Hirekey &nbsp;</label>
+                          <label for="companye_1x"> Hirekey &nbsp; <img src="images/pin.png"></label>
                           <input type="checkbox" name="comparision[]" id="companye_1x" value="e" disabled>
-                          <img src="images/pin.png"> </div>
+                           </div>
                         <div class="chip">
                           <div class="redcirclecss"></div>
-                          <label for="companyf_1x"> University of Phoenix &nbsp;</label>
+                          <label for="companyf_1x"> University of Phoenix &nbsp; <img src="images/pin.png"></label>
                           <input type="checkbox" name="comparision[]" id="companyf_1x" value="f" disabled>
-                          <img src="images/pin.png"> </div>
+                           </div>
                         <div class="chip">
                           <div class="yellowcirclecss"></div>
-                          <label for="companyg_1x"> University of Phoenix &nbsp;</label>
+                          <label for="companyg_1x"> University of Phoenix &nbsp; <img src="images/pin.png"></label>
                           <input type="checkbox" name="comparision[]" id="companyg_1x" value="g" disabled>
-                          <img src="images/pin.png"> </div>
+                           </div>
                       </footer>
                     </div>
                     <div class="campaignbox tabular1 clearfix">
@@ -5665,39 +5707,39 @@ display: block !important;
                 <div class="footerheading">Search for Companies</div>
                 <div class="chip2 activeimg2">
                   <div class="bluecirclecss"></div>
-                  <label for="companya_2x"> Heartland Express &nbsp;</label>
+                  <label for="companya_2x"> Heartland Express &nbsp;<img src="images/pin.png"></label>
                   <input type="checkbox" name="comparision_2[]" id="companya_2x" value="a" checked>
-                  <img src="images/pin.png"> </div>
+                   </div>
                 <div class="chip2 activeimg2">
                   <div class="orangecirclecss"></div>
-                  <label for="companyb_2x"> CRST Specialised &nbsp;</label>
+                  <label for="companyb_2x"> CRST Specialised &nbsp;<img src="images/pin.png"></label>
                   <input type="checkbox" name="comparision_2{}" id="companyb_2x" value="b" checked>
-                  <img src="images/pin.png"> </div>
+                   </div>
                 <div class="chip2">
                   <div class="lemoncirclecss"></div>
-                  <label for="companyc_2x"> Carefirst Bluecross &nbsp;</label>
+                  <label for="companyc_2x"> Carefirst Bluecross &nbsp;<img src="images/pin.png"></label>
                   <input type="checkbox" name="comparision_2{}" id="companyc_2x" value="c" disabled>
-                  <img src="images/pin.png"> </div>
+                   </div>
                 <div class="chip2">
                   <div class="greycirclecss"></div>
-                  <label for="companyd_2x"> Yuma Regional &nbsp;</label>
+                  <label for="companyd_2x"> Yuma Regional &nbsp;<img src="images/pin.png"></label>
                   <input type="checkbox" name="comparision_2{}" id="companyd_2x" value="d" disabled>
-                  <img src="images/pin.png"> </div>
+                   </div>
                 <div class="chip2">
                   <div class="purplecirclecss"></div>
-                  <label for="companye_2x"> Hirekey &nbsp;</label>
+                  <label for="companye_2x"> Hirekey &nbsp;<img src="images/pin.png"></label>
                   <input type="checkbox" name="comparision_2{}" id="companye_2x" value="e" disabled>
-                  <img src="images/pin.png"> </div>
+                   </div>
                 <div class="chip2">
                   <div class="redcirclecss"></div>
-                  <label for="companyf_2x"> University of Phoenix &nbsp;</label>
+                  <label for="companyf_2x"> University of Phoenix &nbsp;<img src="images/pin.png"></label>
                   <input type="checkbox" name="comparision_2{}" id="companyf_2x" value="f" disabled>
-                  <img src="images/pin.png"> </div>
+                   </div>
                 <div class="chip2">
                   <div class="yellowcirclecss"></div>
-                  <label for="companyg_2x"> University of Phoenix &nbsp;</label>
+                  <label for="companyg_2x"> University of Phoenix &nbsp;<img src="images/pin.png"></label>
                   <input type="checkbox" name="comparision_2{}" id="companyg_2x" value="g" disabled>
-                  <img src="images/pin.png"> </div>
+                   </div>
               </footer>
             </div>
                            
@@ -6222,39 +6264,39 @@ display: block !important;
                 <div class="footerheading">Search for Companies</div>
                 <div class="chip3 activeimg3">
                   <div class="bluecirclecss"></div>
-                  <label for="companya_3x"> Heartland Express &nbsp;</label>
+                  <label for="companya_3x"> Heartland Express &nbsp; <img src="images/pin.png"></label>
                   <input type="checkbox" name="comparision_3[]" id="companya_3x" value="a" checked>
-                  <img src="images/pin.png"> </div>
+                   </div>
                 <div class="chip3 activeimg3">
                   <div class="orangecirclecss"></div>
-                  <label for="companyb_3x"> CRST Specialised &nbsp;</label>
+                  <label for="companyb_3x"> CRST Specialised &nbsp; <img src="images/pin.png"></label>
                   <input type="checkbox" name="comparision_3{}" id="companyb_3x" value="b" checked>
-                  <img src="images/pin.png"> </div>
+                   </div>
                 <div class="chip3">
                   <div class="lemoncirclecss"></div>
-                  <label for="companyc_3x"> Carefirst Bluecross &nbsp;</label>
+                  <label for="companyc_3x"> Carefirst Bluecross &nbsp; <img src="images/pin.png"></label>
                   <input type="checkbox" name="comparision_3{}" id="companyc_3x" value="c" disabled>
-                  <img src="images/pin.png"> </div>
+                   </div>
                 <div class="chip3">
                   <div class="greycirclecss"></div>
-                  <label for="companyd_3x"> Yuma Regional &nbsp;</label>
+                  <label for="companyd_3x"> Yuma Regional &nbsp; <img src="images/pin.png"></label>
                   <input type="checkbox" name="comparision_3{}" id="companyd_3x" value="d" disabled>
-                  <img src="images/pin.png"> </div>
+                   </div>
                 <div class="chip3">
                   <div class="purplecirclecss"></div>
-                  <label for="companye_3x"> Hirekey &nbsp;</label>
+                  <label for="companye_3x"> Hirekey &nbsp; <img src="images/pin.png"></label>
                   <input type="checkbox" name="comparision_3{}" id="companye_3x" value="e" disabled>
-                  <img src="images/pin.png"> </div>
+                   </div>
                 <div class="chip3">
                   <div class="redcirclecss"></div>
-                  <label for="companyf_3x"> University of Phoenix &nbsp;</label>
+                  <label for="companyf_3x"> University of Phoenix &nbsp; <img src="images/pin.png"></label>
                   <input type="checkbox" name="comparision_3{}" id="companyf_3x" value="f" disabled>
-                  <img src="images/pin.png"> </div>
+                   </div>
                 <div class="chip3">
                   <div class="yellowcirclecss"></div>
-                  <label for="companyg_3x"> University of Phoenix &nbsp;</label>
+                  <label for="companyg_3x"> University of Phoenix &nbsp; <img src="images/pin.png"></label>
                   <input type="checkbox" name="comparision_3{}" id="companyg_3x" value="g" disabled>
-                  <img src="images/pin.png"> </div>
+                   </div>
               </footer>
             </div>
 			<div class="container" ng-app="datatable">
