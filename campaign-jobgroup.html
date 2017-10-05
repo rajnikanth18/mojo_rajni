@@ -47,6 +47,7 @@ display: block !important;
             <h1 class="logo-wrapper"><a href="#" class="brand-logo darken-1"><img src="images/logo.jpg" class="logo" alt="Logo"></a> <span class="logo-text">Email Campaign Management System</span></h1>
           </li>
         </ul>
+
         <ul class="right hide-on-med-and-down">
           <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light translation-button" data-activates="translation-dropdown">Recommendations<small class="notification-badge">5</small></a> </li>
           <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light notification-button" data-activates="notifications-dropdown">Notifications<small class="notification-badge">5</small></a> </li>
@@ -62,56 +63,62 @@ display: block !important;
             </ul>
           </li>
         </ul>
-       
-        
         <!-- alerts-dropdown -->
-        <ul id="alerts-dropdown" class="dropdown-content">
+        <ul id="alerts-dropdown" class="dropdown-content"">
           <li>
             <div class="data_custom1"><a href="#!">Last 7 days</a></div>
             <div class="data_custom2"><a href="#!">Last 30 days</a></div>
           </li>
           <li class="data_custom3">
-          <div class="form-group clearfix">
-	<span class="labeldate">Custom</span>
-    <div class='input-group date cal' id='datetimepicker9a'> 
-        <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
-        <input class="form-control date" data-date-format="MMM DD, YY"  name="cdate9a" type="text" id="cdate9a" value="MMM DD, YY">
-    </div>
-    <div class="hypendash">-</div>     
-    <div class='input-group date cal' id='datetimepicker10a'>
-    	<span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
-        <input class="form-control date" data-date-format="MMM DD, YY"  name="cdate10a" type="text" id="cdate10a" value="MMM DD, YY">
-      </div>
-      
-          
+            <div class="form-group clearfix">
+            <span class="labeldate">Custom</span>
+            <div class='input-group date cal' id='datetimepicker9a'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+              <input class="form-control date" name="cdate9a" type="text">
+            </div>
+            <div class="hypendash">-</div>
+            <div class='input-group date cal' id='datetimepicker10a'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+              <input class="form-control date" name="cdate10a" type="text">
+            </div>
+            </div>
           </li>
           <li class="divider"></li>
-          <li class="data_custom4">
-          <span>
-    <input class="with-gap" name="alertgroup" type="radio" id="notify" checked />
-    <label for="notify">Notifications</label>
-  </span>
-    <span>
-    <input class="with-gap" name="alertgroup" type="radio" id="alerts"/>
-    <label for="alerts">Alerts</label>
-  </span>
-          </li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a>
-          </li>
+          <li class="data_custom4"> <span>
+            <input class="with-gap" name="alertgroup" value="notify2" type="radio" id="notify2" checked />
+            <label for="notify2">Notifications</label>
+            </span> <span>
+            <input class="with-gap" name="alertgroup" value="alert2" type="radio" id="alert2"/>
+            <label for="alert2">Alerts</label>
+            </span> </li>
+          <li class="notify2 alertbox">
+		  <ul>
+			<li> <a href="#!"> notify Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a>
-          </li>
+          <li> <a href="#!"> notify Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a>
-          </li>
+          <li> <a href="#!"> notify Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a>
-          </li>
+          <li> <a href="#!"> notify Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a>
-          </li>
-        </ul>
-        
+          <li> <a href="#!"> notify Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+		  </ul>
+		  </li>
+          <li class="alert2 alertbox" style="display:none;">
+		  <ul>
+			<li> <a href="#!"> alert Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> alert Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> alert Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> alert Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> alert Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+		  </ul>
+		  </li>
+		  <li><div class="topheader-search-wrapper hide-on-med-and-down"> <i class="fa fa-search" aria-hidden="true"></i>
+          <input name="Search" class="header-search-input z-depth-2" placeholder="Search" type="text">
+        </div></li>
+		</ul>
         <!-- notifications-dropdown -->
         <ul id="notifications-dropdown" class="dropdown-content">
           <li>
@@ -119,46 +126,55 @@ display: block !important;
             <div class="data_custom2"><a href="#!">Last 30 days</a></div>
           </li>
           <li class="data_custom3">
-          <div class="form-group clearfix">
-	<span class="labeldate">Custom</span>
-    <div class='input-group date cal' id='datetimepicker9b'> 
-        <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
-        <input class="form-control-date" data-date-format="MMM DD, YY" name="cdate9b" type="text" id="cdate9b" value="MMM DD, YY">
-    </div>
-    <div class="hypendash">-</div>     
-    <div class='input-group date cal' id='datetimepicker10b'>
-    	<span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
-        <input class="form-control-date" data-date-format="MMM DD, YY" name="cdate10b" type="text" id="cdate10b" value="MMM DD, YY">
-      </div>
-    </div>
-          
+            <div class="form-group clearfix"> <span class="labeldate">Custom</span>
+              <div class='input-group date cal' id='datetimepicker9b'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                <input class="form-control-date" name="cdate9b" type="text">
+              </div>
+              <div class="hypendash">-</div>
+              <div class='input-group date cal' id='datetimepicker10b'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                <input class="form-control-date" name="cdate10b" type="text">
+              </div>
+            </div>
           </li>
           <li class="divider"></li>
-          <li class="data_custom4">
-          <span>
-    <input class="with-gap" name="notifygroup" type="radio" id="notify" checked />
-    <label for="notify">Notifications</label>
-  </span>
-    <span>
-    <input class="with-gap" name="notifygroup" type="radio" id="alerts"/>
-    <label for="alerts">Alerts</label>
-  </span>
-          </li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a>
-          </li>
+          <li class="data_custom4"> <span>
+            <input class="with-gap" name="notifygroup" value="notify" type="radio" id="notify" checked />
+            <label for="notify">Notifications</label>
+            </span> <span>
+            <input class="with-gap" name="notifygroup" value="alert" type="radio" id="alert"/>
+            <label for="alert">Alerts</label>
+            </span> </li>
+<li class="notify notifybox">
+		  <ul>
+			<li> <a href="#!"> notify Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a>
-          </li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a>
-          </li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a>
-          </li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
           <li class="divider"></li>
-          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a>
-          </li>
-        </ul>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+		  </ul>
+		  </li>
+          <li class="alert alertbox" style="display:none;">
+		  <ul>
+			<li> <a href="#!"> alert Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+          <li class="divider"></li>
+          <li> <a href="#!"> Lorem Ipsum is simply dummy text of the printing and typesetting industry standard text ever since the 1500s.</a> </li>
+		  </ul>
+		  </li>          
+
+		  <li><div class="topheader-search-wrapper hide-on-med-and-down"> <i class="fa fa-search" aria-hidden="true"></i>
+          <input name="Search" class="header-search-input z-depth-2" placeholder="Search" type="text">
+        </div></li>
+		</ul>
       </div>
     </nav>
   </div>
