@@ -1,3 +1,9 @@
+
+if($("ul.side-nav.leftside-navigation").height()==800){
+	$(this).css("overflow-y","hidden");
+}
+
+
   $('.dropdown-button1').dropdown({
       inDuration: 300,
       outDuration: 225,
