@@ -789,19 +789,19 @@ function paginationClickHandler(event)
 
     switch (href.substring(href.lastIndexOf("#") + 1))
     {
-        case "cancel":
+        case "Cancel":
             cancel(wizard);
             break;
 
-        case "finish":
+        case "Submit":
             finishStep(wizard, state);
             break;
 
-        case "next":
+        case "Next":
             goToNextStep(wizard, options, state);
             break;
 
-        case "previous":
+        case "Back":
             goToPreviousStep(wizard, options, state);
             break;
     }
@@ -1060,19 +1060,19 @@ function renderPagination(wizard, options, state)
 
         if (!options.forceMoveForward)
         {
-            buttons += buttonTemplate.format("previous", options.labels.previous);
+            buttons += buttonTemplate.format("Back", options.labels.previous);
         }
 
-        buttons += buttonTemplate.format("next", options.labels.next);
+        buttons += buttonTemplate.format("Next", options.labels.next);
 
         if (options.enableFinishButton)
         {
-            buttons += buttonTemplate.format("finish", options.labels.finish);
+            buttons += buttonTemplate.format("Submit", options.labels.finish);
         }
 
         if (options.enableCancelButton)
         {
-            buttons += buttonTemplate.format("cancel", options.labels.cancel);
+            buttons += buttonTemplate.format("Cancel", options.labels.cancel);
         }
 
         wizard.append(pagination.format(options.actionContainerTag, options.clearFixCssClass,
@@ -1471,7 +1471,8 @@ $.fn.steps.setStep = function (index, step)
  **/
 $.fn.steps.skip = function (count)
 {
-    throw new Error("Not yet implemented!");
+	return goToNextStep(this, getOptions(this), getState(this));
+    //throw new Error("Not yet implemented!");
 };
 
 /**
@@ -1794,7 +1795,7 @@ var defaults = $.fn.steps.defaults = {
      * @default false
      * @for defaults
      **/
-    enableCancelButton: false,
+    enableCancelButton: true,
 
     /**
      * Shows the finish button if enabled.
@@ -1825,7 +1826,7 @@ var defaults = $.fn.steps.defaults = {
      * @default false
      * @for defaults
      **/
-    showFinishButtonAlways: false,
+    showFinishButtonAlways: true,
 
     /**
      * Prevents jumping to a previous step.
@@ -1846,7 +1847,7 @@ var defaults = $.fn.steps.defaults = {
      * @default false
      * @for defaults
      **/
-    saveState: false,
+    saveState: true,
 
     /**
      * The position to start on (zero-based).
@@ -2006,7 +2007,7 @@ var defaults = $.fn.steps.defaults = {
          * @default "Finish"
          * @for defaults
          **/
-        finish: "Finish",
+        finish: "Submit",
 
         /**
          * Label for the next button.
@@ -2023,10 +2024,10 @@ var defaults = $.fn.steps.defaults = {
          *
          * @property previous
          * @type String
-         * @default "Previous"
+         * @default "Back"
          * @for defaults
          **/
-        previous: "Previous",
+        previous: "Back",
 
         /**
          * Label for the loading animation.

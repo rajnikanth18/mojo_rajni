@@ -7,7 +7,7 @@
 <meta name="msapplication-tap-highlight" content="no">
 <meta name="description" content=" ">
 <meta name="keywords" content="">
-<title>Email Campaign Management System</title>
+<title>All Clients Jobs</title>
 <!-- Favicons-->
 <link rel="icon" href="images/favicon-32x32.png" sizes="32x32">
 <!-- Favicons-->
@@ -331,7 +331,7 @@ display: block !important;
       <div class="row">
         <div class="col s12">
           <ul class="tabs tabs-fixed-width tab-demo z-depth-1">
-            <li class="tab tab1_width1"><a class="waves-effect waves-light active" href="#campaign_alljobgroups">All Campaigns</a></li>
+            <li class="tab tab1_width1"><a class="waves-effect waves-light active" href="#campaign_alljobgroups">All Job Groups</a></li>
             <li class="tab tab1_width2"><a class="waves-effect waves-light" href="#campaign_jobs">Jobs</a></li>
             <li class="tab tab1_width3"><a class="waves-effect waves-light" href="#campaign_placements">Placements</a></li>
             <li class="tab tab1_width4"><a class="waves-effect waves-light" href="#campaign_rules">Rules</a></li>
@@ -353,7 +353,7 @@ display: block !important;
           </ul>
         </div>
         <div class="col s1 custom-btn floatright">
-        <button class="btn" type="button" data-toggle="dropdown">Add Job Group</button>
+        <a href="jobgroup_create.html" class="btn">Add Job Group</a>
         </div>
         <div class="col s12 fw100p" style="padding:0px;">
           <div id="alljobgroupsdashboard" class="col s12">
@@ -1526,7 +1526,7 @@ display: block !important;
                         <div class="panel-heading2 border">
                           <div class="row">
                             <div class="col s2 pheading-db-addclient">
-                              <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Add Client</button>
+                              <a href="add_clients.html" class="btn">Add Client</a>
                             </div>
                             <div class="col s2 pheading-db-edit">
                               <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Edit <i class="fa fa-angle-down" aria-hidden="true"></i></button>
@@ -1873,13 +1873,1268 @@ display: block !important;
           
            </div>
           <div id="campaign_jobs" class="col s12" style="display: none;">
-          
+			<div class="maincontainer7">
+    <div style="float:left; width:70%;">
+      <div class="dropdowncontainercss">
+        <div class="dropdown1 graphdropcss1" style="width:35%">
+          <button class="btn dropcss dropdown-toggle" type="button" data-toggle="collapse" data-target="#charttab1_2x">Compare Spend & Applies <span class="caret caretcss"></span></button>
+          <div id="charttab1_2x" class="collapse">
+            <div class="comparetxthead">Compare: (select two)</div>
+            <div class="comparecheckboxes">
+              <div class="ccrow"> <span>
+                <input type="checkbox" name="clicks_2x" id="clicks_2x">
+                <label for="clicks_2x">Clicks</label>
+                </span> <span>
+                <input type="checkbox" name="cpc_2x" id="cpc_2x">
+                <label for="cpc_2x">CPC</label>
+                </span> </div>
+              <div class="ccrow"> <span>
+                <input type="checkbox" name="applies_2x" id="applies_2x">
+                <label for="applies_2x">Applies</label>
+                </span> <span>
+                <input type="checkbox" name="cpa_2x" id="cpa_2x">
+                <label for="cpa_2x">CPA</label>
+                </span> </div>
+              <div class="ccrow"> <span>
+                <input type="checkbox" name="spend_2x" id="spend_2x">
+                <label for="spend_2x">Spend</label>
+                </span> <span>
+                <input type="checkbox" name="cta_2x" id="cta_2x">
+                <label for="cta_2x">Spend</label>
+                </span></div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown2 graphdropcss2" style="width:25%">
+          <button class="btn dropcss dropdown-toggle" type="button" data-toggle="collapse" data-target="#charttab2_2x">Custom Date Range <span class="caret caretcss"></span></button>
+          <div id="charttab2_2x" class="collapse">
+            <div class="customoption">Last 7 days</div>
+            <div class="customoption">Last 30 days</div>
+            <div class="customdates">
+              <div class="form-group clearfix"> <span class="labeldate">Custom</span>
+                <div class='input-group date cal' id='datetimepicker3_2x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                  <input type='text' class="form-control-date" name="cdate3_2x" />
+                </div>
+                <div class="hypendash">-</div>
+                <div class='input-group date cal' id='datetimepicker4_2x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                  <input type='text' class="form-control-date" name="cdate4_2x" />
+                </div>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <br />
+            <div class="customoption">
+              <div class="switch">
+                <label> Compare
+                  <input type="checkbox">
+                  <span class="lever"></span> </label>
+              </div>
+            </div>
+            <div class="customoption">Last 7 days</div>
+            <div class="customoption">Last 30 days</div>
+            <div class="customdates">
+              <div class="form-group clearfix"> <span class="labeldate">Custom</span>
+                <div class='input-group date cal' id='datetimepicker5_2x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                  <input type='text' class="form-control-date" name="cdate5_2x" />
+                </div>
+                <div class="hypendash">-</div>
+                <div class='input-group date cal' id='datetimepicker6_2x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                  <input type='text' class="form-control-date" name="cdate6_2x" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown3 graphdropcss3" style="width:18%">
+          <div class='input-group date' id='datetimepicker9_2x'>
+            <div class="chart_tab3_btn"> <span class="input-group-addon"> <span class="fa fa-calendar calendarcss"></span> </span>
+              <input type='text' class="form-control-date" name="cdate9_2x" />
+              <span class="input-group-addon"><span class="caret caretcss1"></span></span> </div>
+          </div>
+        </div>
+        <div class="dropdown4 graphdropcss4" style="width:18%">
+          <div class='input-group date' id='datetimepicker10_2x'>
+            <div class="chart_tab3_btn"> <span class="input-group-addon"> <span class="fa fa-calendar calendarcss"></span></span>
+              <input type='text' class="form-control-date" name="cdate9_2x" />
+              <span class="input-group-addon"><span class="caret caretcss1"></span></span> </div>
+          </div>
+        </div>
+      </div>
+      <div id="chartdiv7"></div>
+    </div>
+    <div class="sidesectioncss">
+      <h4>Comparison - Summary</h4>
+      <div class="list-group a activeldd7" id="a" style="display:block; float:left; width:50%; border-right:1px solid #dedede;">
+        <div class=bluecirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="bluetextcss">2,659</p>
+        <h6 class="">Applies</h6>
+        <p class="bluetextcss">185</p>
+        <h6 class="">Spend</h6>
+        <p class="bluetextcss">$6,365</p>
+        <h6 class="">CPC</h6>
+        <p class="bluetextcss">$3.68</p>
+        <h6 class="">CPA</h6>
+        <p class="bluetextcss">$12.34</p>
+        <h6 class="">CTA</h6>
+        <p class="bluetextcss">3%</p>
+      </div>
+      <div class="list-group b activeldd7" id="b" style="display:block; float:left; width:50%;">
+        <div class=orangecirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="orangetextcss">3,659</p>
+        <h6 class="">Applies</h6>
+        <p class="orangetextcss">195</p>
+        <h6 class="">Spend</h6>
+        <p class="orangetextcss">$7,365</p>
+        <h6 class="">CPC</h6>
+        <p class="orangetextcss">$4.68</p>
+        <h6 class="">CPA</h6>
+        <p class="orangetextcss">$15.34</p>
+        <h6 class="">CTA</h6>
+        <p class="orangetextcss">4%</p>
+      </div>
+      <div class="list-group c" id="c" style="display:none; float:left; width:50%;">
+        <div class=lemoncirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="lemontextcss">2,659</p>
+        <h6 class="">Applies</h6>
+        <p class="lemontextcss">185</p>
+        <h6 class="">Spend</h6>
+        <p class="lemontextcss">$6,365</p>
+        <h6 class="">CPC</h6>
+        <p class="lemontextcss">$3.68</p>
+        <h6 class="">CPA</h6>
+        <p class="lemontextcss">$12.34</p>
+        <h6 class="">CTA</h6>
+        <p class="lemontextcss">3%</p>
+      </div>
+      <div class="list-group d" id="d" style="display:none; float:left; width:50%;">
+        <div class=greycirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="greytextcss">3,659</p>
+        <h6 class="">Applies</h6>
+        <p class="greytextcss">195</p>
+        <h6 class="">Spend</h6>
+        <p class="greytextcss">$7,365</p>
+        <h6 class="">CPC</h6>
+        <p class="greytextcss">$4.68</p>
+        <h6 class="">CPA</h6>
+        <p class="greytextcss">$15.34</p>
+        <h6 class="">CTA</h6>
+        <p class="greytextcss">4%</p>
+      </div>
+      <div class="list-group e" id="e" style="display:none; float:left; width:50%;">
+        <div class=purplecirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="purpletextcss">3,659</p>
+        <h6 class="">Applies</h6>
+        <p class="purpletextcss">195</p>
+        <h6 class="">Spend</h6>
+        <p class="purpletextcss">$7,365</p>
+        <h6 class="">CPC</h6>
+        <p class="purpletextcss">$4.68</p>
+        <h6 class="">CPA</h6>
+        <p class="purpletextcss">$15.34</p>
+        <h6 class="">CTA</h6>
+        <p class="purpletextcss">4%</p>
+      </div>
+      <div class="list-group f" id="f" style="display:none; float:left; width:50%;">
+        <div class=redcirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="redtextcss">3,659</p>
+        <h6 class="">Applies</h6>
+        <p class="redtextcss">195</p>
+        <h6 class="">Spend</h6>
+        <p class="redtextcss">$7,365</p>
+        <h6 class="">CPC</h6>
+        <p class="redtextcss">$4.68</p>
+        <h6 class="">CPA</h6>
+        <p class="redtextcss">$15.34</p>
+        <h6 class="">CTA</h6>
+        <p class="redtextcss">4%</p>
+      </div>
+      <div class="list-group g" id="g" style="display:none; float:left; width:50%;">
+        <div class=yellowcirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="yellowtextcss">3,659</p>
+        <h6 class="">Applies</h6>
+        <p class="yellowtextcss">195</p>
+        <h6 class="">Spend</h6>
+        <p class="yellowtextcss">$7,365</p>
+        <h6 class="">CPC</h6>
+        <p class="yellowtextcss">$4.68</p>
+        <h6 class="">CPA</h6>
+        <p class="yellowtextcss">$15.34</p>
+        <h6 class="">CTA</h6>
+        <p class="yellowtextcss">4%</p>
+      </div>
+	  	
+    </div>
+    <footer>
+      <div class="footerheading">Search for Companies</div>
+      <div class="chip7 activeimg7">
+        <div class="bluecirclecss"></div>
+        <label for="companya_7x"> Heartland Express &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_7[]" id="companya_7x" value="a" checked>
+      </div>
+      <div class="chip7 activeimg7">
+        <div class="orangecirclecss"></div>
+        <label for="companyb_7x"> CRST Specialised &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_7{}" id="companyb_7x" value="b" checked>
+      </div>
+      <div class="chip7">
+        <div class="lemoncirclecss"></div>
+        <label for="companyc_7x"> Carefirst Bluecross &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_7{}" id="companyc_7x" value="c" disabled>
+      </div>
+      <div class="chip7">
+        <div class="greycirclecss"></div>
+        <label for="companyd_7x"> Yuma Regional &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_7{}" id="companyd_7x" value="d" disabled>
+      </div>
+      <div class="chip7">
+        <div class="purplecirclecss"></div>
+        <label for="companye_7x"> Hirekey &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_7{}" id="companye_7x" value="e" disabled>
+      </div>
+      <div class="chip7">
+        <div class="redcirclecss"></div>
+        <label for="companyf_7x"> University of Phoenix &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_7{}" id="companyf_7x" value="f" disabled>
+      </div>
+      <div class="chip7">
+        <div class="yellowcirclecss"></div>
+        <label for="companyg_7x"> University of Phoenix &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_7{}" id="companyg_7x" value="g" disabled>
+      </div>
+    </footer>
+  </div>
+  <div class="container" ng-app="datatable">
+    <div class="panel" data-ng-controller="datatableCtrl">
+      <div class="panel-heading2 border">
+        <div class="row">
+          <div class="col s2 pheading-db-addclient">
+            <a href="add_clients.html" class="btn">Add Client</a>
+          </div>
+          <div class="col s2 pheading-db-edit">
+            <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Edit <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+          </div>
+          <div class="col s3 pheading-db-search">
+            <div class="db-search hide-on-med-and-down"> <i class="fa fa-search" aria-hidden="true"></i>
+              <input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0">
+            </div>
+          </div>
+          <div class="col s2 pheading-db-clientstatus">
+            <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Automation <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+          </div>
+          <div class="col s2 pheading-db-columnview">
+            <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Column View <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+          </div>
+          <div class="col s1 pheading-db-downloadicon">
+            <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-download" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        <table id="allclientdb_table">
+          <thead>
+            <tr>
+              <th><input id="checkall" name="ch" id="ch0" type="checkbox" class="filled-in">
+                <label for="ch0"></label></th>
+              <th>Active</th>
+              <th>Campaign Name</th>
+              <th>Status</th>
+              <th>Clicks</th>
+              <th>Bot Clicks</th>
+              <th>Applies</th>
+              <th>CPC</th>
+              <th>CPA</th>
+              <th>Spend</th>
+              <th>Budget</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input name="ch" id="ch1" type="checkbox" class="filled-in">
+                <label for="ch1"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Heartland Express</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch2" type="checkbox" class="filled-in">
+                <label for="ch2"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>CRST Specialised Transportation (STI)</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch3" type="checkbox" class="filled-in">
+                <label for="ch3"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Best Logistics</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch4" type="checkbox" class="filled-in">
+                <label for="ch4"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>CareFirst Bluecross Blueshield</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch5" type="checkbox" class="filled-in">
+                <label for="ch5"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Yuma Regional Medical Centre</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch6" type="checkbox" class="filled-in">
+                <label for="ch6"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>University of Phoenix</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch7" type="checkbox" class="filled-in">
+                <label for="ch7"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>CRST Expedited</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch8" type="checkbox" class="filled-in">
+                <label for="ch8"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>CRST Malone</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch9" type="checkbox" class="filled-in">
+                <label for="ch9"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Mcleod Express</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch10" type="checkbox" class="filled-in">
+                <label for="ch11"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Celadon</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch11" type="checkbox" class="filled-in">
+                <label for="ch11"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Schilli Corporation</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch12" type="checkbox" class="filled-in">
+                <label for="ch12"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Sherman Brother Trucking</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch13" type="checkbox" class="filled-in">
+                <label for="ch13"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Adex Medical Staffing</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch14" type="checkbox" class="filled-in">
+                <label for="ch14"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>IMC Corporation</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch15" type="checkbox" class="filled-in">
+                <label for="ch15"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Navajo Express</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch16" type="checkbox" class="filled-in">
+                <label for="ch16"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>G6 Hospitality</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch17" type="checkbox" class="filled-in">
+                <label for="ch17"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>FCA</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch18" type="checkbox" class="filled-in">
+                <label for="ch18"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>BAYADA - ICIMS</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch19" type="checkbox" class="filled-in">
+                <label for="ch19"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Franchise Career Services</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch20" type="checkbox" class="filled-in">
+                <label for="ch20"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Hirekey - West Marnie</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
            </div>
            <div id="campaign_placements" class="col s12" style="display: none;">
-
+				<div class="maincontainer6">
+    <div style="float:left; width:70%;">
+      <div class="dropdowncontainercss">
+        <div class="dropdown1 graphdropcss1" style="width:35%">
+          <button class="btn dropcss dropdown-toggle" type="button" data-toggle="collapse" data-target="#charttab1_2x">Compare Spend & Applies <span class="caret caretcss"></span></button>
+          <div id="charttab1_2x" class="collapse">
+            <div class="comparetxthead">Compare: (select two)</div>
+            <div class="comparecheckboxes">
+              <div class="ccrow"> <span>
+                <input type="checkbox" name="clicks_2x" id="clicks_2x">
+                <label for="clicks_2x">Clicks</label>
+                </span> <span>
+                <input type="checkbox" name="cpc_2x" id="cpc_2x">
+                <label for="cpc_2x">CPC</label>
+                </span> </div>
+              <div class="ccrow"> <span>
+                <input type="checkbox" name="applies_2x" id="applies_2x">
+                <label for="applies_2x">Applies</label>
+                </span> <span>
+                <input type="checkbox" name="cpa_2x" id="cpa_2x">
+                <label for="cpa_2x">CPA</label>
+                </span> </div>
+              <div class="ccrow"> <span>
+                <input type="checkbox" name="spend_2x" id="spend_2x">
+                <label for="spend_2x">Spend</label>
+                </span> <span>
+                <input type="checkbox" name="cta_2x" id="cta_2x">
+                <label for="cta_2x">Spend</label>
+                </span></div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown2 graphdropcss2" style="width:25%">
+          <button class="btn dropcss dropdown-toggle" type="button" data-toggle="collapse" data-target="#charttab2_2x">Custom Date Range <span class="caret caretcss"></span></button>
+          <div id="charttab2_2x" class="collapse">
+            <div class="customoption">Last 7 days</div>
+            <div class="customoption">Last 30 days</div>
+            <div class="customdates">
+              <div class="form-group clearfix"> <span class="labeldate">Custom</span>
+                <div class='input-group date cal' id='datetimepicker3_2x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                  <input type='text' class="form-control-date" name="cdate3_2x" />
+                </div>
+                <div class="hypendash">-</div>
+                <div class='input-group date cal' id='datetimepicker4_2x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                  <input type='text' class="form-control-date" name="cdate4_2x" />
+                </div>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <br />
+            <div class="customoption">
+              <div class="switch">
+                <label> Compare
+                  <input type="checkbox">
+                  <span class="lever"></span> </label>
+              </div>
+            </div>
+            <div class="customoption">Last 7 days</div>
+            <div class="customoption">Last 30 days</div>
+            <div class="customdates">
+              <div class="form-group clearfix"> <span class="labeldate">Custom</span>
+                <div class='input-group date cal' id='datetimepicker5_2x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                  <input type='text' class="form-control-date" name="cdate5_2x" />
+                </div>
+                <div class="hypendash">-</div>
+                <div class='input-group date cal' id='datetimepicker6_2x'> <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                  <input type='text' class="form-control-date" name="cdate6_2x" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown3 graphdropcss3" style="width:18%">
+          <div class='input-group date' id='datetimepicker9_2x'>
+            <div class="chart_tab3_btn"> <span class="input-group-addon"> <span class="fa fa-calendar calendarcss"></span> </span>
+              <input type='text' class="form-control-date" name="cdate9_2x" />
+              <span class="input-group-addon"><span class="caret caretcss1"></span></span> </div>
+          </div>
+        </div>
+        <div class="dropdown4 graphdropcss4" style="width:18%">
+          <div class='input-group date' id='datetimepicker10_2x'>
+            <div class="chart_tab3_btn"> <span class="input-group-addon"> <span class="fa fa-calendar calendarcss"></span></span>
+              <input type='text' class="form-control-date" name="cdate9_2x" />
+              <span class="input-group-addon"><span class="caret caretcss1"></span></span> </div>
+          </div>
+        </div>
+      </div>
+      <div id="chartdiv6"></div>
+    </div>
+    <div class="sidesectioncss">
+      <h4>Comparison - Summary</h4>
+      <div class="list-group a activeldd6" id="a" style="display:block; float:left; width:50%; border-right:1px solid #dedede;">
+        <div class=bluecirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="bluetextcss">2,659</p>
+        <h6 class="">Applies</h6>
+        <p class="bluetextcss">185</p>
+        <h6 class="">Spend</h6>
+        <p class="bluetextcss">$6,365</p>
+        <h6 class="">CPC</h6>
+        <p class="bluetextcss">$3.68</p>
+        <h6 class="">CPA</h6>
+        <p class="bluetextcss">$12.34</p>
+        <h6 class="">CTA</h6>
+        <p class="bluetextcss">3%</p>
+      </div>
+      <div class="list-group b activeldd6" id="b" style="display:block; float:left; width:50%;">
+        <div class=orangecirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="orangetextcss">3,659</p>
+        <h6 class="">Applies</h6>
+        <p class="orangetextcss">195</p>
+        <h6 class="">Spend</h6>
+        <p class="orangetextcss">$7,365</p>
+        <h6 class="">CPC</h6>
+        <p class="orangetextcss">$4.68</p>
+        <h6 class="">CPA</h6>
+        <p class="orangetextcss">$15.34</p>
+        <h6 class="">CTA</h6>
+        <p class="orangetextcss">4%</p>
+      </div>
+      <div class="list-group c" id="c" style="display:none; float:left; width:50%;">
+        <div class=lemoncirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="lemontextcss">2,659</p>
+        <h6 class="">Applies</h6>
+        <p class="lemontextcss">185</p>
+        <h6 class="">Spend</h6>
+        <p class="lemontextcss">$6,365</p>
+        <h6 class="">CPC</h6>
+        <p class="lemontextcss">$3.68</p>
+        <h6 class="">CPA</h6>
+        <p class="lemontextcss">$12.34</p>
+        <h6 class="">CTA</h6>
+        <p class="lemontextcss">3%</p>
+      </div>
+      <div class="list-group d" id="d" style="display:none; float:left; width:50%;">
+        <div class=greycirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="greytextcss">3,659</p>
+        <h6 class="">Applies</h6>
+        <p class="greytextcss">195</p>
+        <h6 class="">Spend</h6>
+        <p class="greytextcss">$7,365</p>
+        <h6 class="">CPC</h6>
+        <p class="greytextcss">$4.68</p>
+        <h6 class="">CPA</h6>
+        <p class="greytextcss">$15.34</p>
+        <h6 class="">CTA</h6>
+        <p class="greytextcss">4%</p>
+      </div>
+      <div class="list-group e" id="e" style="display:none; float:left; width:50%;">
+        <div class=purplecirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="purpletextcss">3,659</p>
+        <h6 class="">Applies</h6>
+        <p class="purpletextcss">195</p>
+        <h6 class="">Spend</h6>
+        <p class="purpletextcss">$7,365</p>
+        <h6 class="">CPC</h6>
+        <p class="purpletextcss">$4.68</p>
+        <h6 class="">CPA</h6>
+        <p class="purpletextcss">$15.34</p>
+        <h6 class="">CTA</h6>
+        <p class="purpletextcss">4%</p>
+      </div>
+      <div class="list-group f" id="f" style="display:none; float:left; width:50%;">
+        <div class=redcirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="redtextcss">3,659</p>
+        <h6 class="">Applies</h6>
+        <p class="redtextcss">195</p>
+        <h6 class="">Spend</h6>
+        <p class="redtextcss">$7,365</p>
+        <h6 class="">CPC</h6>
+        <p class="redtextcss">$4.68</p>
+        <h6 class="">CPA</h6>
+        <p class="redtextcss">$15.34</p>
+        <h6 class="">CTA</h6>
+        <p class="redtextcss">4%</p>
+      </div>
+      <div class="list-group g" id="g" style="display:none; float:left; width:50%;">
+        <div class=yellowcirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="yellowtextcss">3,659</p>
+        <h6 class="">Applies</h6>
+        <p class="yellowtextcss">195</p>
+        <h6 class="">Spend</h6>
+        <p class="yellowtextcss">$7,365</p>
+        <h6 class="">CPC</h6>
+        <p class="yellowtextcss">$4.68</p>
+        <h6 class="">CPA</h6>
+        <p class="yellowtextcss">$15.34</p>
+        <h6 class="">CTA</h6>
+        <p class="yellowtextcss">4%</p>
+      </div>
+	  <div class="list-group h" id="h" style="display:none; float:left; width:50%;">
+        <div class=pinkcirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="pinktextcss">3,659</p>
+        <h6 class="">Applies</h6>
+        <p class="pinktextcss">195</p>
+        <h6 class="">Spend</h6>
+        <p class="pinktextcss">$7,365</p>
+        <h6 class="">CPC</h6>
+        <p class="pinktextcss">$4.68</p>
+        <h6 class="">CPA</h6>
+        <p class="pinktextcss">$15.34</p>
+        <h6 class="">CTA</h6>
+        <p class="pinktextcss">4%</p>
+      </div>
+	  <div class="list-group i" id="i" style="display:none; float:left; width:50%;">
+        <div class=skybluecirclelist></div>
+        <h6 class="">Clicks</h6>
+        <p class="skybluetextcss">3,659</p>
+        <h6 class="">Applies</h6>
+        <p class="skybluetextcss">195</p>
+        <h6 class="">Spend</h6>
+        <p class="skybluetextcss">$7,365</p>
+        <h6 class="">CPC</h6>
+        <p class="skybluetextcss">$4.68</p>
+        <h6 class="">CPA</h6>
+        <p class="skybluetextcss">$15.34</p>
+        <h6 class="">CTA</h6>
+        <p class="skybluetextcss">4%</p>
+      </div>
+    </div>
+    <footer>
+      <div class="footerheading">Search for Companies</div>
+      <div class="chip6 activeimg6">
+        <div class="bluecirclecss"></div>
+        <label for="companya_6x"> Ripple &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_6[]" id="companya_6x" value="a" checked>
+      </div>
+      <div class="chip6 activeimg6">
+        <div class="orangecirclecss"></div>
+        <label for="companyb_6x"> Indeed &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_6{}" id="companyb_6x" value="b" checked>
+      </div>
+      <div class="chip6">
+        <div class="lemoncirclecss"></div>
+        <label for="companyc_6x"> Jobs2Careers &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_6{}" id="companyc_6x" value="c" disabled>
+      </div>
+      <div class="chip6">
+        <div class="greycirclecss"></div>
+        <label for="companyd_6x"> Beyond &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_6{}" id="companyd_6x" value="d" disabled>
+      </div>
+      <div class="chip6">
+        <div class="purplecirclecss"></div>
+        <label for="companye_6x"> Linkup &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_6{}" id="companye_6x" value="e" disabled>
+      </div>
+      <div class="chip6">
+        <div class="redcirclecss"></div>
+        <label for="companyf_6x"> CareerBliss &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_6{}" id="companyf_6x" value="f" disabled>
+      </div>
+      <div class="chip6">
+        <div class="yellowcirclecss"></div>
+        <label for="companyg_6x"> Lead5 &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_6{}" id="companyg_6x" value="g" disabled>
+      </div>
+	  <div class="chip6">
+        <div class="pinkcirclecss"></div>
+        <label for="companyh_6x"> ZipRecruiter &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_6{}" id="companyh_6x" value="h" disabled>
+      </div>
+	  <div class="chip6">
+        <div class="skybluecirclecss"></div>
+        <label for="companyi_6x"> RestorationMedia &nbsp;<img src="images/pin.png"></label>
+        <input type="checkbox" name="comparision_6{}" id="companyi_6x" value="i" disabled>
+      </div>
+    </footer>
+  </div>
+  <div class="container" ng-app="datatable">
+    <div class="panel" data-ng-controller="datatableCtrl">
+      <div class="panel-heading2 border">
+        <div class="row">
+          <div class="col s2 pheading-db-addclient">
+            <a href="add_clients.html" class="btn">Add Client</a>
+          </div>
+          <div class="col s2 pheading-db-edit">
+            <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Edit <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+          </div>
+          <div class="col s3 pheading-db-search">
+            <div class="db-search hide-on-med-and-down"> <i class="fa fa-search" aria-hidden="true"></i>
+              <input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0">
+            </div>
+          </div>
+          <div class="col s2 pheading-db-clientstatus">
+            <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Automation <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+          </div>
+          <div class="col s2 pheading-db-columnview">
+            <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown">Column View <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+          </div>
+          <div class="col s1 pheading-db-downloadicon">
+            <button class="btn dropcss dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-download" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        <table id="allclientdb_table">
+          <thead>
+            <tr>
+              <th><input id="checkall" name="ch" id="ch0" type="checkbox" class="filled-in">
+                <label for="ch0"></label></th>
+              <th>Active</th>
+              <th>Campaign Name</th>
+              <th>Status</th>
+              <th>Clicks</th>
+              <th>Bot Clicks</th>
+              <th>Applies</th>
+              <th>CPC</th>
+              <th>CPA</th>
+              <th>Spend</th>
+              <th>Budget</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input name="ch" id="ch1" type="checkbox" class="filled-in">
+                <label for="ch1"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Heartland Express</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch2" type="checkbox" class="filled-in">
+                <label for="ch2"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>CRST Specialised Transportation (STI)</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch3" type="checkbox" class="filled-in">
+                <label for="ch3"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Best Logistics</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch4" type="checkbox" class="filled-in">
+                <label for="ch4"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>CareFirst Bluecross Blueshield</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch5" type="checkbox" class="filled-in">
+                <label for="ch5"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Yuma Regional Medical Centre</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch6" type="checkbox" class="filled-in">
+                <label for="ch6"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>University of Phoenix</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch7" type="checkbox" class="filled-in">
+                <label for="ch7"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>CRST Expedited</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch8" type="checkbox" class="filled-in">
+                <label for="ch8"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>CRST Malone</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch9" type="checkbox" class="filled-in">
+                <label for="ch9"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Mcleod Express</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch10" type="checkbox" class="filled-in">
+                <label for="ch11"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Celadon</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch11" type="checkbox" class="filled-in">
+                <label for="ch11"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Schilli Corporation</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch12" type="checkbox" class="filled-in">
+                <label for="ch12"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Sherman Brother Trucking</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch13" type="checkbox" class="filled-in">
+                <label for="ch13"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Adex Medical Staffing</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch14" type="checkbox" class="filled-in">
+                <label for="ch14"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>IMC Corporation</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch15" type="checkbox" class="filled-in">
+                <label for="ch15"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Navajo Express</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch16" type="checkbox" class="filled-in">
+                <label for="ch16"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>G6 Hospitality</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch17" type="checkbox" class="filled-in">
+                <label for="ch17"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>FCA</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch18" type="checkbox" class="filled-in">
+                <label for="ch18"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>BAYADA - ICIMS</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch19" type="checkbox" class="filled-in">
+                <label for="ch19"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Franchise Career Services</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+            <tr>
+              <td><input name="ch" id="ch20" type="checkbox" class="filled-in">
+                <label for="ch20"></label></td>
+              <td><img src="images/checkbox_circle.png" alt=""></td>
+              <td>Hirekey - West Marnie</td>
+              <td>3204 Live</td>
+              <td>19753</td>
+              <td>231</td>
+              <td>386</td>
+              <td>$0.66</td>
+              <td>$13.66</td>
+              <td>$2222.25</td>
+              <td>$6700 Monthly</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
            </div>
            <div id="campaign_rules" class="col s12" style="display: none;">
-
+				<div class="form-addclient">
+			<div class="form-inside">
+				<div class="row">
+					<div class="input-field col s4">
+					<select>
+					  <option value="1">CDL-A-Truck Driver - Great Pay and Routes</option>
+					  <option value="2">Option 2</option>
+					  <option value="3">Option 3</option>
+					</select>
+					<label>Rule Applied to</label>
+				  </div>
+					<div class="input-field col s4">
+					<select>
+					  <option value="1">Bid Strategy</option>
+					  <option value="2">Option 2</option>
+					  <option value="3">Option 3</option>
+					</select>
+					<label>Requirement</label>
+				  </div>
+				</div>
+				<div class="row">
+					<div class="fbox_selectjobs">
+						<div class="row">
+							<div class="rowheader">Select Jobs</div>
+							<div class="input-field col s1">
+								<select>
+								  <option value="1">Select</option>
+								  <option value="2">Option 2</option>
+								  <option value="3">Option 3</option>
+								</select>
+								<label></label>
+							</div>
+							<div class="input-field col s2">
+								<select>
+								  <option value="1">Select</option>
+								  <option value="2">Option 2</option>
+								  <option value="3">Option 3</option>
+								</select>
+								<label></label>
+							</div>
+							<div class="input-field col s1">
+								<input id="selectjobs_text" type="text" class="validate">
+								<label for="selectjobs_text"></label>
+							</div>
+							<div class="input-field col s1">
+								<select>
+								  <option value="1">Select</option>
+								  <option value="2">Option 2</option>
+								  <option value="3">Option 3</option>
+								</select>
+								<label></label>
+							</div>
+							<div class="input-field col s1">
+								<select>
+								  <option value="1">Select</option>
+								  <option value="2">Option 2</option>
+								  <option value="3">Option 3</option>
+								</select>
+								<label></label>
+							</div>
+							<div class="input-field col s1">
+								<input id="selectjobs_text" type="text" class="validate">
+								<label for="selectjobs_text"></label>
+							</div>
+							<div class="input-field col s1">
+								<select>
+								  <option value="1">Select</option>
+								  <option value="2">Option 2</option>
+								  <option value="3">Option 3</option>
+								</select>
+								<label></label>
+							</div>
+							<div class="input-field col s1">
+								<select>
+								  <option value="1">Select</option>
+								  <option value="2">Option 2</option>
+								  <option value="3">Option 3</option>
+								</select>
+								<label></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		  </div>
            </div>
            <div id="campaign_recommendations" class="col s12" style="display: none;">
 
@@ -1924,7 +3179,8 @@ display: block !important;
 
 <script src="js/chart2.js"></script>
 <script src="js/chart5.js"></script>
-
+<script src="js/chart6.js"></script>
+<script src="js/chart7.js"></script>
 <!--materialize js-->
 <script type="text/javascript" src="js/materialize.js"></script>
 <!--prism-->

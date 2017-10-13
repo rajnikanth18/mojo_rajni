@@ -19,6 +19,7 @@
 .wizard ul,
 .tabcontrol ul
 {
+	float:left;
     list-style: none !important;
     padding: 0;
     margin: 0;
@@ -30,6 +31,7 @@
     display: block;
     padding: 0;
 	width:200px;
+	position:relative;
 }
 
 /* Accessibility */
@@ -100,6 +102,30 @@
     width: 100%;
 }
 
+.wizard > .steps .disabled a hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    position: absolute;
+    border-top: 1px solid #dedede;
+    height: 1px;
+    top: 21px;
+    width: 96px;
+    left: -75px;
+}
+
+.wizard > .steps .done a hr, .wizard > .steps .current a hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    position: absolute;
+    border-top: 1px solid #979797;
+    height: 1px;
+    top: 21px;
+    width: 96px;
+    left: -75px;
+}
+
 .wizard > .steps a,
 .wizard > .steps a:hover,
 .wizard > .steps a:active
@@ -109,7 +135,6 @@
     margin: 0 0.5em 0.5em;
     padding: 1em 1em;
     text-decoration: none;
-
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -125,12 +150,14 @@
 	font-size:20px !important;
 }
 
+.wizard > .steps .disabled a .number{ background:#e9e9e9; color:#fff;}
+
 .wizard > .steps .current a,
 .wizard > .steps .current a:hover,
 .wizard > .steps .current a:active
 {
     background: #fff;
-    color: #bcbcbc;
+    color: #354052;
     cursor: default;
 	font-size:20px;
 }
@@ -141,7 +168,10 @@
 {
     background: #fff;
     color: #bcbcbc;
+	font-size:20px !important;
 }
+
+.wizard > .steps .done a .number{ background:#bcbcbc; color:#fff;}
 
 .wizard > .steps .error a,
 .wizard > .steps .error a:hover,
@@ -153,18 +183,14 @@
 
 .wizard > .content
 {
-    background: #eee;
     display: block;
     margin: 0.5em;
     min-height: 35em;
     overflow: hidden;
     position: relative;
     width: auto;
-
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
+	box-shadow:none;
+ }
 
 .wizard.vertical > .content
 {
@@ -206,6 +232,9 @@
     border: 1px solid #ccc;
 }
 
+.wizard > .content > .body input.percent80{width:80% !important;}
+.wizard > .content > .body .percent80{width:80% !important;}
+
 .wizard > .content > .body input[type="checkbox"]
 {
     display: inline-block;
@@ -220,9 +249,12 @@
 
 .wizard > .content > .body label
 {
-    display: inline-block;
+    display: block;
     margin-bottom: 0.5em;
+	text-align:left;
 }
+.wizard > .content > .body .input-field label{}
+.wizard > .content > .body .input-field .labelbox label{}
 
 .wizard > .content > .body label.error
 {
@@ -394,3 +426,5 @@
 {
     display: list-item;
 }
+
+[type="radio"]:checked + label::after{ border:2px solid #1d95ee;background-color:#1d95ee;}

@@ -1,8 +1,14 @@
 
+
+/*var table = $('#jobgroupdb_table').DataTable();
+table.columns.adjust().draw();
+*/
+
 if($("ul.side-nav.leftside-navigation").height()==800){
 	$(this).css("overflow-y","hidden");
 }
 
+/* var imageWidth = 152;$(".imageContainer").width($(".imagegallery").length*imageWidth); */
 
   $('.dropdown-button1').dropdown({
       inDuration: 300,
@@ -197,6 +203,66 @@ if ($(".chip5 :checkbox[type='checkbox']:checked").length == 2)  {
 }
 });
 
+$('.chip6 input[type="checkbox"]').parent(".chip6.activeimg6").find("img").show();
+$('.chip6 input[type="checkbox"]').click(function(){
+												  
+	var inputValue6 = $(this).attr("value");
+	$(".maincontainer6 ." + inputValue6).removeClass("activeldd6");
+	$(".maincontainer6 .list-group").removeClass("firstcheck6");
+	$(".maincontainer6 ." + inputValue6).toggle();	
+	$(this).parent("").toggleClass("activeimg6");	
+													 
+
+if ($(".chip6 :checkbox[type='checkbox']:checked").length == 0)  { 
+	$(".maincontainer6 .list-group").removeClass("activeldd6");
+	$(".maincontainer6 .activeldd6:eq(0)").removeClass("firstcheck6");
+}
+if ($(".chip6 :checkbox[type='checkbox']:checked").length == 1)  { 
+	$(".maincontainer6 ." + inputValue6).addClass("activeldd6");
+	$(".maincontainer6 ." + inputValue6).addClass("firstcheck6");
+}
+if ($(".chip6 :checkbox[type='checkbox']:checked").length == 2)  {      
+  //not(:checked)
+   
+   $('.chip6 :checkbox:not(:checked)').prop('disabled', true);
+   $(".maincontainer6 ." + inputValue6).addClass("activeldd6");
+   $(".maincontainer6 .activeldd6:eq(0)").addClass("firstcheck6");
+}
+  else { 
+   $('.chip6 :checkbox:not(:checked)').prop('disabled', false);  
+}
+});
+
+$('.chip7 input[type="checkbox"]').parent(".chip7.activeimg7").find("img").show();
+$('.chip7 input[type="checkbox"]').click(function(){
+												  
+	var inputValue7 = $(this).attr("value");
+	$(".maincontainer7 ." + inputValue7).removeClass("activeldd7");
+	$(".maincontainer7 .list-group").removeClass("firstcheck7");
+	$(".maincontainer7 ." + inputValue7).toggle();	
+	$(this).parent("").toggleClass("activeimg7");	
+													 
+
+if ($(".chip7 :checkbox[type='checkbox']:checked").length == 0)  { 
+	$(".maincontainer7 .list-group").removeClass("activeldd7");
+	$(".maincontainer7 .activeldd7:eq(0)").removeClass("firstcheck7");
+}
+if ($(".chip7 :checkbox[type='checkbox']:checked").length == 1)  { 
+	$(".maincontainer7 ." + inputValue7).addClass("activeldd7");
+	$(".maincontainer7 ." + inputValue7).addClass("firstcheck7");
+}
+if ($(".chip7 :checkbox[type='checkbox']:checked").length == 2)  {      
+  //not(:checked)
+   
+   $('.chip7 :checkbox:not(:checked)').prop('disabled', true);
+   $(".maincontainer7 ." + inputValue7).addClass("activeldd7");
+   $(".maincontainer7 .activeldd7:eq(0)").addClass("firstcheck7");
+}
+  else { 
+   $('.chip7 :checkbox:not(:checked)').prop('disabled', false);  
+}
+});
+
 
 /*
 $('#alerts-dropdown').perfectScrollbar();
@@ -208,7 +274,7 @@ $('#datetimepicker3_1x, #datetimepicker4_1x, #datetimepicker5_1x, #datetimepicke
 	format: 'MMM DD, YY',
 	defaultDate: new Date()									 
 });
-$('#datetimepicker3_2x, #datetimepicker4_2x, #datetimepicker5_2x, #datetimepicker6_2x, #datetimepicker7_2x, #datetimepicker8_2x').datetimepicker({
+$('#datetimepicker3_2x, #datetimepicker4_2x, #datetimepicker5_2x, #datetimepicker6_2x, #datetimepicker7_2x, #datetimepicker8_2x, #datetimepicker9_2x, #datetimepicker10_2x').datetimepicker({
 	format: 'MMM DD, YY',
 	defaultDate: new Date()										 
 });
@@ -542,6 +608,25 @@ $("#datetimepicker2_1x_o").on("dp.change", function (e) {
 });
 
 /* tab16 */
+$('#datetimepickerform1').datetimepicker({
+	format: 'MMM DD, YY',
+	defaultDate: new Date()								 
+});
+$('#datetimepickerform2').datetimepicker({
+	format: 'MMM DD, YY',
+	defaultDate: new Date()
+});
+
+/* Job Group Form */
+$("#datetimepickerform1").on("dp.change", function (e) {
+	$('#datetimepickerform2').data("DateTimePicker").minDate(e.date);
+});
+$("#datetimepickerform2").on("dp.change", function (e) {
+	$('#datetimepickerform1').data("DateTimePicker").maxDate(e.date);
+});
+
+
+/* tab16 */
 $('#datetimepicker1_1x_p').datetimepicker({
 	format: 'MMM DD, YY',
 	defaultDate: new Date()								 
@@ -556,6 +641,7 @@ $("#datetimepicker1_1x_p").on("dp.change", function (e) {
 $("#datetimepicker2_1x_p").on("dp.change", function (e) {
 	$('#datetimepicker1_1x_p').data("DateTimePicker").maxDate(e.date);
 });
+
 
 
 

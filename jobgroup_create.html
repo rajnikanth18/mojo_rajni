@@ -7,7 +7,7 @@
 <meta name="msapplication-tap-highlight" content="no">
 <meta name="description" content=" ">
 <meta name="keywords" content="">
-<title>Add Client</title>
+<title>Job Group Create</title>
 <!-- Favicons-->
 <link rel="icon" href="images/favicon-32x32.png" sizes="32x32">
 <!-- Favicons-->
@@ -27,6 +27,7 @@
 <link rel='stylesheet prefetch' href='css/bootstrap.css'>
 <link rel='stylesheet prefetch' href='css/dataTables.bootstrap.css'>
 <link rel='stylesheet prefetch' href='css/jquery.steps.css'>
+<link rel='stylesheet prefetch' href='css/formsteps.css'>
 <style>
 @media only screen and (min-width: 993px) {
 .hide-on-large-only {
@@ -155,17 +156,17 @@ display: block !important;
         </div>
       </li>
       <li class="no-padding">
-        <ul class="collapsible"  data-collapsible="accordion">
+        <ul class="collapsible" data-collapsible="accordion">
           <li class="bold sidemenu active"><a class="collapsible-header active" style="padding-top:0px;" href="all_clients.html"> All Clients </a><span class="listno">16</span>
             <div class="collapsible-body" style="display:block;">
               <ul class="collapsible collapsible-accordion">
                 <li class="no-padding">
                   <ul class="collapsible collapsible-accordion">
                     <li class="bold"><a class="collapsible-header" href="all_campaigns.html"> Heartland Expresss <i class="fa fa-angle-right"></i></a>
-                      <div class="collapsible-body">
+                      <div class="collapsible-body sublist show">
                         <ul class="collapsible collapsible-accordion sublist">
                           <li><a class="collapsible-header waves-effect waves-cyan" href="all_clients_jobs.html">High Performing Campaign <i class="fa fa-angle-right"></i></a>
-                            <div class="collapsible-body sub_sublist active">
+                            <div class="collapsible-body sub_sublist show active">
                               <ul>
                                 <li class="twolines"><a href="#">CDL-A Truck Driver - Great Pay and Routes <i class="fa fa-angle-right"></i></a></li>
                                 <li><a href="#">Class A CDL Truck Driver <i class="fa fa-angle-right"></i></a></li>
@@ -276,102 +277,829 @@ display: block !important;
   <!--breadcrumbs end-->
   <!--start container-->
   <div class="container">
-    <div class="col s12 m8 l9 tab1">
-      <div class="row">
-          <ul class="tabs tab-demo-active z-depth-1" style="width: 100%;">
-            <li class="tab col s3"><a class="waves-effect waves-light active" href="#allclients">All Clients</a></li>
-            <li class="tab col s3"><a class="waves-effect waves-light" href="#allplacements">All Placements</a></li>
-          </ul>
-        </div>
-        
-          
-            <div class="col s12 m8 l9 tab2">
+    <div class="col s12 m8 l9">
+            <div class="col s12 m8 l9">
               <div class="row">
+			  <div class="col s12">
+			  <div class="card-panel-jobgroupcreate">
 			  
-			  <form id="example-advanced-form" action="#">
-    <h3>Step</h3>
-    <fieldset>
-        <div class="input-field col s12">
-		<select>
+<form id="job-group-create-form" action="" method="POST">
+  <!-- progressbar -->
+  <div class="form-top-nav">
+  <h1 class="pagetitle">Job Group Create</h1>
+  <ul id="progressbar">
+    <li class="active">Step <hr></li>
+    <li>Step <hr></li>
+    <li>Step <hr></li>
+	<li>Step <hr></li>
+  </ul>
+  </div>
+  <!-- fieldsets -->
+  <fieldset>
+    <div id="form" class="step1 stepswrap">
+          <div class="row">
+      <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-5" style="margin-left:15px;">
+        <label for="jobgroupname">Job Group Name</label>
+        <input type="text" name="jobgroupname" class="form-control percent80 required" id="jobgroupname" placeholder="Job Group Name">
+      </div>
+      <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-5" style="margin-left:15px;">
+        <label for="campaignname">Campaign Name</label>
+        <select id="campaignname" class="percent80">
+          <option value="1">General Campaign</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="rowheader">Job Filter</div>
+      <div class="fbox_jobfilter">
+        <div class="col s8">
+          <div class="row padding-top15">
+            <div class="col s4">
+              <select>
+                <option value="1">Category</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label></label>
+            </div>
+            <div class="col s1 padding-top10">
+              <input type="checkbox" id="not_id" />
+              <label for="not_id">Not</label>
+            </div>
+            <div class="col s4">
+              <div class="input-field2 col s12">
+                <input id="notinput" type="text" class="validate">
+                <label for="notinput"></label>
+              </div>
+            </div>
+            <div class="col s2">
+              <select>
+                <option value="1">Select</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label></label>
+            </div>
+          </div>
+          <div class="row padding-top15">
+            <div class="col s4">
+              <select>
+                <option value="1">Industry</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label></label>
+            </div>
+            <div class="col s4">
+              <select>
+                <option value="1">Occupation</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label></label>
+            </div>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="fbox_filerresults">
+            <div class="fbox_row"><span>No of Jobs found</span>:<span>165 Jobs</span></div>
+            <div class="fbox_row"><span>Locations</span>:<span>19 Locations</span></div>
+            <div class="fbox_row"><span>Suggested Keywords</span>:<span>Great Pay and Routes</span></div>
+            <div class="fbox_row"><span>No. of Jobs not selected</span>:<span>56 Jobs</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="form-group col s3">
+        <div class='input-group date cal' id='datetimepickerform1'>
+          <input class="form-control-date" name="cdate10_jobgroup1" type="text" placeholder="Job Group Start Date" required>
+          <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span> </div>
+      </div>
+      <div class="col s3">
+        <div class='input-group date cal' id='datetimepickerform2'>
+          <input class="form-control-date" name="cdate10_jobgroup2" type="text" placeholder="Job Group End Date" required>
+          <span class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> </span> </div>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col s4">
+        <div class="rowheader">Spend Budget Cap</div>
+        <div class="fbox_form">
+          <div class="input-field col s3">
+            <label for="daily">Daily</label>
+            <input placeholder="" id="daily" type="text" class="inputs">
+          </div>
+          <div class="input-field col s3">
+            <label for="weekly">Weekly</label>
+            <input placeholder="" id="weekly" type="text" class="inputs">
+          </div>
+          <div class="input-field col s3">
+            <label for="monthly">Monthly</label>
+            <input placeholder="" id="monthly" type="text" class="inputs">
+          </div>
+          <div class="input-field col s3">
+            <label for="joblifetime">Job Lifetime</label>
+            <input placeholder="" id="joblifetime" type="text" class="inputs">
+          </div>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="rowheader">Clips Cap</div>
+        <div class="fbox_form">
+          <div class="input-field col s3">
+            <label for="daily">Daily</label>
+            <input placeholder="" id="daily" type="text" class="inputs">
+          </div>
+          <div class="input-field col s3">
+            <label for="weekly">Weekly</label>
+            <input placeholder="" id="weekly" type="text" class="inputs">
+          </div>
+          <div class="input-field col s3">
+            <label for="monthly">Monthly</label>
+            <input placeholder="" id="monthly" type="text" class="inputs">
+          </div>
+          <div class="input-field col s3">
+            <label for="joblifetime">Job Lifetime</label>
+            <input placeholder="" id="joblifetime" type="text" class="inputs">
+          </div>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="rowheader">Applies Cap</div>
+        <div class="fbox_form">
+          <div class="input-field col s3">
+            <label for="daily">Daily</label>
+            <input placeholder="" id="daily" type="text" class="inputs">
+          </div>
+          <div class="input-field col s3">
+            <label for="weekly">Weekly</label>
+            <input placeholder="" id="weekly" type="text" class="inputs">
+          </div>
+          <div class="input-field col s3">
+            <label for="monthly">Monthly</label>
+            <input placeholder="" id="monthly" type="text" class="inputs">
+          </div>
+          <div class="input-field col s3">
+            <label for="joblifetime">Job Lifetime</label>
+            <input placeholder="" id="joblifetime" type="text" class="inputs">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row formatgap">
+      <div class="input-field col s12">
+        <input type="checkbox" id="evenly" />
+        <label for="evenly">Evenly distribute the budget among all jobs</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s3">
+        <input type="checkbox" id="evenly" />
+        <label for="evenly">Only show publisher with these tags </label>
+      </div>
+      <div class="input-field col s3">
+        <select>
+          <option value="1">Transportation</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+        <label></label>
+      </div>
+    </div>
+    <div class="row formatgap">
+      <div class="rowheader" style="margin-bottom:40px;">Select Publishers and Schedule Budget (you will only see publishers in this range)</div>
+      <div class="col s12">
+        <div class="row">
+          <div class="col s1">
+            <input type="text" id="cpcminbid" value="$0.50" />
+            <label for="cpcminbid">CPC min Bid</label>
+          </div>
+          <div class="range-field col s3">
+            <input type="range" id="test5" min="0" max="100" />
+          </div>
+          <div class="col s1">
+            <input type="text" id="cpcmaxbid" value="$1.50" />
+            <label for="cpcmaxbid">CPC max Bid</label>
+          </div>
+          <div class="col s3"> Shows publisher who are in this range </div>
+        </div>
+        <div class="row formatgap">
+          <div class="col s1">
+            <input type="text" id="cpcminbid" value="$0.50" />
+            <label for="cpcminbid">CPC min Bid</label>
+          </div>
+          <div class="range-field col s3">
+            <input type="range" id="test5" min="0" max="100" />
+          </div>
+          <div class="col s1">
+            <input type="text" id="cpcmaxbid" value="$1.50" />
+            <label for="cpcmaxbid">CPC max Bid</label>
+          </div>
+          <div class="col s3"> Shows publisher who are in this range </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s3">
+        <input type="checkbox" id="showjoveo" value="$1.50" />
+        <label for="showjoveo">Show Joveo Algo<sup>TM</sup> recommendations</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="rowheader">Joveo recommends using Career Builder, Cognius, CareerBliss, Geebo, Linkup and Ziprecruiter (refer publihser table below)</div>
+      <!-- Data table -->
+      <div class="panel-body-formstep1">
+        <table id="jobgroupdb_table" style="width: 1250px;">
+          <thead>
+            <tr>
+              <th><input id="checkall" name="ch" id="ch0" type="checkbox" class="filled-in">
+                <label for="ch0"></label></th>
+              <th>Active</th>
+              <th>Publisher Relevancy <br />
+                Score (1-10)</th>
+              <th>Publisher Name</th>
+              <th>Trend</th>
+              <th>Min. Bid</th>
+              <th>Max. Bid</th>
+              <th>Expected CPC</th>
+              <th>Expected CPA</th>
+              <th>Budget<br />
+                $, % </th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+          
+          <tr>
+          
+          <td><input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label></td>
+          <td><img src="images/checkbox_circle.png" alt=""></td>
+          <td>6</td>
+          <td>CareerBuilder</td>
+          <td>Chart Img</td>
+          <td>19753</td>
+          <td>0.35</td>
+          <td>0.65</td>
+          <td>$0.66</td>
+          <td>$13.66</td>
+          <td>$2222.25</td>
+          <td>
+          <div class="custom-btn">
+          <button class="btn">
+          Change
+          </btn>
+          </div>
+          </td>
+          
+          </tr>
+          
+          <tr>
+            <td>
+          <input name="ch" id="ch1" type="checkbox" class="filled-in">
+          <label for="ch1"></label>
+          </td>
+          
+          <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>Cognius</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>CareerBliss</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>Geebo</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>Jobs2Career</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>Lead5</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>Linkup</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>LiveCareer</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>RestorationMedia</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>ZipRecruiter</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>ZipRecruiter</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>ZipRecruiter</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>ZipRecruiter</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>ZipRecruiter</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>ZipRecruiter</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>ZipRecruiter</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>ZipRecruiter</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>ZipRecruiter</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>ZipRecruiter</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            <tr>
+                <td>
+            <input name="ch" id="ch1" type="checkbox" class="filled-in">
+            <label for="ch1"></label>
+            </td>
+            <td><img src="images/checkbox_circle.png" alt=""></td>
+            <td>6</td>
+            <td>ZipRecruiter</td>
+            <td>Chart Img</td>
+            <td>19753</td>
+            <td>0.35</td>
+            <td>0.65</td>
+            <td>$0.66</td>
+            <td>$13.66</td>
+            <td>$2222.25</td>
+            <td>
+            <div class="custom-btn">
+            <button class="btn">
+            Change
+            </btn>
+            </div>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+	<!--div class="buttons_align"-->
+	<input type="button" name="next" class="next action-button btn" value="Next" />
+	<!--/div-->
+	</fieldset>
+  
+  <fieldset>
+    <div id="form" class="step2 stepswrap">
+			<div class="row formatgap">
+       <div class="input-field col s4">
+		<select class="select-wrapper2">
 		  <option value="1" selected>Social</option>
 		  <option value="2">Option 2</option>
 		  <option value="3">Option 3</option>
 		</select>
-		<label>Select Media (Not for PPC, Job Boards, Pay and Post Job Board)</label>
+		<label class="">Select Media (Not for PPC, Job Boards, Pay and Post Job Board)</label>
 	  </div> 
-        <div class="input-field col s3">
-		<select>
+	  </div>
+	  <div class="row formatgap">
+        <div class="input-field col s2 mright">
+		<select class="select-wrapper">
 		  <option value="1">Everyone in this location</option>
 		  <option value="2">Option 2</option>
 		  <option value="3">Option 3</option>
 		</select>
 		<label>Location</label>
 	  </div> 
-	  <div class="input-field col s3">
-		<select>
+	  <div class="input-field col s2 mright">
+		<select class="select-wrapper">
 		  <option value="1">Select Locations</option>
 		  <option value="2">Option 2</option>
 		  <option value="3">Option 3</option>
 		</select>
 	  </div> 
-	  <div class="input-field col s2">
+	  <div class="input-field col s2 mright">
           <input id="zip" type="text" class="validate">
-          <label for="zip">Zip</label>
+          <label for="zip">Zip code</label>
       </div>
-	  <div class="input-field col s2">
+	  <div class="input-field col s2 mright">
           <input id="mileradius" type="text" class="validate">
           <label for="mileradius">Mile Radius</label>
       </div>	
 	  <div class="input-field col s2">
-		<select>
+		<select class="select-wrapper">
 		  <option value="1">Include</option>
 		  <option value="2">Option 2</option>
 		  <option value="3">Option 3</option>
 		</select>
 	  </div>
-	  <div class="input-field col s3">
-		<select>
+	  </div>
+	  <div class="row formatgap">
+	  <div class="input-field col s2">
+	    <span class="prefix">Age</span>
+		<select class="select-wrapper postselect">
 		  <option value="1" selected></option>
 		  <option value="1">Everyone in this location</option>
 		  <option value="2">Option 2</option>
 		  <option value="3">Option 3</option>
 		</select>
-		<label>Age</label>
+		<label></label>
 	  </div> 
-	  -
-	  <div class="input-field col s3">
-		<select>
+	  <span class="hypencenter">&mdash;</span>
+	  <div class="input-field col s2 mright">
+		<select class="select-wrapper">
 		  <option value="1" selected></option>
 		  <option value="1">Everyone in this location</option>
 		  <option value="2">Option 2</option>
 		  <option value="3">Option 3</option>
 		</select>
-		<label>Age</label>
+		<label></label>
 	  </div> 
-	  <div class="input-field col s3">
-		<select>
+	  <div class="input-field col s2 mright">
+	  <span class="prefix">Gender</span>
+		<select class="select-wrapper postselect">
 		  <option value="1" selected></option>
 		  <option value="1">Everyone in this location</option>
 		  <option value="2">Option 2</option>
 		  <option value="3">Option 3</option>
 		</select>
-		<label>Gender</label>
+		<label></label>
 	  </div> 
-	  <div class="input-field col s3">
-		<select>
+	  <div class="input-field col s2 mright">
+	  <span class="prefix">Ethnicity</span>
+		<select class="select-wrapper postselect">
 		  <option value="1" selected></option>
 		  <option value="1">Everyone in this location</option>
 		  <option value="2">Option 2</option>
 		  <option value="3">Option 3</option>
 		</select>
-		<label>Ethnicity</label>
+		<label></label>
 	  </div> 
-	  <div class="input-field col s12">
-          <input id="mileradius" type="text" class="validate">
-          <label for="mileradius">Mile Radius</label>
+	  </div>
+	  <div class="row">
+	  <div class="input-field col s2">
+          <input id="keywords" type="text" class="validate">
+          <label for="keywords">Keywords</label>
       </div>	
+	  </div>
+	  <div class="row formatgap">
+	   <div class="input-field col s5 mright">
  	  <div>Detailed Targetting</div>
-	  <div class="input-field col s6">
     <select>
       <option value="" disabled selected>Add Education, Word</option>
       <option value="1">Option 1</option>
@@ -380,7 +1108,8 @@ display: block !important;
     </select>
     <label>Include people who match at least ONE of the following</label>
   </div>
-  <div class="input-field col s6">
+  <div class="input-field col s5 mright">
+  <div>&nbsp;</div>
     <select>
       <option value="" disabled selected>Add Education, Word</option>
       <option value="1">Option 1</option>
@@ -389,33 +1118,59 @@ display: block !important;
     </select>
     <label>Exclude people who match at least ONE of the following</label>
   </div>
-  <div class="container">
+  </div>
+  <div class="fbox_audience">
 	<div class="row">
 		<div class="col s12">Audience</div>
 		<div class="row">
-			<div class="col s6">
+			<div class="col s5">
 				<div class="row">  
 					<div class="col s6">
-						<input class="with-gap" name="group1" type="radio" id="test3"  />
-						<label for="test3">Create a custom audience</label>
+						<input class="with-gap" name="group_audience" type="radio" id="audi" checked  />
+						<label for="audi">Create a custom audience</label>
 					</div>
 					<div class="col s6">
-						<input class="with-gap" name="group1" type="radio" id="test3"  />
-						<label for="test3">Use saved audience</label>
+						<input class="with-gap" name="group_audience" type="radio" id="audi2"  />
+						<label for="audi2">Use saved audience</label>
 					</div>
 				</div>
-				<div class="row">
-					
-					<div class="col s12">
+				<div class="row fbox_audience2">
+						
+					<div class="col s12" style="padding:0px;">
 					  <ul class="tabs tab-demo-active z-depth-1" style="width: 100%;">
-						<li class="tab col s3"><a class="active" href="#formstep1">Customer File</a></li>
-						<li class="tab col s3"><a class="" href="#formstep2">Website Traffic</a></li>
-						<li class="tab col s3"><a class="" href="#formstep3">Engagement on Facebook</a></li>
+						<li class="tab col s2"><a class="active" href="#formstep1">Customer File</a></li>
+						<li class="tab col s2"><a class="" href="#formstep2">Website Traffic</a></li>
+						<li class="tab col s6" style="padding-left:14px;"><a class="" href="#formstep3">Engagement on Facebook</a></li>
 					  </ul>
 					</div>
 					<div class="col s12">
 						<div id="formstep1" class="col s12">
-							formstep1 form here
+								<div class="row formatgap">  
+									<div class="col s12">
+										<input class="with-gap" name="customerfile" type="radio" id="cfile" checked  />
+										<label for="cfile">Add a new file (CSV or TXT)</label>
+									</div>
+								</div>
+								<div class="col s12">
+									<div class="file-field input-field custom-file-field">
+									  <div class="browse">
+										<span class="custom-btn">UPLOAD FILE</span>
+										<input type="file">
+									  </div>
+									  <div class="file-path-wrapper">
+										<input class="file-path validate" type="text">
+									  </div>
+									</div>
+								</div>
+								<div class="row">		
+									<div class="col s12">
+										<input class="with-gap" name="customerfile" type="radio" id="cfile2"  />
+										<label for="cfile2">Copy and Paste</label>
+									</div>
+								</div>
+								<div class="row">
+									<textarea class="textbox">Paste your data here</textarea>
+								</div>
 						</div>
 						<div id="formstep2" class="col s12">
 							<div class="row">
@@ -451,7 +1206,6 @@ display: block !important;
 								</div>
 							</div>
 							<div class="row">
-								
 								<div class="input-field col s12">
 								<select>
 								  <option value="" disabled selected>Choose your option</option>
@@ -472,69 +1226,338 @@ display: block !important;
 							</div>
 						</div>
 					</div>
-						<a class="waves-effect waves-light btn">Cancel</a>
-						<a class="waves-effect waves-light btn">Create Audience</a>
+					<div class="row formatgap align-btns-right">
+						<div class="col custom-btn"><a class="btn">Cancel</a></div>
+						<div class="col custom-btn"><a class="btn">Create Audience</a></div>
+					</div>
+
 				</div>
 			</div>
-			<div class="col s6">
+			<div class="col s5" style="margin-left:5%;">
+			
 				<div class="row">  
 					<div class="col s6">
 						<input class="with-gap" name="group1" type="radio" id="test4"  />
 						<label for="test3">Create a look alike audience</label>
 					</div>
 				</div>
+				<div class="row fbox_audience2">
+			 <div class="col s12">
 				<div class="row">
-					<div class="col s12">Look alike audience</div>
-					<div class="row">
+					<div class="col s12 fbox_alike">
+					<div class="row formatgap"><div class="col s12">Look alike audience</div></div>
+						<div class="row formatgap">
 						<div class="input-field col s12">
-						  <input placeholder="Choose for custom audience or a page" id="first_name" type="text" class="validate">
-						  <label for="first_name">Add source URL</label>
+						  <input placeholder="Choose for custom audience or a page" id="addsourceurl" type="text" class="validate">
+						  <label for="addsourceurl">Add source URL</label>
 						</div>
-						<div class="file-field input-field">
-						  <div class="btn">
-							<span>Browse</span>
-							<input type="file">
-						  </div>
-						  <div class="file-path-wrapper">
-							<input class="file-path validate" type="text" placeholder="Location">
-						  </div>
 						</div>
-						<div class="range-field">
-						  <input type="range" id="test5" min="0" max="10" />
+						<div class="row formatgap">
+						  <div class="col s12">
+							<div class="file-field input-field custom-file-field">
+							  <div class="browse">
+								<span class="custom-btn">UPLOAD FILE</span>
+								<input type="file">
+							  </div>
+							  <div class="file-path-wrapper">
+								<input class="file-path validate" type="text">
+							  </div>
+							</div>
+							</div>
 						</div>
-						<a class="waves-effect waves-light btn">Cancel</a>
-						<a class="waves-effect waves-light btn">Create Audience</a>
+						<div class="row formatgap">
+							<div class="col s12">
+								<div class="range-field">
+									<input type="range" id="test5" min="0" max="10" />
+								</div>
+							</div>
+						</div>
+						<div class="row formatgap align-btns-right">
+							<div class="col custom-btn"><a class="btn">Cancel</a></div>
+							<div class="col custom-btn"><a class="btn">Create Audience</a></div>
+						</div>
 					</div>
+				</div>
+				</div>
 				</div>
 			</div>
 		</div>
 	</div>
   </div>
-    </fieldset>
- 
-    <h3>Step</h3>
-    <fieldset>
-        
-    </fieldset>
- 
-    <h3>Step</h3>
-    <fieldset>
-        <legend>You are to young</legend>
- 
-        <p>Please go away ;-)</p>
-    </fieldset>
- 
-    <h3>Step</h3>
-    <fieldset>
-        <legend>Terms and Conditions</legend>
- 
-        <input id="acceptTerms-2" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
-    </fieldset>
+    </div>
+    <input type="button" name="previous" class="previous action-button btn" value="Previous" />
+    <input type="button" name="next" class="next action-button btn" value="Next" />
+  </fieldset>
+  <fieldset>
+    <div id="form" class="step3 stepswrap">
+		    <div class="fbox_placements formatheader">
+      <div class="rowheader">Placements</div>
+      <div class="row placements">
+        <div class="input-field col s12">
+          <input name="group1" type="radio" id="placement_radio1" />
+          <label for="placement_radio">Automatic Placements</label>
+          <div class="placement_radio2_details"> Your job group will automocatically be shown to your audience in the places where they're likely to perform best. </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input name="group1" type="radio" id="placement_radio2" />
+          <label for="placement_radio">Edit Placements</label>
+          <div class="placement_radio2_details">
+            <div class="row">
+              <div class="col s1">Device Types</div>
+              <div class="input-field col s3">
+                <select>
+                  <option value="1">All Devices</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+                <label></label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s1">Platforms</div>
+              <div class="input-field col s3">
+                <select>
+                  <option value="1">Facebook</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+                <label></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fbox_placements formatheader">
+      <div class="rowheader">Budget and Schedule</div>
+      <div class="row">
+        <div class="col s1">Budget</div>
+        <div class="input-field col s3">
+          <select>
+            <option value="1">Daily Budget</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <label></label>
+        </div>
+        <div class="input-field col s3">
+          <input type="text" id="budget_txt">
+          <label>USD</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s1">Schedule</div>
+        <div class="input-field col s6">
+          <div class="row">
+            <div class="input-field col s12">
+              <input name="scheduegroup" type="radio" id="schedue1" />
+              <label for="schedue1">Run my job group from today</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input name="scheduegroup" type="radio" id="schedue1" />
+              <label for="schedue1">Set a job group start date and end date</label>
+            </div>
+            <div class="row">
+              <div class="col s6">
+                <input type="text" class="datepicker_budget_schedule1">
+              </div>
+              <div class="col s6">
+                <input type="text" class="datepicker_budget_schedule2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	</div>
+	    <input type="button" name="previous" class="previous action-button btn" value="Previous" />
+    <input type="button" name="next" class="next action-button btn" value="Next" />
+   </fieldset>
+   <fieldset>
+    <div id="form" class="step4 stepswrap">
+		<div class="row formatheader">
+<div class="rowheader">Format</div>
+<div class="input-field col s2">
+  <div class="labelbox">
+    <input name="formatgroup" type="radio" id="formatid1" />
+    <label for="formatid1">Carousel</label>
+    <img src="images/formatimage.jpg" alt=""	 /> </div>
+</div>
+<div class="input-field col s2">
+  <div class="labelbox">
+    <input name="formatgroup" type="radio" id="formatid2" />
+    <label for="formatid2">Single Image</label>
+    <img src="images/formatimage.jpg" alt=""	 /> </div>
+</div>
+<div class="input-field col s2">
+  <div class="labelbox">
+    <input name="formatgroup" type="radio" id="formatid3" />
+    <label for="formatid3">Slide show</label>
+    <img src="images/formatimage.jpg" alt=""	 /> </div>
+</div>
+<div class="input-field col s2">
+  <div class="labelbox">
+    <input name="formatgroup" type="radio" id="formatid4" />
+    <label for="formatid4">Collection</label>
+    <img src="images/formatimage.jpg" alt=""	 /> </div>
+</div>
+</div>
+<div class="row formatheader">
+<div class="rowheader">Media</div>
+<div class="rowsubheader">Browse Library</div>
+<div class="col s12">
+  <div class="row">
+    <div class="col s12 tabscroll">
+      <ul class="tabs tab-demo-active z-depth-1" style="width: 100%;">
+        <li class="tab col s3"><a class="active" href="#step4_formstep1">Image Library</a></li>
+        <li class="tab col s3"><a class="" href="#step4_formstep2">Stock Images</a></li>
+        <li class="tab col s3"><a class="" href="#step4_formstep3">Upload Images</a></li>
+      </ul>
+    </div>
+    <div class="col s12">
+      <div id="step4_formstep1" class="col s12">
+        <div class="mediabox">
+          <div class="imageContainer">
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img1.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img2.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img3.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img1.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img2.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img3.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img1.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img2.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img3.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img1.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img2.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img3.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img1.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img2.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img3.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="step4_formstep2" class="col s12">
+        <div class="mediabox">
+          <div class="imageContainer">
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img1.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img2.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img3.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img1.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img2.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img3.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img1.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img2.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img3.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img1.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img2.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img3.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img1.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img2.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+            <div class="imagegallery"><a href="#"><img src="images/imagelibrary_img3.jpg" height="82px" style="max-width: 100%;" alt=""></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="step4_formstep3" class="col s12">
+        <div class="row">
+          <div class="col s12">
+            <div class="rowtext">Drag and drop multiple images or click to upload images</div>
+            <div class="file-field input-field">
+              <div class="custom-btn"> <span>File</span>
+                <input type="file">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="row formatheader">
+<div class="col s6">
+  <div class="row">
+    <div class="rowheader2">Page and Link</div>
+    <div class="input-field col s12">
+      <input placeholder="Website URL" id="websiteurl" type="text" class="validate">
+      <label for="websiteurl">Website URL</label>
+    </div>
+    <div class="input-field col s12">
+      <input placeholder="Headline" id="headline" type="text" class="validate">
+      <label for="headline">Headline</label>
+    </div>
+    <div class="input-field col s12">
+      <input placeholder="Description text" id="desctext" type="text" class="validate">
+      <label for="desctext">Description text</label>
+    </div>
+    <div class="input-field col s12">
+      <input placeholder="Apply now" id="buttontext" type="text" class="validate">
+      <label for="buttontext">Button text</label>
+    </div>
+    <div class="input-field col s12">
+      <input placeholder="Apply now" id="buttontext" type="text" class="validate">
+      <label for="buttontext">Button text</label>
+    </div>
+    <div class="col s2">
+      <div class="custom-btn2"><a class="btn">Apply now</a></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="rowheader">Pixel tracking</div>
+    <div class="input-field col s12">
+      <input type="checkbox" id="pixeltracking" />
+      <label for="pixeltracking">Track all conversions from my tracking pixel</label>
+    </div>
+  </div>
+</div>
+<div class="col s6 box-column">
+  <div class="row">
+    <div class="rowheader">Advert preview</div>
+    <div class="input-field col s12">
+      <select class="select-wrapper preview-select">
+        <option value="1">Desktop news feed</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+      <label></label>
+    </div>
+  </div>
+  <div class="previewbox">
+    <div class="ad"><img src="images/ad1.jpg" alt="" /></div>
+    <div class="previewtitle">A job for everyone</div>
+    <div class="previewimage"><img src="images/previewimage.jpg" alt="" /></div>
+    <div class="previewheadline">JOVEO A Job For Everyone</div>
+    <div class="previewdesc">A job for everyone</div>
+    <div class="row btn-apply-row">
+      <div class="col preview-url">JOVEO.COM</div>
+      <div class="col btn-share floatright2">Apply Now</div>
+    </div>
+  </div>
+</div>
+</div>
+	</div>
+    <input type="button" name="previous" class="previous action-button btn" value="Previous" />
+    <input type="button" name="next" class="next action-button btn" value="Submit" />
+   </fieldset>
+<fieldset>
+<div id="form" class="step5 stepswrap">
+			Thanks for submitting form
+	</div>
+</fieldset>   
 </form>
 			  
+			</div>
+			</div> 
 			  </div>
       </div>
     </div>
+	</div>
     <br>
     <!--Accordion-->
     <!--end container-->
@@ -580,18 +1603,22 @@ display: block !important;
 <script src='js/dataTables.bootstrap.js'></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/script_db.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/additional-methods.js"></script>
+<script type="text/javascript" src="js/jquery.easing.js"></script>
 <script type="text/javascript" src="js/form.js"></script>
+
 <script type='text/javascript'>
 window.onload=function(){
-$('.tabular1_scrollbar').perfectScrollbar();
-$('#notifications-dropdown').perfectScrollbar();
-$('#alerts-dropdown').perfectScrollbar();
 
 $('.pagination .paginate_button.previous.disabled a').html('<i class="fa fa-chevron-left" aria-hidden="true"></i>');
 $('.pagination .paginate_button.next.disabled a').html('<i class="fa fa-chevron-right" aria-hidden="true"></i>');
 
 $('.pagination .paginate_button.previous a').html('<i class="fa fa-chevron-left" aria-hidden="true"></i>');
 $('.pagination .paginate_button.next a').html('<i class="fa fa-chevron-right" aria-hidden="true"></i>');
+
+$("h1.pagetitle").insertBefore(".steps ul");
+$("span.thumb").html("Publisher Goal");
 
 } 
 

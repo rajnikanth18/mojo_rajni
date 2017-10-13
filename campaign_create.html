@@ -7,7 +7,7 @@
 <meta name="msapplication-tap-highlight" content="no">
 <meta name="description" content=" ">
 <meta name="keywords" content="">
-<title>Add Client</title>
+<title>Campaign Create</title>
 <!-- Favicons-->
 <link rel="icon" href="images/favicon-32x32.png" sizes="32x32">
 <!-- Favicons-->
@@ -161,10 +161,10 @@ display: block !important;
                 <li class="no-padding">
                   <ul class="collapsible collapsible-accordion">
                     <li class="bold"><a class="collapsible-header" href="all_campaigns.html"> Heartland Expresss <i class="fa fa-angle-right"></i></a>
-                      <div class="collapsible-body">
-                        <ul class="collapsible collapsible-accordion sublist">
+                      <div class="collapsible-body sublist show">
+                        <ul class="collapsible collapsible-accordion">
                           <li><a class="collapsible-header waves-effect waves-cyan" href="all_clients_jobs.html">High Performing Campaign <i class="fa fa-angle-right"></i></a>
-                            <div class="collapsible-body sub_sublist active">
+                            <div class="collapsible-body sub_sublist show active">
                               <ul>
                                 <li class="twolines"><a href="#">CDL-A Truck Driver - Great Pay and Routes <i class="fa fa-angle-right"></i></a></li>
                                 <li><a href="#">Class A CDL Truck Driver <i class="fa fa-angle-right"></i></a></li>
@@ -276,66 +276,43 @@ display: block !important;
   <!--start container-->
   <div class="container">
     <div class="col s12 m8 l9 tab1">
-            <div class="col s12 m8 l9 tab2">
+        <div class="col s12 m8 l9 tab2">
               <div class="row">
             <div class="col s12 m12 l12">
               <div class="card-panel-addclient">
-                <h4 class="header2">Client Create</h4>
+                <h4 class="header2">Campaign Create</h4>
 				<div class="form-addclient">
 				 <div class="form-inside">
                 <div class="row">
-				  <form id="add-client-ats-form" action="" method="POST" class="col s12">
+                  <form id="campaign-create-form" action="" method="POST" class="col s12">
                     <div class="row">
 						<div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-6">
-							<label for="clientname">Client Name</label>
-							<input type="text" name="clientname" class="form-control" id="clientname" placeholder="Client Name" required>
+							<label for="campaignname">Campaign Name</label>
+							<input type="text" class="form-control" name="campaignname" id="campaignname" placeholder="Campaign Name" required>
 						</div>
-						<div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-6">
-							<label for="exportedname">Exported Name</label>
-							<input type="text" class="form-control" name="exportedname" id="exportedname" placeholder="Exported Name" required>
-						</div>
-					</div>	
-					<div class="row">
-					<div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-6">
-					<div class="row file-field input-field">
-                      <div class="file-path-wrapper col s9">
-                        <input class="file-path validate" id="uploadfeed" type="text" placeholder="Upload Feed">
-                      </div>
-					  <div class="btn custom-btn col s1">
-                        <span>Edit Feed</span>
-                        <input type="file">
-                      </div>
-                    </div>
-					</div>
 					</div>
 					<div class="row">
 					<div class="form-group col-xs-12">
-						<div class="rowheader">Schema Mappings</div>
+						<div class="rowheader">Select Network</div>
 						<div class="fbox_feed">
 							<div class="row">
 								<div class="col s6">
 									<div class="row">
 										<div class="input-field inline">
-											<input id="jobcollection" type="text" class="validate">
-											<label for="jobcollection" data-error="wrong" data-success="right">Job Collection</label>
+											<input id="ppc" type="checkbox" class="validate">
+											<label for="ppc" data-error="wrong" data-success="right">PPC-Job Board</label>
 										</div>
 									 </div>
 									 <div class="row">
 										<div class="input-field inline">
-											<input id="company" type="text" class="validate">
-											<label for="company" data-error="wrong" data-success="right">Company</label>
+											<input id="social" type="checkbox" class="validate">
+											<label for="social" data-error="wrong" data-success="right">Social</label>
 										</div>
 									 </div>
 									 <div class="row">
 										<div class="input-field inline">
-											<input id="city" type="text" class="validate">
-											<label for="city" data-error="wrong" data-success="right">City</label>
-										</div>
-									 </div>
-									 <div class="row">
-										<div class="input-field inline">
-											<input id="description" type="text" class="validate">
-											<label for="description" data-error="wrong" data-success="right">Description</label>
+											<input id="search" type="checkbox" class="validate">
+											<label for="search" data-error="wrong" data-success="right">Search</label>
 										</div>
 									 </div>
 								</div>
@@ -343,72 +320,56 @@ display: block !important;
 								
 								<div class="row">
 										<div class="input-field inline">
-											<input id="job" type="text" class="validate">
-											<label for="job" data-error="wrong" data-success="right">Job</label>
+											<input id="postpay" type="checkbox" class="validate">
+											<label for="postpay" data-error="wrong" data-success="right">Post and Pay</label>
 										</div>
 									 </div>
 									 <div class="row">
 										<div class="input-field inline">
-											<input id="jobtitle" type="text" class="validate">
-											<label for="jobtitle" data-error="wrong" data-success="right">Job Title</label>
+											<input id="www" type="checkbox" class="validate">
+											<label for="www" data-error="wrong" data-success="right">WWW</label>
 										</div>
 									 </div>
 									 <div class="row">
 										<div class="input-field inline">
-											<input id="state" type="text" class="validate">
-											<label for="state" data-error="wrong" data-success="right">State</label>
+											<input id="all" type="checkbox" class="validate">
+											<label for="all" data-error="wrong" data-success="right">All</label>
 										</div>
 									 </div>
-									 <div class="row">
-										<div class="input-field inline">
-											<input id="country" type="text" class="validate">
-											<label for="country" data-error="wrong" data-success="right">Country</label>
-										</div>
-									 </div>
+									 
 								
 								</div>
 							</div>
 						</div>
+						<div class="rowheader">Select Obective</div>
+						<div class="fbox_feed">
+							<div class="row">
+								<div class="col s6">
+									<div class="row">
+										<div class="input-field inline">
+											<input id="cpc" type="checkbox" class="validate">
+											<label for="cpc" data-error="wrong" data-success="right">CPC Optimisation</label>
+										</div>
+									 </div>
+								</div>
+								<div class="col s6">
+								
+								<div class="row">
+										<div class="input-field inline">
+											<input id="cpa" type="checkbox" class="validate">
+											<label for="cpa" data-error="wrong" data-success="right">CPA Optimisation</label>
+										</div>
+									 </div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+						<input type="button" name="campaign_reset" class="campaign_reset action-button btn" value="Reset" />
+						<input type="button" name="campaign_submit" class="campaign_submit action-button btn" value="Submit" />
+						</div>
 					</div>
 					</div>
-					<div class="row">
-						  <div class="btn custom-btn">
-							<span>Multiple Feed Upload</span>
-						   </div>
-					</div>
-                    <div class="row">
-                      <div class="input-field col s6">
-                        <div class="select-wrapper">
-						<select class="initialized">
-                          <option value="" disabled="" selected="">Choose</option>
-                          <option value="1 selected">Industry</option>
-                          <option value="2">Industry2</option>
-                          <option value="3">Industry3</option>
-                        </select></div>
-                        <label></label>
-                      </div>  
-						<div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-6">
-							<label for="monthlybudget">Monthly Budget</label>
-							<input type="text" class="form-control" id="monthlybudget" placeholder="Monthly Budget">
-						</div>                      
-                      
-                      </div>
-                      
                     </div>
-                    
-                    <div class="row">
-                      <div class="file-field input-field col s6">
-                        <input id="client_name" type="text">
-                        <label for="client_name" class="">ATS Name</label>
-                      </div>
-                      <div class="input-field col s6">                          
-                         <input id="client_name" type="text">
-                        <label for="client_name" class="">ATS URL</label>
-                      </div>
-                    </div>
-                    <div class="row">
-					<input type="button" name="addatas" class="addatas action-button btn" value="Add ATS" />
-					</div>
                   </form>
 				  </div>
                 </div>
@@ -466,7 +427,7 @@ display: block !important;
 <script type="text/javascript" src="js/jquery.validate.js"></script>
 <script type="text/javascript" src="js/additional-methods.js"></script>
 <script type="text/javascript" src="js/jquery.easing.js"></script>
-<script type="text/javascript" src="js/addclients_validations.js"></script>
+<script type="text/javascript" src="js/campaigncreate_validations.js"></script>
 <script type='text/javascript'>
 window.onload=function(){
 $('.tabular1_scrollbar').perfectScrollbar();
